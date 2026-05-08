@@ -1,36 +1,27 @@
-# CensusFlow Step 5: Product Polish + ROI Layer
+# CensusFlow AI MVP
 
-This phase makes the MVP feel more like a real product demo.
+CensusFlow AI is a synthetic-data MVP for an AI-assisted referral capture platform for skilled nursing facilities and assisted living operators.
 
-## New in this step
+The goal of the project is to demonstrate how an admissions team could use AI to review inbound referral packets faster, identify facility fit, flag missing information, detect hard constraints, draft responses, and analyze referral/ROI performance.
 
-1. Sidebar filters by status and priority.
-2. Priority labels.
-3. Next-best-action logic.
-4. Cleaner referral inbox.
-5. ROI sensitivity model.
-6. Demo talk track.
-7. Product memo outline.
-8. Extra tests for ROI and priority logic.
+This is not production-ready healthcare software. It is a strong MVP designed to demonstrate the product workflow, architecture, and business case.
 
-## Run tests
+---
 
-```bash
-pytest
-```
+## What the Product Does
 
-## Run dashboard
+CensusFlow AI takes synthetic referral packets and turns them into an admissions workflow.
 
-```bash
-streamlit run app.py
-```
+The workflow is:
 
-## What to demo
-
-1. Referral Inbox
-2. Referral Review
-3. Missing Information
-4. Hard Constraints
-5. Editable Response Draft
-6. Analytics + ROI
-7. Architecture
+```text
+Referral packet
+→ structured extraction
+→ ReferralExtract schema validation
+→ missing-information checker
+→ facility and payer rules
+→ hard constraint detection
+→ weighted fit scoring
+→ priority and next-best-action logic
+→ editable response draft
+→ referral analytics and ROI dashboard
