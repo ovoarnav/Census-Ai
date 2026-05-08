@@ -1,0 +1,38 @@
+SYNTHETIC REFERRAL PACKET — FOR DEMO USE ONLY
+    Referral ID: REF-005
+    Source: Mercy Hospital Discharge Planning
+    Channel: Referral portal
+    Received: 2026-05-07 09:58
+    Target Facility: GV-SNF-001
+
+    PATIENT FACE SHEET
+    Patient Initials: S.K.
+    Age: 74
+    Payer: Commercial
+    Authorization Status: approved
+    Discharge Target: 2026-05-07 18:00
+
+    CURRENT COURSE OF ILLNESS AND TREATMENT
+    Primary Diagnosis / Reason for Referral: Stage 3 pressure injury with wound VAC after sepsis admission
+    Hospital Course: Sepsis resolved. Needs skilled wound care and monitoring.
+
+    CLINICAL CARE NEEDS
+    Current Medications / MAR Summary: Apixaban, metformin, cefazolin IV q8h through 05/14, pain regimen.
+    Allergies: Latex allergy.
+    Mobility / Transfer Status: Mechanical lift for transfers.
+    Therapy Need: PT/OT recommended, low endurance.
+    Wound / Skin Needs: Sacral pressure injury with wound VAC. Wound orders mention dressing changes but frequency unclear.
+    Oxygen / Respiratory Needs: None.
+    Dialysis Need: No.
+    Cognitive Status: Alert and oriented x4.
+    Behavioral / Safety Concerns: No behavioral concerns.
+    Infection / Isolation Status: Contact precautions discontinued before discharge.
+    Advance Directive / Code Status: Full code.
+    Durable Medical Equipment Needs: Mechanical lift, wound VAC supplies.
+
+    KNOWN MISSING OR UNCLEAR ITEMS
+    - Clear wound VAC order frequency
+- IV antibiotic stop date confirmation
+
+    DEMO NOTE
+    This document is fully synthetic and contains no real patient data.

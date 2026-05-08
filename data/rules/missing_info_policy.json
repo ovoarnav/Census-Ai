@@ -1,0 +1,39 @@
+{
+  "required_fields": {
+    "high": [
+      "primary_diagnosis",
+      "current_course_of_illness",
+      "discharge_target_datetime",
+      "payer",
+      "authorization_status_if_required",
+      "current_medication_list_or_mar",
+      "allergies",
+      "mobility_transfer_status",
+      "skilled_need",
+      "infection_or_isolation_status"
+    ],
+    "medium": [
+      "wound_care_orders_if_applicable",
+      "therapy_evaluation_if_rehab",
+      "oxygen_liters_if_applicable",
+      "cognitive_behavioral_status",
+      "advance_directive_code_status",
+      "responsible_party_contact",
+      "durable_medical_equipment_needs"
+    ],
+    "low": [
+      "preferred_pharmacy",
+      "family_transport_preference",
+      "dietary_preferences",
+      "follow_up_appointments"
+    ]
+  },
+  "severity_logic": {
+    "missing_authorization_status_if_required": "high",
+    "missing_current_medication_list_or_mar": "high",
+    "missing_allergies": "high",
+    "missing_wound_orders_when_wound_present": "medium",
+    "missing_therapy_eval_when_rehab_requested": "medium",
+    "missing_discharge_time": "medium"
+  }
+}

@@ -1,0 +1,37 @@
+SYNTHETIC REFERRAL PACKET — FOR DEMO USE ONLY
+Referral ID: REF-001
+Source: Mercy Hospital Discharge Planning
+Channel: Referral portal
+Received: 2026-05-07 09:05
+Target Facility: GV-SNF-001
+
+PATIENT FACE SHEET
+Patient Initials: J.M.
+Age: 78
+Payer: Medicare Part A
+Authorization Status: not_required
+Discharge Target: 2026-05-07 16:00
+
+CURRENT COURSE OF ILLNESS AND TREATMENT
+Primary Diagnosis / Reason for Referral: Right hip fracture status post ORIF, needs short-term rehabilitation
+Hospital Course: Admitted after fall at home. Surgical repair completed. Medically stable for SNF transfer.
+
+CLINICAL CARE NEEDS
+Current Medications / MAR Summary: Acetaminophen, oxycodone PRN, enoxaparin prophylaxis, lisinopril, atorvastatin.
+Allergies: No known drug allergies.
+Mobility / Transfer Status: Two-person assist for transfers; ambulated 15 feet with rolling walker and PT.
+Therapy Need: PT/OT recommended 5x/week.
+Wound / Skin Needs: Surgical incision clean/dry/intact; dressing change every 48 hours.
+Oxygen / Respiratory Needs: None.
+Dialysis Need: No.
+Cognitive Status: Alert and oriented x3, mild nighttime confusion reported once.
+Behavioral / Safety Concerns: No aggressive or unsafe behaviors.
+Infection / Isolation Status: No isolation required.
+Advance Directive / Code Status: Full code.
+Durable Medical Equipment Needs: Rolling walker.
+
+KNOWN MISSING OR UNCLEAR ITEMS
+- None documented in this synthetic packet.
+
+DEMO NOTE
+This document is fully synthetic and contains no real patient data.

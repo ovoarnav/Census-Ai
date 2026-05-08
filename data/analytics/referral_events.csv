@@ -1,0 +1,13 @@
+event_id,referral_id,received_at,first_review_started_at,first_response_sent_at,source,channel,status_after_ai_review,simulated_outcome,simulated_lost_reason
+EVT-REF-001,REF-001,2026-05-07T09:05,2026-05-07T09:17,2026-05-07T10:00,Mercy Hospital Discharge Planning,Referral portal,accept_ready,won_or_pending_acceptance,
+EVT-REF-002,REF-002,2026-05-07T09:18,2026-05-07T09:30,2026-05-07T09:36,St. Anne Medical Center,Fax packet,likely_accept_needs_info,pending_info,
+EVT-REF-003,REF-003,2026-05-07T09:32,2026-05-07T09:44,2026-05-07T10:27,Lakeshore Hospital,Email attachment,clinical_review,clinical_review,
+EVT-REF-004,REF-004,2026-05-07T09:44,2026-05-07T10:04,2026-05-07T10:02,County General Hospital,Phone call transcript + emailed face sheet,decline_recommended,declined,Decline recommended for Green Valley because locked memory care is unavailable.
+EVT-REF-005,REF-005,2026-05-07T09:58,2026-05-07T10:18,2026-05-07T10:26,Mercy Hospital Discharge Planning,Referral portal,clinical_review,clinical_review,
+EVT-REF-006,REF-006,2026-05-07T10:12,2026-05-07T10:24,2026-05-07T10:40,Northview Hospital,Fax packet,accept_ready,won_or_pending_acceptance,
+EVT-REF-007,REF-007,2026-05-07T10:31,2026-05-07T11:04,2026-05-07T12:16,St. Anne Medical Center,Referral portal,decline_recommended,declined,Decline recommended because facility does not support complex tracheostomy care.
+EVT-REF-008,REF-008,2026-05-07T10:46,2026-05-07T11:06,2026-05-07T12:31,Regional Ortho Center,Email referral,accept_ready,won_or_pending_acceptance,
+EVT-REF-009,REF-009,2026-05-07T11:03,2026-05-07T11:23,2026-05-07T11:31,County General Hospital,Portal screenshot entered manually,likely_accept_needs_info,pending_info,
+EVT-REF-010,REF-010,2026-05-07T11:21,2026-05-07T11:25,2026-05-07T12:03,Northview Hospital,Referral portal,decline_recommended,declined,Decline or financial escalation because payer is out-of-network and authorization is pending.
+EVT-REF-011,REF-011,2026-05-07T11:36,2026-05-07T12:09,2026-05-07T12:04,Mercy Hospital Discharge Planning,Phone call transcript,likely_accept_needs_info,pending_info,
+EVT-REF-012,REF-012,2026-05-07T11:54,2026-05-07T12:06,2026-05-07T12:36,Regional Ortho Center,Referral portal,decline_recommended,declined,Decline recommended because bariatric bed/equipment unavailable.

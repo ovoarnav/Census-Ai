@@ -1,0 +1,37 @@
+SYNTHETIC REFERRAL PACKET — FOR DEMO USE ONLY
+Referral ID: REF-012
+Source: Regional Ortho Center
+Channel: Referral portal
+Received: 2026-05-07 11:54
+Target Facility: GV-SNF-001
+
+PATIENT FACE SHEET
+Patient Initials: B.S.
+Age: 58
+Payer: Commercial
+Authorization Status: approved
+Discharge Target: 2026-05-08 11:54
+
+CURRENT COURSE OF ILLNESS AND TREATMENT
+Primary Diagnosis / Reason for Referral: Bariatric rehab after ankle fracture
+Hospital Course: Post-surgical rehab requested. Requires bariatric bed and lift equipment.
+
+CLINICAL CARE NEEDS
+Current Medications / MAR Summary: Pain regimen, anticoagulation prophylaxis.
+Allergies: No known drug allergies.
+Mobility / Transfer Status: Non-weight-bearing; requires bariatric mechanical lift.
+Therapy Need: PT/OT recommended.
+Wound / Skin Needs: Surgical dressing intact.
+Oxygen / Respiratory Needs: None.
+Dialysis Need: No.
+Cognitive Status: Alert and oriented x4.
+Behavioral / Safety Concerns: No behavioral concerns.
+Infection / Isolation Status: No isolation required.
+Advance Directive / Code Status: Full code.
+Durable Medical Equipment Needs: Bariatric bed, bariatric mechanical lift.
+
+KNOWN MISSING OR UNCLEAR ITEMS
+- None documented in this synthetic packet.
+
+DEMO NOTE
+This document is fully synthetic and contains no real patient data.

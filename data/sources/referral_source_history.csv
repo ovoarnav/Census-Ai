@@ -1,0 +1,7 @@
+source,monthly_referrals,historical_accept_rate,avg_response_deadline_minutes,quality_of_packet,strategic_priority
+Mercy Hospital Discharge Planning,42,0.46,60,high,high
+St. Anne Medical Center,28,0.34,75,medium,medium
+Lakeshore Hospital,16,0.25,90,medium,medium
+County General Hospital,31,0.29,80,variable,medium
+Regional Ortho Center,18,0.61,45,high,high
+Northview Hospital,22,0.38,70,medium,medium

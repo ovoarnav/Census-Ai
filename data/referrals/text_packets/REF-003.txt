@@ -1,0 +1,37 @@
+SYNTHETIC REFERRAL PACKET — FOR DEMO USE ONLY
+Referral ID: REF-003
+Source: Lakeshore Hospital
+Channel: Email attachment
+Received: 2026-05-07 09:32
+Target Facility: GV-SNF-001
+
+PATIENT FACE SHEET
+Patient Initials: A.P.
+Age: 69
+Payer: Medicare Part A
+Authorization Status: not_required
+Discharge Target: 2026-05-07 13:32
+
+CURRENT COURSE OF ILLNESS AND TREATMENT
+Primary Diagnosis / Reason for Referral: End-stage renal disease with recent pneumonia, needs post-acute monitoring
+Hospital Course: Treated for pneumonia. Requires ongoing hemodialysis three times per week.
+
+CLINICAL CARE NEEDS
+Current Medications / MAR Summary: Sevelamer, carvedilol, insulin glargine, cefdinir through 05/12.
+Allergies: Sulfa allergy.
+Mobility / Transfer Status: Wheelchair level; one-person assist for transfers.
+Therapy Need: PT/OT evaluation included.
+Wound / Skin Needs: No wounds.
+Oxygen / Respiratory Needs: Room air.
+Dialysis Need: Hemodialysis Monday/Wednesday/Friday. Transport not arranged.
+Cognitive Status: Alert and oriented x3.
+Behavioral / Safety Concerns: No behavioral concerns.
+Infection / Isolation Status: No isolation required.
+Advance Directive / Code Status: Full code.
+Durable Medical Equipment Needs: Wheelchair.
+
+KNOWN MISSING OR UNCLEAR ITEMS
+- Dialysis transport plan
+
+DEMO NOTE
+This document is fully synthetic and contains no real patient data.

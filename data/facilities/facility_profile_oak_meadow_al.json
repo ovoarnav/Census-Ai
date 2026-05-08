@@ -1,0 +1,33 @@
+{
+  "facility_id": "OM-AL-002",
+  "facility_name": "Oak Meadow Assisted Living",
+  "facility_type": "AL",
+  "market": "Midwest independent operator",
+  "total_beds": 54,
+  "available_beds_today": {
+    "assisted_living": 3,
+    "memory_care": 1,
+    "private_room": 1
+  },
+  "accepted_payers": {
+    "Private Pay": true,
+    "Long Term Care Insurance": true,
+    "Medicaid Waiver": true,
+    "Medicare Part A": false,
+    "Medicare Advantage": false
+  },
+  "clinical_capabilities": {
+    "medication_reminders": true,
+    "limited_wound_care": true,
+    "oxygen_support": true,
+    "skilled_nursing_24_7": false,
+    "iv_antibiotics": false,
+    "wound_vac": false,
+    "dialysis_on_site": false,
+    "ventilator": false,
+    "memory_care_locked_unit": true,
+    "behavioral_high_acuity": false,
+    "two_person_assist_supported": false,
+    "total_mechanical_lift_supported": false
+  }
+}

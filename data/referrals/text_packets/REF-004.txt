@@ -1,0 +1,38 @@
+SYNTHETIC REFERRAL PACKET — FOR DEMO USE ONLY
+    Referral ID: REF-004
+    Source: County General Hospital
+    Channel: Phone call transcript + emailed face sheet
+    Received: 2026-05-07 09:44
+    Target Facility: GV-SNF-001
+
+    PATIENT FACE SHEET
+    Patient Initials: T.B.
+    Age: 87
+    Payer: Medicaid
+    Authorization Status: not_required
+    Discharge Target: 2026-05-08 09:44
+
+    CURRENT COURSE OF ILLNESS AND TREATMENT
+    Primary Diagnosis / Reason for Referral: Dementia with wandering behavior after UTI treatment
+    Hospital Course: UTI treated. Hospital reports ongoing wandering and exit-seeking behavior.
+
+    CLINICAL CARE NEEDS
+    Current Medications / MAR Summary: Donepezil, memantine, quetiapine low dose at bedtime.
+    Allergies: No known drug allergies.
+    Mobility / Transfer Status: Ambulates independently but unsafe due to wandering.
+    Therapy Need: No skilled rehab need documented.
+    Wound / Skin Needs: No wounds.
+    Oxygen / Respiratory Needs: None.
+    Dialysis Need: No.
+    Cognitive Status: Severe short-term memory impairment; requires secured memory-care setting.
+    Behavioral / Safety Concerns: Exit-seeking/wandering daily.
+    Infection / Isolation Status: No isolation required.
+    Advance Directive / Code Status: DNR.
+    Durable Medical Equipment Needs: None.
+
+    KNOWN MISSING OR UNCLEAR ITEMS
+    - Behavioral incident log
+- Responsible party confirmation
+
+    DEMO NOTE
+    This document is fully synthetic and contains no real patient data.

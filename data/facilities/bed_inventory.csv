@@ -1,0 +1,4 @@
+facility_id,date,skilled_rehab_available,long_term_care_available,memory_care_available,isolation_private_available,bariatric_bed_available
+GV-SNF-001,2026-05-07,4,2,0,1,0
+GV-SNF-001,2026-05-08,3,2,0,1,0
+GV-SNF-001,2026-05-09,2,1,0,0,0

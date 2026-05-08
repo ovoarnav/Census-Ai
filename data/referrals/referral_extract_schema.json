@@ -1,0 +1,29 @@
+{
+  "ReferralExtract": {
+    "referral_id": "str",
+    "patient_initials": "str | null",
+    "age": "int | null",
+    "source": "str | null",
+    "channel": "str | null",
+    "received_at": "datetime | null",
+    "target_facility_id": "str | null",
+    "primary_diagnosis": "str | null",
+    "current_course_of_illness": "str | null",
+    "payer": "str | null",
+    "authorization_status": "str | null",
+    "current_medications_or_mar": "str | null",
+    "allergies": "str | null",
+    "mobility_transfer_status": "str | null",
+    "therapy_need": "str | null",
+    "wound_skin_needs": "str | null",
+    "oxygen_respiratory_needs": "str | null",
+    "dialysis_need": "str | null",
+    "cognitive_status": "str | null",
+    "behavioral_safety_concerns": "str | null",
+    "infection_isolation_status": "str | null",
+    "advance_directive_code_status": "str | null",
+    "durable_medical_equipment_needs": "str | null",
+    "missing_or_unclear_items": "list[str]",
+    "evidence": "dict[field_name, quoted_supporting_text]"
+  }
+}

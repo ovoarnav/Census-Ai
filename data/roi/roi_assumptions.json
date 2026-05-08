@@ -1,0 +1,15 @@
+{
+  "demo_only": true,
+  "assumptions_are_adjustable": true,
+  "facility_total_beds": 96,
+  "baseline_occupancy_rate": 0.82,
+  "target_occupancy_rate": 0.86,
+  "average_daily_revenue_per_admission_usd": 475,
+  "average_length_of_stay_days_short_stay_rehab": 22,
+  "monthly_referral_volume": 150,
+  "baseline_referral_conversion_rate": 0.32,
+  "target_conversion_rate_after_ai": 0.36,
+  "estimated_extra_admissions_per_month": 6,
+  "estimated_revenue_per_extra_short_stay_admission_usd": 10450,
+  "note": "These are illustrative demo assumptions, not validated customer economics."
+}

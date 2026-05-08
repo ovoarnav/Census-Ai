@@ -1,0 +1,37 @@
+SYNTHETIC REFERRAL PACKET — FOR DEMO USE ONLY
+Referral ID: REF-008
+Source: Regional Ortho Center
+Channel: Email referral
+Received: 2026-05-07 10:46
+Target Facility: GV-SNF-001
+
+PATIENT FACE SHEET
+Patient Initials: L.N.
+Age: 72
+Payer: Medicare Advantage
+Authorization Status: approved
+Discharge Target: 2026-05-07 16:00
+
+CURRENT COURSE OF ILLNESS AND TREATMENT
+Primary Diagnosis / Reason for Referral: Total knee replacement, short-term rehabilitation
+Hospital Course: Post-op day 2. Stable and ready for rehab transfer today.
+
+CLINICAL CARE NEEDS
+Current Medications / MAR Summary: Pain regimen, aspirin DVT prophylaxis, amlodipine.
+Allergies: No known drug allergies.
+Mobility / Transfer Status: One-person assist, ambulated 50 feet with walker.
+Therapy Need: PT/OT recommend daily rehab.
+Wound / Skin Needs: Surgical dressing intact, routine post-op care.
+Oxygen / Respiratory Needs: None.
+Dialysis Need: No.
+Cognitive Status: Alert and oriented x4.
+Behavioral / Safety Concerns: No behavioral concerns.
+Infection / Isolation Status: No isolation required.
+Advance Directive / Code Status: Full code.
+Durable Medical Equipment Needs: Rolling walker.
+
+KNOWN MISSING OR UNCLEAR ITEMS
+- None documented in this synthetic packet.
+
+DEMO NOTE
+This document is fully synthetic and contains no real patient data.

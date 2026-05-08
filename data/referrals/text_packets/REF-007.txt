@@ -1,0 +1,37 @@
+SYNTHETIC REFERRAL PACKET — FOR DEMO USE ONLY
+Referral ID: REF-007
+Source: St. Anne Medical Center
+Channel: Referral portal
+Received: 2026-05-07 10:31
+Target Facility: GV-SNF-001
+
+PATIENT FACE SHEET
+Patient Initials: D.H.
+Age: 65
+Payer: Medicare Part A
+Authorization Status: not_required
+Discharge Target: 2026-05-08 10:31
+
+CURRENT COURSE OF ILLNESS AND TREATMENT
+Primary Diagnosis / Reason for Referral: Complex tracheostomy care after prolonged ICU stay
+Hospital Course: Respiratory failure improving but requires tracheostomy suctioning and complex airway monitoring.
+
+CLINICAL CARE NEEDS
+Current Medications / MAR Summary: Multiple respiratory treatments, anticoagulation, tube feeds.
+Allergies: No known drug allergies.
+Mobility / Transfer Status: Dependent for bed mobility and transfers.
+Therapy Need: PT/OT/ST involved.
+Wound / Skin Needs: No active wounds documented.
+Oxygen / Respiratory Needs: Humidified oxygen via trach collar.
+Dialysis Need: No.
+Cognitive Status: Awake, follows simple commands.
+Behavioral / Safety Concerns: No behavioral concerns.
+Infection / Isolation Status: No isolation required.
+Advance Directive / Code Status: Full code.
+Durable Medical Equipment Needs: Trach supplies, suction equipment, hospital bed.
+
+KNOWN MISSING OR UNCLEAR ITEMS
+- Detailed respiratory care orders
+
+DEMO NOTE
+This document is fully synthetic and contains no real patient data.

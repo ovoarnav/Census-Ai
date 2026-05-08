@@ -1,0 +1,39 @@
+SYNTHETIC REFERRAL PACKET — FOR DEMO USE ONLY
+    Referral ID: REF-002
+    Source: St. Anne Medical Center
+    Channel: Fax packet
+    Received: 2026-05-07 09:18
+    Target Facility: GV-SNF-001
+
+    PATIENT FACE SHEET
+    Patient Initials: R.L.
+    Age: 83
+    Payer: Medicare Advantage
+    Authorization Status: missing
+    Discharge Target: 2026-05-08 10:00
+
+    CURRENT COURSE OF ILLNESS AND TREATMENT
+    Primary Diagnosis / Reason for Referral: Congestive heart failure exacerbation with deconditioning
+    Hospital Course: Diuresed during admission. Stable on oral medications but below baseline mobility.
+
+    CLINICAL CARE NEEDS
+    Current Medications / MAR Summary: Medication list referenced but MAR not included in packet.
+    Allergies: Penicillin allergy.
+    Mobility / Transfer Status: One-person assist for transfers; needs supervised ambulation.
+    Therapy Need: PT recommended. OT evaluation pending.
+    Wound / Skin Needs: No wound care.
+    Oxygen / Respiratory Needs: 2L nasal cannula at night.
+    Dialysis Need: No.
+    Cognitive Status: Alert and oriented x4.
+    Behavioral / Safety Concerns: No behavioral concerns.
+    Infection / Isolation Status: No isolation required.
+    Advance Directive / Code Status: DNR per hospital note.
+    Durable Medical Equipment Needs: Oxygen concentrator requested.
+
+    KNOWN MISSING OR UNCLEAR ITEMS
+    - Prior authorization status
+- Current MAR
+- OT evaluation
+
+    DEMO NOTE
+    This document is fully synthetic and contains no real patient data.

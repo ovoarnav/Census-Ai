@@ -1,0 +1,38 @@
+SYNTHETIC REFERRAL PACKET — FOR DEMO USE ONLY
+    Referral ID: REF-011
+    Source: Mercy Hospital Discharge Planning
+    Channel: Phone call transcript
+    Received: 2026-05-07 11:36
+    Target Facility: GV-SNF-001
+
+    PATIENT FACE SHEET
+    Patient Initials: N.F.
+    Age: 84
+    Payer: Medicaid
+    Authorization Status: not_required
+    Discharge Target: 2026-05-07 15:36
+
+    CURRENT COURSE OF ILLNESS AND TREATMENT
+    Primary Diagnosis / Reason for Referral: Generalized weakness after UTI, long-term placement consideration
+    Hospital Course: UTI treated. Family cannot provide care at home. Looking for long-term care placement.
+
+    CLINICAL CARE NEEDS
+    Current Medications / MAR Summary: Oral antibiotics completed, sertraline, levothyroxine.
+    Allergies: No known drug allergies.
+    Mobility / Transfer Status: Two-person assist for transfers; wheelchair for mobility.
+    Therapy Need: Therapy screen only; no strong skilled rehab goal.
+    Wound / Skin Needs: No wounds.
+    Oxygen / Respiratory Needs: None.
+    Dialysis Need: No.
+    Cognitive Status: Mild cognitive impairment.
+    Behavioral / Safety Concerns: No behavioral concerns.
+    Infection / Isolation Status: No isolation required.
+    Advance Directive / Code Status: DNR.
+    Durable Medical Equipment Needs: Wheelchair.
+
+    KNOWN MISSING OR UNCLEAR ITEMS
+    - Long-term care financial packet
+- Responsible party paperwork
+
+    DEMO NOTE
+    This document is fully synthetic and contains no real patient data.

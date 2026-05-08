@@ -1,0 +1,53 @@
+{
+  "hard_decline_rules": [
+    {
+      "rule_id": "NO_VENT",
+      "condition": "referral.requires_ventilator == true and facility.ventilator == false",
+      "message": "Ventilator support required but facility does not support ventilators."
+    },
+    {
+      "rule_id": "NO_TRACH_COMPLEX",
+      "condition": "referral.requires_complex_tracheostomy == true and facility.tracheostomy_complex == false",
+      "message": "Complex tracheostomy care required but facility does not support it."
+    },
+    {
+      "rule_id": "NO_BED",
+      "condition": "facility.available_beds_today.skilled_rehab + facility.available_beds_today.long_term_care == 0",
+      "message": "No available skilled or long-term care bed today."
+    },
+    {
+      "rule_id": "NO_PAYER",
+      "condition": "facility.accepted_payers[referral.payer] == false",
+      "message": "Payer not accepted by facility."
+    },
+    {
+      "rule_id": "AL_SKILLED_NEED",
+      "condition": "facility.facility_type == 'AL' and referral.requires_24_7_skilled_nursing == true",
+      "message": "Assisted living facility cannot support 24/7 skilled nursing need."
+    }
+  ],
+  "clinical_review_rules": [
+    "wound_vac",
+    "iv_antibiotics",
+    "two_person_assist",
+    "mechanical_lift",
+    "moderate_to_severe_cognitive_impairment",
+    "behavioral_symptoms",
+    "isolation_precautions",
+    "insulin_regimen",
+    "high_risk_anticoagulant"
+  ],
+  "weighted_fit_model": {
+    "clinical_fit_weight": 0.35,
+    "operational_fit_weight": 0.25,
+    "financial_fit_weight": 0.2,
+    "information_completeness_weight": 0.1,
+    "urgency_weight": 0.1
+  },
+  "recommendation_thresholds": {
+    "accept_ready": "overall_score >= 85 and no high severity missing info and no hard constraints",
+    "likely_accept_needs_info": "overall_score >= 70 and no hard constraints",
+    "clinical_review": "overall_score >= 50 or clinical review rule triggered",
+    "decline_recommended": "hard constraint triggered or overall_score < 50"
+  }
+}

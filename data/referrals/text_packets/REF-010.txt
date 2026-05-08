@@ -1,0 +1,38 @@
+SYNTHETIC REFERRAL PACKET — FOR DEMO USE ONLY
+    Referral ID: REF-010
+    Source: Northview Hospital
+    Channel: Referral portal
+    Received: 2026-05-07 11:21
+    Target Facility: GV-SNF-001
+
+    PATIENT FACE SHEET
+    Patient Initials: E.W.
+    Age: 76
+    Payer: Out of Network Managed Medicaid
+    Authorization Status: pending
+    Discharge Target: 2026-05-07 19:21
+
+    CURRENT COURSE OF ILLNESS AND TREATMENT
+    Primary Diagnosis / Reason for Referral: Cellulitis requiring IV antibiotics
+    Hospital Course: Improving cellulitis. Needs IV antibiotics for five more days and wound monitoring.
+
+    CLINICAL CARE NEEDS
+    Current Medications / MAR Summary: Vancomycin IV daily through 05/12, warfarin, metoprolol.
+    Allergies: Cephalexin allergy.
+    Mobility / Transfer Status: One-person assist.
+    Therapy Need: PT evaluation says rehab potential fair.
+    Wound / Skin Needs: Lower extremity wound dressing daily.
+    Oxygen / Respiratory Needs: None.
+    Dialysis Need: No.
+    Cognitive Status: Alert and oriented x4.
+    Behavioral / Safety Concerns: No behavioral concerns.
+    Infection / Isolation Status: Contact precautions for MRSA wound.
+    Advance Directive / Code Status: Full code.
+    Durable Medical Equipment Needs: IV supplies.
+
+    KNOWN MISSING OR UNCLEAR ITEMS
+    - Network exception/contract confirmation
+- Vancomycin monitoring plan
+
+    DEMO NOTE
+    This document is fully synthetic and contains no real patient data.

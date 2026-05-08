@@ -1,0 +1,39 @@
+SYNTHETIC REFERRAL PACKET — FOR DEMO USE ONLY
+    Referral ID: REF-009
+    Source: County General Hospital
+    Channel: Portal screenshot entered manually
+    Received: 2026-05-07 11:03
+    Target Facility: GV-SNF-001
+
+    PATIENT FACE SHEET
+    Patient Initials: P.R.
+    Age: 80
+    Payer: Medicare Part A
+    Authorization Status: not_required
+    Discharge Target: 2026-05-07 17:03
+
+    CURRENT COURSE OF ILLNESS AND TREATMENT
+    Primary Diagnosis / Reason for Referral: Stroke with dysphagia and major functional decline
+    Hospital Course: Acute stroke treated. Needs rehab, swallowing precautions, and close monitoring.
+
+    CLINICAL CARE NEEDS
+    Current Medications / MAR Summary: Clopidogrel, atorvastatin, lisinopril.
+    Allergies: Not listed.
+    Mobility / Transfer Status: Dependent for transfers; mechanical lift recommended.
+    Therapy Need: PT/OT/ST recommended.
+    Wound / Skin Needs: No wounds.
+    Oxygen / Respiratory Needs: None.
+    Dialysis Need: No.
+    Cognitive Status: Moderate impairment; follows one-step commands.
+    Behavioral / Safety Concerns: No aggression, needs supervision.
+    Infection / Isolation Status: No isolation required.
+    Advance Directive / Code Status: Full code.
+    Durable Medical Equipment Needs: Mechanical lift, wheelchair.
+
+    KNOWN MISSING OR UNCLEAR ITEMS
+    - Allergies
+- Diet/swallowing orders
+- Medication administration record
+
+    DEMO NOTE
+    This document is fully synthetic and contains no real patient data.

@@ -1,0 +1,77 @@
+{
+  "facility_id": "GV-SNF-001",
+  "facility_name": "Green Valley Skilled Nursing",
+  "facility_type": "SNF",
+  "market": "Midwest independent operator",
+  "total_beds": 96,
+  "available_beds_today": {
+    "skilled_rehab": 4,
+    "long_term_care": 2,
+    "memory_care": 0,
+    "isolation_private": 1
+  },
+  "admission_hours": {
+    "weekday": "08:00-18:00",
+    "weekend": "09:00-15:00",
+    "after_hours_admissions_supported": false
+  },
+  "accepted_payers": {
+    "Medicare Part A": true,
+    "Medicare Advantage": true,
+    "Medicaid": true,
+    "Commercial": true,
+    "Private Pay": true,
+    "Out of Network Managed Medicaid": false
+  },
+  "payer_constraints": {
+    "Medicare Advantage": {
+      "prior_authorization_required": true,
+      "network_required": true
+    },
+    "Commercial": {
+      "prior_authorization_required": true,
+      "network_required": true
+    },
+    "Medicare Part A": {
+      "prior_authorization_required": false,
+      "network_required": false
+    },
+    "Medicaid": {
+      "prior_authorization_required": false,
+      "network_required": true
+    }
+  },
+  "clinical_capabilities": {
+    "wound_care": true,
+    "wound_vac": true,
+    "iv_antibiotics": true,
+    "oxygen_support": true,
+    "cpap_bipap": true,
+    "dialysis_on_site": false,
+    "dialysis_transport_coordination": true,
+    "ventilator": false,
+    "tracheostomy_complex": false,
+    "memory_care_locked_unit": false,
+    "behavioral_high_acuity": false,
+    "bariatric_bed_available": false,
+    "isolation_precautions": true,
+    "two_person_assist_supported": true,
+    "total_mechanical_lift_supported": true,
+    "pt_ot_st_available": true
+  },
+  "operational_constraints": {
+    "max_new_admissions_per_day": 3,
+    "current_admissions_today": 1,
+    "night_shift_staffing": "moderate_constraint",
+    "weekend_pharmacy_cutoff": "14:00",
+    "requires_nurse_review_for": [
+      "wound_vac",
+      "iv_antibiotics",
+      "two_person_assist",
+      "behavioral_symptoms",
+      "isolation_precautions",
+      "high_risk_anticoagulant",
+      "insulin_regimen"
+    ]
+  }
+}
