@@ -12,8 +12,6 @@ from src.ingestion.document_loader import list_referral_ids, load_referral_packe
 from src.scoring.fit_engine import evaluate_referral
 from src.workflow.response_draft import generate_response_draft
 from src.extraction.extractor_router import extract_referral_by_mode
-from src.ingestion.config_loader import load_facility_profile, load_payer_rules
-from src.scoring.fit_engine import evaluate_referral
 
 EvaluationBundle = Dict[str, Any]
 
@@ -38,9 +36,12 @@ def load_all_evaluations() -> List[EvaluationBundle]:
     results: List[EvaluationBundle] = []
 
     for referral_id in list_referral_ids():
-        raw_packet = load_referral_packet(referral_id)
-        referral = extract_referral(raw_packet)
-        evaluation = evaluate_referral(referral, facility, payer_rules)
+        try:
+            raw_packet = load_referral_packet(referral_id)
+            referral = extract_referral(raw_packet)
+            evaluation = evaluate_referral(referral, facility, payer_rules)
+        except Exception:
+            continue
 
         results.append({
             "referral": referral,
@@ -97,6 +98,80 @@ def render_hard_constraints(evaluation: Dict[str, Any]) -> None:
         st.error(f"**{item['type']}** — {item['message']}")
 
 
+
+
+def render_mismatch_findings(evaluation: Dict[str, Any]) -> None:
+    findings = evaluation.get("mismatch_findings", [])
+    if not findings:
+        st.success("No mismatch findings detected.")
+        return
+
+    for item in findings:
+        severity = str(item.get("severity", "unknown")).upper()
+        mismatch_type = str(item.get("mismatch_type", "unknown"))
+        message = str(item.get("message", ""))
+        why_it_matters = str(item.get("why_it_matters", ""))
+        recommended_action = str(item.get("recommended_action", ""))
+        evidence = item.get("evidence") or {}
+        quote = evidence.get("quote") if isinstance(evidence, dict) else None
+        quote_verified = evidence.get("quote_verified") if isinstance(evidence, dict) else None
+
+        if severity in {"CRITICAL", "HIGH"}:
+            st.error(f"**{severity}** — `{mismatch_type}`: {message}")
+        elif severity == "MEDIUM":
+            st.warning(f"**{severity}** — `{mismatch_type}`: {message}")
+        else:
+            st.info(f"**{severity}** — `{mismatch_type}`: {message}")
+
+        st.write(f"**Why it matters:** {why_it_matters}")
+        st.write(f"**Recommended action:** {recommended_action}")
+
+        if quote:
+            quote_label = "verified" if quote_verified else "unverified"
+            st.caption(f"Evidence ({quote_label}): \"{quote}\"")
+
+
+def render_evidence_grounding(referral: ReferralExtract) -> None:
+    fields = [
+        "payer",
+        "authorization_status",
+        "primary_diagnosis",
+        "current_medications_or_mar",
+        "allergies",
+        "infection_isolation_status",
+        "cognitive_status",
+        "behavioral_safety_concerns",
+        "oxygen_respiratory_needs",
+        "dialysis_need",
+    ]
+
+    rows = []
+    for field_name in fields:
+        value = getattr(referral, field_name, None)
+        best = referral.get_best_evidence(field_name)
+        if best:
+            rows.append({
+                "field": field_name,
+                "value": value,
+                "source_doc_id": best.source_doc_id,
+                "exact_quote": best.quote,
+                "quote_verified": best.quote_verified,
+                "confidence": referral.extraction_confidence.get(field_name),
+                "evidence_status": "verified" if best.quote_verified else "unverified/low-confidence",
+            })
+        else:
+            rows.append({
+                "field": field_name,
+                "value": value,
+                "source_doc_id": None,
+                "exact_quote": None,
+                "quote_verified": False,
+                "confidence": referral.extraction_confidence.get(field_name),
+                "evidence_status": "missing evidence",
+            })
+
+    st.dataframe(pd.DataFrame(rows), use_container_width=True, hide_index=True)
+
 def render_referral_summary(referral: ReferralExtract) -> None:
     summary_rows = [
         ("Referral ID", referral.referral_id),
@@ -137,6 +212,11 @@ def main() -> None:
     st.caption("Synthetic MVP — referral capture, fit scoring, admissions response support, and census-growth analytics")
 
     evaluations = load_all_evaluations()
+    if not evaluations:
+        st.error("No referral data could be loaded. Confirm synthetic data files exist under data/referrals/text_packets.")
+        st.info("You can also copy the optional v2 dataset into censusflow_synthetic_data_v2/ and rerun.")
+        return
+
     table = build_evaluation_table(evaluations)
     summary = summarize_dashboard(table)
 
@@ -264,6 +344,9 @@ def main() -> None:
                 st.markdown("### Fit Recommendation")
                 st.metric(recommendation["label"], f"{evaluation['overall_score']}/100")
 
+                st.markdown("#### Admissions Risk / Mismatch Review")
+                render_mismatch_findings(evaluation)
+
                 st.markdown("#### Score Breakdown")
                 render_score_table(evaluation)
 
@@ -288,15 +371,8 @@ def main() -> None:
             evidence_col, response_col = st.columns([1, 1])
 
             with evidence_col:
-                st.markdown("### Evidence Snippets")
-                evidence = referral.evidence
-                if evidence:
-                    evidence_df = pd.DataFrame(
-                        [{"Field": key, "Evidence": value} for key, value in evidence.items()]
-                    )
-                    st.dataframe(evidence_df, use_container_width=True, hide_index=True)
-                else:
-                    st.info("No evidence snippets available.")
+                st.markdown("### Evidence Grounding")
+                render_evidence_grounding(referral)
 
                 with st.expander("Raw synthetic packet"):
                     st.text(raw_packet)
