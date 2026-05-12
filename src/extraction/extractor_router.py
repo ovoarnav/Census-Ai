@@ -9,6 +9,7 @@ from src.extraction.deterministic_extractor import (
 )
 from src.extraction.hf_extractor import extract_referral_with_hf
 from src.extraction.schema import ReferralExtract
+from src.evidence.verifier import verify_referral_evidence
 from src.ingestion.models import ReferralDocumentBundle
 
 
@@ -46,4 +47,5 @@ def extract_referral_from_bundle_by_mode(
     mode: BundleExtractionMode = "heuristic_bundle",
 ) -> ReferralExtract:
     """Bundle-aware extractor router for Phase 5; preserves legacy text extraction paths."""
-    return extract_referral_from_bundle(bundle, mode)
+    referral_extract = extract_referral_from_bundle(bundle, mode)
+    return verify_referral_evidence(referral_extract, bundle)

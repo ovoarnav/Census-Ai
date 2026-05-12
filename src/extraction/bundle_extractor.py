@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 import re
-from typing import Literal
+from typing import Literal, Pattern
 
 from src.extraction.deterministic_extractor import extract_referral as extract_deterministic
 from src.extraction.schema import ReferralExtract
@@ -14,6 +14,30 @@ BundleExtractionMode = Literal[
 ]
 
 
+FIELD_PATTERNS: dict[str, Pattern[str]] = {
+    "patient_initials": re.compile(r"Patient Initials:\s*(.*)", re.IGNORECASE),
+    "payer": re.compile(r"Payer:\s*(.*)", re.IGNORECASE),
+    "authorization_status": re.compile(r"Authorization Status:\s*(.*)", re.IGNORECASE),
+    "primary_diagnosis": re.compile(
+        r"Primary Diagnosis(?: / Reason for Referral)?:\s*(.*)", re.IGNORECASE
+    ),
+    "current_medications_or_mar": re.compile(
+        r"(?:Current Medications / MAR Summary|MAR):\s*(.*)", re.IGNORECASE
+    ),
+    "allergies": re.compile(r"Allergies:\s*(.*)", re.IGNORECASE),
+    "mobility_transfer_status": re.compile(r"Mobility / Transfer Status:\s*(.*)", re.IGNORECASE),
+    "therapy_need": re.compile(r"Therapy Need:\s*(.*)", re.IGNORECASE),
+    "oxygen_respiratory_needs": re.compile(r"Oxygen / Respiratory Needs:\s*(.*)", re.IGNORECASE),
+    "dialysis_need": re.compile(r"Dialysis Need:\s*(.*)", re.IGNORECASE),
+    "cognitive_status": re.compile(r"Cognitive Status:\s*(.*)", re.IGNORECASE),
+    "behavioral_safety_concerns": re.compile(r"Behavioral / Safety Concerns:\s*(.*)", re.IGNORECASE),
+    "infection_isolation_status": re.compile(r"Infection / Isolation Status:\s*(.*)", re.IGNORECASE),
+    "durable_medical_equipment_needs": re.compile(
+        r"Durable Medical Equipment Needs:\s*(.*)", re.IGNORECASE
+    ),
+}
+
+
 def _normalized_bundle_text(bundle: ReferralDocumentBundle) -> str:
     parts = []
     for doc in bundle.source_documents:
@@ -22,16 +46,18 @@ def _normalized_bundle_text(bundle: ReferralDocumentBundle) -> str:
     return "\n\n".join(parts)
 
 
-def _find_line_value(label_regex: str, text: str) -> str | None:
-    match = re.search(label_regex, text, flags=re.IGNORECASE)
+def _find_line_value(label_pattern: Pattern[str], text: str) -> str | None:
+    match = label_pattern.search(text)
     if not match:
         return None
     value = match.group(1).strip()
     return value if value else None
 
 
-def _extract_evidence_from_doc(field_name: str, pattern: str, doc: SourceDocument) -> EvidenceSpan | None:
-    match = re.search(pattern, doc.text or "", flags=re.IGNORECASE)
+def _extract_evidence_from_doc(
+    field_name: str, pattern: Pattern[str], doc: SourceDocument
+) -> EvidenceSpan | None:
+    match = pattern.search(doc.text or "")
     if not match:
         return None
     quote = match.group(1).strip()
@@ -43,7 +69,7 @@ def _extract_evidence_from_doc(field_name: str, pattern: str, doc: SourceDocumen
         quote=quote,
         char_start=match.start(1),
         char_end=match.end(1),
-        quote_verified=True,
+        quote_verified=False,
     )
 
 
@@ -69,26 +95,9 @@ def extract_referral_from_bundle(
             "source_document_ids": [doc.source_doc_id for doc in bundle.source_documents],
         }
 
-        field_patterns = {
-            "patient_initials": r"Patient Initials:\s*(.*)",
-            "payer": r"Payer:\s*(.*)",
-            "authorization_status": r"Authorization Status:\s*(.*)",
-            "primary_diagnosis": r"Primary Diagnosis(?: / Reason for Referral)?:\s*(.*)",
-            "current_medications_or_mar": r"(?:Current Medications / MAR Summary|MAR):\s*(.*)",
-            "allergies": r"Allergies:\s*(.*)",
-            "mobility_transfer_status": r"Mobility / Transfer Status:\s*(.*)",
-            "therapy_need": r"Therapy Need:\s*(.*)",
-            "oxygen_respiratory_needs": r"Oxygen / Respiratory Needs:\s*(.*)",
-            "dialysis_need": r"Dialysis Need:\s*(.*)",
-            "cognitive_status": r"Cognitive Status:\s*(.*)",
-            "behavioral_safety_concerns": r"Behavioral / Safety Concerns:\s*(.*)",
-            "infection_isolation_status": r"Infection / Isolation Status:\s*(.*)",
-            "durable_medical_equipment_needs": r"Durable Medical Equipment Needs:\s*(.*)",
-        }
-
         evidence_spans: dict[str, list[EvidenceSpan]] = {}
 
-        for field_name, pattern in field_patterns.items():
+        for field_name, pattern in FIELD_PATTERNS.items():
             value = _find_line_value(pattern, all_text)
             if value:
                 payload[field_name] = value
