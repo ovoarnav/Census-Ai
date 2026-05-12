@@ -43,7 +43,7 @@ def _extract_evidence_from_doc(field_name: str, pattern: str, doc: SourceDocumen
         quote=quote,
         char_start=match.start(1),
         char_end=match.end(1),
-        quote_verified=True,
+        quote_verified=False,
     )
 
 

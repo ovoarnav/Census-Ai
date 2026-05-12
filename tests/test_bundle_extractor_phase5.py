@@ -35,7 +35,9 @@ def test_heuristic_bundle_extracts_fields_and_evidence():
     assert extracted.authorization_status == "Pending"
     assert extracted.primary_diagnosis == "CHF exacerbation"
     assert extracted.source_document_ids == ["doc-1"]
-    assert extracted.get_best_evidence("payer") is not None
+    payer_span = extracted.get_best_evidence("payer")
+    assert payer_span is not None
+    assert payer_span.quote_verified is False
 
 
 def test_deterministic_text_packet_mode_still_runs_on_bundle():
@@ -48,6 +50,9 @@ def test_llm_placeholder_raises_not_implemented():
         extract_referral_from_bundle(_bundle(), mode="llm_placeholder")
 
 
-def test_router_supports_bundle_mode():
+def test_router_supports_bundle_mode_and_verifies_evidence():
     extracted = extract_referral_from_bundle_by_mode(_bundle(), mode="heuristic_bundle")
     assert extracted.referral_id == "REF-700"
+    payer_span = extracted.get_best_evidence("payer")
+    assert payer_span is not None
+    assert payer_span.quote_verified is True
