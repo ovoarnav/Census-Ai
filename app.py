@@ -36,9 +36,12 @@ def load_all_evaluations() -> List[EvaluationBundle]:
     results: List[EvaluationBundle] = []
 
     for referral_id in list_referral_ids():
-        raw_packet = load_referral_packet(referral_id)
-        referral = extract_referral(raw_packet)
-        evaluation = evaluate_referral(referral, facility, payer_rules)
+        try:
+            raw_packet = load_referral_packet(referral_id)
+            referral = extract_referral(raw_packet)
+            evaluation = evaluate_referral(referral, facility, payer_rules)
+        except Exception:
+            continue
 
         results.append({
             "referral": referral,
@@ -209,6 +212,11 @@ def main() -> None:
     st.caption("Synthetic MVP — referral capture, fit scoring, admissions response support, and census-growth analytics")
 
     evaluations = load_all_evaluations()
+    if not evaluations:
+        st.error("No referral data could be loaded. Confirm synthetic data files exist under data/referrals/text_packets.")
+        st.info("You can also copy the optional v2 dataset into censusflow_synthetic_data_v2/ and rerun.")
+        return
+
     table = build_evaluation_table(evaluations)
     summary = summarize_dashboard(table)
 
