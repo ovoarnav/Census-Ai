@@ -3,13 +3,7 @@ from typing import Dict, List
 from src.extraction.schema import ReferralExtract
 from src.workflow.missing_info import check_missing_information
 from src.scoring.mismatch_detector import detect_mismatches
-
-
-def contains(text: str | None, *keywords: str) -> bool:
-    if not text:
-        return False
-    lowered = text.lower()
-    return any(keyword.lower() in lowered for keyword in keywords)
+from src.scoring.text_utils import contains
 
 
 def check_hard_constraints(referral: ReferralExtract, facility: dict) -> List[Dict[str, str]]:

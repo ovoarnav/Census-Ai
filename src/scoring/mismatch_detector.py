@@ -4,13 +4,7 @@ from typing import Dict, List, Optional
 
 from src.extraction.schema import ReferralExtract
 from src.ingestion.models import EvidenceSpan, MismatchFinding
-
-
-def contains(text: str | None, *keywords: str) -> bool:
-    if not text:
-        return False
-    lowered = text.lower()
-    return any(keyword.lower() in lowered for keyword in keywords)
+from src.scoring.text_utils import contains
 
 
 def _get_evidence(referral: ReferralExtract, field_name: str) -> Optional[EvidenceSpan]:
