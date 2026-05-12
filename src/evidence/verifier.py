@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from copy import deepcopy
 from typing import Dict, List
 
 from src.extraction.schema import ReferralExtract
@@ -59,20 +60,23 @@ def verify_evidence_span(
 def verify_referral_evidence(
     referral_extract: ReferralExtract,
     document_bundle: ReferralDocumentBundle,
+    in_place: bool = True,
 ) -> ReferralExtract:
     """Verify all evidence spans against source docs; never mark unverifiable quotes as verified."""
+    target_extract = referral_extract if in_place else deepcopy(referral_extract)
+
     source_docs = {d.source_doc_id: d for d in document_bundle.source_documents}
 
-    if not referral_extract.evidence_spans and referral_extract.evidence:
-        referral_extract.ensure_evidence_spans_from_legacy()
+    if not target_extract.evidence_spans and target_extract.evidence:
+        target_extract.ensure_evidence_spans_from_legacy()
 
     verified_spans: Dict[str, List[EvidenceSpan]] = {}
-    for field_name, spans in referral_extract.evidence_spans.items():
+    for field_name, spans in target_extract.evidence_spans.items():
         verified_spans[field_name] = [verify_evidence_span(span, source_docs) for span in spans]
 
-    referral_extract.evidence_spans = verified_spans
+    target_extract.evidence_spans = verified_spans
 
-    if not referral_extract.source_document_ids:
-        referral_extract.source_document_ids = [d.source_doc_id for d in document_bundle.source_documents]
+    if not target_extract.source_document_ids:
+        target_extract.source_document_ids = [d.source_doc_id for d in document_bundle.source_documents]
 
-    return referral_extract
+    return target_extract

@@ -68,3 +68,64 @@ def test_verify_referral_evidence_verifies_and_repairs():
     assert best.quote_verified is True
     assert best.char_start == 7
     assert best.char_end == 17
+
+
+def test_verify_referral_evidence_in_place_true_mutates_original():
+    extract = ReferralExtract(
+        referral_id="REF-101",
+        evidence_spans={
+            "payer": [
+                EvidenceSpan(
+                    field_name="payer",
+                    source_doc_id="doc-1",
+                    quote="Medicare A",
+                    char_start=0,
+                    char_end=2,
+                )
+            ]
+        },
+    )
+    bundle = ReferralDocumentBundle(
+        referral_id="REF-101",
+        source_documents=[SourceDocument(source_doc_id="doc-1", text="Payer: Medicare A")],
+    )
+
+    verified = verify_referral_evidence(extract, bundle, in_place=True)
+
+    assert verified is extract
+    assert extract.evidence_spans["payer"][0].char_start == 7
+    assert extract.evidence_spans["payer"][0].char_end == 17
+    assert extract.evidence_spans["payer"][0].quote_verified is True
+
+
+def test_verify_referral_evidence_in_place_false_returns_copy():
+    extract = ReferralExtract(
+        referral_id="REF-101",
+        evidence_spans={
+            "payer": [
+                EvidenceSpan(
+                    field_name="payer",
+                    source_doc_id="doc-1",
+                    quote="Medicare A",
+                    char_start=0,
+                    char_end=2,
+                    quote_verified=False,
+                )
+            ]
+        },
+    )
+    bundle = ReferralDocumentBundle(
+        referral_id="REF-101",
+        source_documents=[SourceDocument(source_doc_id="doc-1", text="Payer: Medicare A")],
+    )
+
+    verified = verify_referral_evidence(extract, bundle, in_place=False)
+
+    assert verified is not extract
+    assert verified.evidence_spans["payer"][0] is not extract.evidence_spans["payer"][0]
+    assert extract.evidence_spans["payer"][0].char_start == 0
+    assert extract.evidence_spans["payer"][0].char_end == 2
+    assert extract.evidence_spans["payer"][0].quote_verified is False
+    assert verified.evidence_spans["payer"][0].char_start == 7
+    assert verified.evidence_spans["payer"][0].char_end == 17
+    assert verified.evidence_spans["payer"][0].quote_verified is True
