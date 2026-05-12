@@ -1,5 +1,6 @@
 from typing import Dict, List
 
+from src.config import REQUIRE_VERIFIED_QUOTES
 from src.extraction.schema import ReferralExtract
 from src.workflow.missing_info import check_missing_information
 from src.scoring.mismatch_detector import detect_mismatches
@@ -196,13 +197,19 @@ def generate_recommendation(
     hard_constraints: List[dict],
     missing_info: List[dict],
     scores: Dict[str, int],
+    mismatch_findings: List[dict],
 ) -> Dict[str, object]:
     high_missing = [item for item in missing_info if item.get("severity") == "high"]
+
+    has_high_evidence_gap = any(
+        finding.get("mismatch_type") == "weak_or_missing_evidence" and finding.get("severity") == "high"
+        for finding in mismatch_findings
+    )
 
     if hard_constraints:
         status = "decline_recommended"
         label = "Decline recommended / escalation required"
-    elif overall_score >= 85 and not high_missing:
+    elif overall_score >= 85 and not high_missing and not (REQUIRE_VERIFIED_QUOTES and has_high_evidence_gap):
         status = "accept_ready"
         label = "Accept-ready"
     elif overall_score >= 70:
@@ -222,6 +229,9 @@ def generate_recommendation(
 
     if high_missing:
         reasons.append("High-severity missing information must be resolved before final admission decision.")
+
+    if REQUIRE_VERIFIED_QUOTES and has_high_evidence_gap:
+        reasons.append("Verified quote evidence is required for critical fields before acceptance.")
 
     if scores["clinical_fit"] >= 80:
         reasons.append("Clinical needs appear mostly within facility capabilities.")
@@ -261,14 +271,15 @@ def evaluate_referral(referral: ReferralExtract, facility: dict, payer_rules: di
     }
 
     overall_score = calculate_overall_score(scores)
-    recommendation = generate_recommendation(overall_score, hard_constraints, missing_info, scores)
+    mismatch_findings_dicts = [finding.model_dump() for finding in mismatch_findings]
+    recommendation = generate_recommendation(overall_score, hard_constraints, missing_info, scores, mismatch_findings_dicts)
 
     return {
         "referral_id": referral.referral_id,
         "scores": scores,
         "overall_score": overall_score,
         "hard_constraints": hard_constraints,
-        "mismatch_findings": [finding.model_dump() for finding in mismatch_findings],
+        "mismatch_findings": mismatch_findings_dicts,
         "missing_info": missing_info,
         "recommendation": recommendation,
     }
