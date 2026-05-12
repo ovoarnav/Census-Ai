@@ -1,4 +1,4 @@
-from typing import Any, Dict, List
+from typing import Any, Dict, List, Tuple
 
 import pandas as pd
 import streamlit as st
@@ -6,6 +6,8 @@ import streamlit as st
 from src.analytics.metrics import build_evaluation_table, source_performance, summarize_dashboard
 from src.analytics.roi import estimate_monthly_revenue_lift, format_currency
 from src.extraction.deterministic_extractor import extract_referral
+from pydantic import ValidationError
+
 from src.extraction.schema import ReferralExtract
 from src.ingestion.config_loader import load_facility_profile, load_payer_rules
 from src.ingestion.document_loader import list_referral_ids, load_referral_packet
@@ -29,18 +31,23 @@ def status_label(status: str) -> str:
 
 
 @st.cache_data
-def load_all_evaluations() -> List[EvaluationBundle]:
+def load_all_evaluations() -> Tuple[List[EvaluationBundle], List[Dict[str, str]]]:
     facility = load_facility_profile()
     payer_rules = load_payer_rules()
 
     results: List[EvaluationBundle] = []
+    skipped_referrals: List[Dict[str, str]] = []
 
     for referral_id in list_referral_ids():
         try:
             raw_packet = load_referral_packet(referral_id)
             referral = extract_referral(raw_packet)
             evaluation = evaluate_referral(referral, facility, payer_rules)
-        except Exception:
+        except (FileNotFoundError, ValidationError, ValueError, KeyError) as exc:
+            skipped_referrals.append({
+                "referral_id": referral_id,
+                "error": str(exc).splitlines()[0][:180],
+            })
             continue
 
         results.append({
@@ -49,7 +56,7 @@ def load_all_evaluations() -> List[EvaluationBundle]:
             "raw_packet": raw_packet,
         })
 
-    return results
+    return results, skipped_referrals
 
 
 def find_bundle(evaluations: List[EvaluationBundle], referral_id: str) -> EvaluationBundle:
@@ -211,7 +218,8 @@ def main() -> None:
     st.title("CensusFlow AI")
     st.caption("Synthetic MVP — referral capture, fit scoring, admissions response support, and census-growth analytics")
 
-    evaluations = load_all_evaluations()
+    evaluations, skipped_referrals = load_all_evaluations()
+    st.session_state["load_skipped_referrals"] = skipped_referrals
     if not evaluations:
         st.error("No referral data could be loaded. Confirm synthetic data files exist under data/referrals/text_packets.")
         st.info("You can also copy the optional v2 dataset into censusflow_synthetic_data_v2/ and rerun.")
@@ -286,6 +294,12 @@ def main() -> None:
 
     with tabs[1]:
         st.subheader("Referral Review")
+
+        skipped_referrals = st.session_state.get("load_skipped_referrals", [])
+        if skipped_referrals:
+            st.warning(f"{len(skipped_referrals)} referrals skipped during load.")
+            with st.expander("Show skipped referral details"):
+                st.dataframe(pd.DataFrame(skipped_referrals), use_container_width=True, hide_index=True)
 
         if filtered_table.empty:
             st.info("No referrals match the current filters.")
