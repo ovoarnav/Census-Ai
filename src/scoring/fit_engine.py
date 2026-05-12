@@ -2,6 +2,7 @@ from typing import Dict, List
 
 from src.extraction.schema import ReferralExtract
 from src.workflow.missing_info import check_missing_information
+from src.scoring.mismatch_detector import detect_mismatches
 
 
 def contains(text: str | None, *keywords: str) -> bool:
@@ -249,6 +250,7 @@ def generate_recommendation(
 def evaluate_referral(referral: ReferralExtract, facility: dict, payer_rules: dict) -> Dict[str, object]:
     missing_info = check_missing_information(referral, payer_rules)
     hard_constraints = check_hard_constraints(referral, facility)
+    mismatch_findings = detect_mismatches(referral, facility, payer_rules)
 
     scores = {
         "clinical_fit": score_clinical_fit(referral, facility),
@@ -266,6 +268,7 @@ def evaluate_referral(referral: ReferralExtract, facility: dict, payer_rules: di
         "scores": scores,
         "overall_score": overall_score,
         "hard_constraints": hard_constraints,
+        "mismatch_findings": [finding.model_dump() for finding in mismatch_findings],
         "missing_info": missing_info,
         "recommendation": recommendation,
     }
