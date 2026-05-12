@@ -72,3 +72,38 @@ def test_evaluate_referral_includes_mismatch_findings():
     assert "mismatch_findings" in evaluation
     assert isinstance(evaluation["mismatch_findings"], list)
     assert any(f["mismatch_type"] == "payer_not_accepted" for f in evaluation["mismatch_findings"])
+
+
+def test_detect_mismatches_regression_cached_text_triggers_core_gaps():
+    referral = ReferralExtract(
+        referral_id="REF-502",
+        cognitive_status="Wandering and exit-seeking",
+        mobility_transfer_status="Requires two-person transfer with bariatric support",
+        durable_medical_equipment_needs="BARIATRIC bed and supplies",
+        oxygen_respiratory_needs="Ventilator dependent",
+        primary_diagnosis="Chronic respiratory failure with trach history",
+    )
+
+    findings = detect_mismatches(referral, _facility_fixture(), _payer_rules_fixture())
+    types = {f.mismatch_type for f in findings}
+
+    assert "memory_care_gap" in types
+    assert "bariatric_equipment_gap" in types
+    assert "ventilator_gap" in types
+    assert "tracheostomy_gap" in types
+
+
+def test_detect_mismatches_regression_conflicting_statuses_still_trigger():
+    referral = ReferralExtract(
+        referral_id="REF-503",
+        behavioral_safety_concerns="No concerns",
+        cognitive_status="Aggressive episodes and unsafe wandering",
+        infection_isolation_status="No isolation",
+        missing_or_unclear_items=["Isolation order unclear in packet"],
+    )
+
+    findings = detect_mismatches(referral, _facility_fixture(), _payer_rules_fixture())
+    types = {f.mismatch_type for f in findings}
+
+    assert "conflicting_behavioral_status" in types
+    assert "conflicting_isolation_status" in types
