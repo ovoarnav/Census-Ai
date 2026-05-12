@@ -62,10 +62,39 @@ def evaluate_mismatches() -> Dict[str, dict]:
 
     high_severity_expected = 0
     high_severity_detected = 0
+    rows_skipped = 0
+
+    has_expected_predicted = any(
+        isinstance(row.get("expected_mismatches"), list)
+        and isinstance(row.get("predicted_mismatches"), list)
+        for row in rows
+    )
+    has_gold_pred = any(
+        isinstance(row.get("gold"), list) and isinstance(row.get("pred"), list)
+        for row in rows
+    )
+    if has_expected_predicted:
+        schema_mode = "expected_mismatches+predicted_mismatches"
+    elif has_gold_pred:
+        schema_mode = "gold+pred"
+    else:
+        schema_mode = "unknown"
+
+    print(f"Detected input schema mode: {schema_mode}")
 
     for row in rows:
-        expected = row.get("expected_mismatches", row.get("gold", []))
-        predicted = row.get("predicted_mismatches", row.get("pred", []))
+        expected = row.get("expected_mismatches", row.get("gold"))
+        predicted = row.get("predicted_mismatches", row.get("pred"))
+
+        if not isinstance(expected, list) or not isinstance(predicted, list):
+            rows_skipped += 1
+            continue
+
+        if not all(isinstance(e, dict) for e in expected) or not all(
+            isinstance(p, dict) for p in predicted
+        ):
+            rows_skipped += 1
+            continue
 
         exp_types = {e.get("mismatch_type") for e in expected if e.get("mismatch_type")}
         pred_types = {p.get("mismatch_type") for p in predicted if p.get("mismatch_type")}
@@ -98,6 +127,7 @@ def evaluate_mismatches() -> Dict[str, dict]:
     )
 
     print("Mismatch evaluation metrics")
+    print(f"- rows skipped due to schema mismatch: {rows_skipped}")
     for mismatch_type, m in metrics_by_type.items():
         print(
             f"- {mismatch_type}: precision={m['precision']:.3f}, recall={m['recall']:.3f}, f1={m['f1']:.3f}"

@@ -68,10 +68,29 @@ def evaluate_extractions() -> Dict[str, float]:
     exact_match_count = 0
     null_match_total = 0
     null_match_count = 0
+    rows_skipped = 0
+
+    has_gold_pred = any(
+        isinstance(row.get("gold"), dict) and isinstance(row.get("pred"), dict)
+        for row in gold_rows
+    )
+    has_flat_pred = any(isinstance(row.get("prediction"), dict) for row in gold_rows)
+    if has_gold_pred:
+        schema_mode = "gold+pred"
+    elif has_flat_pred:
+        schema_mode = "row+prediction"
+    else:
+        schema_mode = "unknown"
+
+    print(f"Detected input schema mode: {schema_mode}")
 
     for row in gold_rows:
         gold = row.get("gold", row)
         pred = row.get("pred", row.get("prediction", {}))
+
+        if not isinstance(gold, dict) or not isinstance(pred, dict):
+            rows_skipped += 1
+            continue
 
         for _, gold_value, pred_value in _iter_field_pairs(gold, pred, excluded=["referral_id", "evidence_spans"]):
             total_fields += 1
@@ -100,6 +119,7 @@ def evaluate_extractions() -> Dict[str, float]:
     }
 
     print("Extraction evaluation metrics")
+    print(f"- rows skipped due to schema mismatch: {rows_skipped}")
     print(f"- field_exact_match_rate: {metrics['field_exact_match_rate']:.3f}")
     print(f"- field_missing_null_accuracy: {metrics['field_missing_null_accuracy']:.3f}")
     print(f"- evidence_quote_verification_rate: {metrics['evidence_quote_verification_rate']:.3f}")
