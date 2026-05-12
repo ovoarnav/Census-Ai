@@ -2,6 +2,7 @@ from __future__ import annotations
 
 from typing import Dict, List, Optional
 
+from src.config import REQUIRE_VERIFIED_QUOTES
 from src.extraction.schema import ReferralExtract
 from src.ingestion.models import EvidenceSpan, MismatchFinding
 
@@ -177,7 +178,11 @@ def detect_mismatches(referral: ReferralExtract, facility: dict, payer_rules: Di
     ]
     weak_fields = [f for f in important_fields if not referral.has_verified_evidence(f)]
     if weak_fields:
-        findings.append(_make_finding("weak_or_missing_evidence", "medium", "evidence_spans",
+        severity = "medium"
+        if REQUIRE_VERIFIED_QUOTES and any(field in {"payer", "authorization_status", "current_medications_or_mar", "allergies"} for field in weak_fields):
+            severity = "high"
+
+        findings.append(_make_finding("weak_or_missing_evidence", severity, "evidence_spans",
             f"Verified evidence is missing for key fields: {', '.join(weak_fields)}.",
             "Weak evidence traceability lowers confidence in admissions safety review.",
             "Request source documentation or verify quotes before final decision.",
