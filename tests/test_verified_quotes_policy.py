@@ -1,6 +1,6 @@
 from src.extraction.schema import ReferralExtract
 from src.scoring import fit_engine, mismatch_detector
-
+from typing import Any, cast
 
 def _facility_fixture():
     return {
@@ -60,14 +60,31 @@ def test_accept_ready_blocked_when_verified_quotes_required(monkeypatch):
 
     monkeypatch.setattr(mismatch_detector, "REQUIRE_VERIFIED_QUOTES", False)
     monkeypatch.setattr(fit_engine, "REQUIRE_VERIFIED_QUOTES", False)
-    relaxed_eval = fit_engine.evaluate_referral(referral, _facility_fixture(), {"Medicare A": {"prior_auth_required": True}})
-    assert relaxed_eval["recommendation"]["status"] == "accept_ready"
+
+    relaxed_eval = fit_engine.evaluate_referral(
+        referral,
+        _facility_fixture(),
+        {"Medicare A": {"prior_auth_required": True}},
+    )
+
+    relaxed_recommendation = cast(dict[str, Any], relaxed_eval["recommendation"])
+    assert relaxed_recommendation["status"] == "accept_ready"
 
     monkeypatch.setattr(mismatch_detector, "REQUIRE_VERIFIED_QUOTES", True)
     monkeypatch.setattr(fit_engine, "REQUIRE_VERIFIED_QUOTES", True)
-    strict_eval = fit_engine.evaluate_referral(referral, _facility_fixture(), {"Medicare A": {"prior_auth_required": True}})
-    assert strict_eval["recommendation"]["status"] != "accept_ready"
+
+    strict_eval = fit_engine.evaluate_referral(
+        referral,
+        _facility_fixture(),
+        {"Medicare A": {"prior_auth_required": True}},
+    )
+
+    strict_recommendation = cast(dict[str, Any], strict_eval["recommendation"])
+    assert strict_recommendation["status"] != "accept_ready"
+
+    reasons = cast(list[str], strict_recommendation["reasons"])
+
     assert any(
         reason == "Verified quote evidence is required for critical fields before acceptance."
-        for reason in strict_eval["recommendation"]["reasons"]
+        for reason in reasons
     )

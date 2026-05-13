@@ -71,8 +71,13 @@ def test_evaluate_referral_includes_mismatch_findings():
     evaluation = evaluate_referral(referral, _facility_fixture(), _payer_rules_fixture())
     assert "mismatch_findings" in evaluation
     assert isinstance(evaluation["mismatch_findings"], list)
-    assert any(f["mismatch_type"] == "payer_not_accepted" for f in evaluation["mismatch_findings"])
+    mismatch_findings = evaluation["mismatch_findings"]
 
+    assert isinstance(mismatch_findings, list)
+    assert any(
+        f["mismatch_type"] == "payer_not_accepted"
+        for f in mismatch_findings
+    )
 
 def test_detect_mismatches_regression_cached_text_triggers_core_gaps():
     referral = ReferralExtract(
