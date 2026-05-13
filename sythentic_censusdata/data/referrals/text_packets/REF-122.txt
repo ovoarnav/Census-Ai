@@ -1,0 +1,99 @@
+SYNTHETIC REFERRAL PACKET — FOR DEMO USE ONLY
+Referral ID: REF-122
+Source: County General Hospital
+Channel: Phone call transcript + emailed face sheet
+Received: 2026-05-07 09:00
+Target Facility: GV-SNF-001
+
+PATIENT FACE SHEET
+Patient Initials: U.E.
+Age: 86
+Payer: Medicaid
+Authorization Status: not_required
+Discharge Target: 2026-05-08 10:00
+
+CURRENT COURSE OF ILLNESS AND TREATMENT
+Primary Diagnosis / Reason for Referral: Advanced dementia with aggressive episodes
+Hospital Course: Medically stable after dehydration treatment. Staff reports hitting, kicking, and care refusal.
+
+CLINICAL CARE NEEDS
+Current Medications / MAR Summary: Quetiapine scheduled, trazodone, donepezil.
+Allergies: No known drug allergies.
+Mobility / Transfer Status: Ambulates with supervision.
+Therapy Need: No skilled rehab need documented.
+Wound / Skin Needs: No wounds.
+Oxygen / Respiratory Needs: Room air.
+Dialysis Need: No dialysis.
+Cognitive Status: Advanced dementia.
+Behavioral / Safety Concerns: Aggressive behavior during care, hitting staff twice this week.
+Infection / Isolation Status: No isolation required.
+Advance Directive / Code Status: DNR.
+Durable Medical Equipment Needs: None.
+
+KNOWN MISSING OR UNCLEAR ITEMS
+- Behavioral plan
+- Psychiatry note
+- Responsible party confirmation
+
+RAW SOURCE DOCUMENTS FOR NEXT-GEN INGESTION TESTING
+
+--- REF-122-01 / face_sheet / Phone call transcript + emailed face sheet ---
+PATIENT FACE SHEET
+Referral ID: REF-122
+Source: County General Hospital
+Channel: Phone call transcript + emailed face sheet
+Received: 2026-05-07 12:51
+Target Facility: GV-SNF-001
+Patient Initials: U.E.
+Age: 86
+Payer: Medicaid
+Authorization Status: not_required
+Discharge Target: 2026-05-08 10:00
+
+--- REF-122-02 / discharge_summary / Phone call transcript + emailed face sheet ---
+DISCHARGE SUMMARY / CLINICAL SNAPSHOT
+Primary Diagnosis / Reason for Referral: Advanced dementia with aggressive episodes
+Hospital Course: Medically stable after dehydration treatment. Staff reports hitting, kicking, and care refusal.
+
+CLINICAL CARE NEEDS
+Current Medications / MAR Summary: Quetiapine scheduled, trazodone, donepezil.
+Allergies: No known drug allergies.
+Mobility / Transfer Status: Ambulates with supervision.
+Therapy Need: No skilled rehab need documented.
+Wound / Skin Needs: No wounds.
+Oxygen / Respiratory Needs: Room air.
+Dialysis Need: No dialysis.
+Cognitive Status: Advanced dementia.
+Behavioral / Safety Concerns: Aggressive behavior during care, hitting staff twice this week.
+Infection / Isolation Status: No isolation required.
+Advance Directive / Code Status: DNR.
+Durable Medical Equipment Needs: None.
+
+--- REF-122-03 / phone_transcript / phone ---
+PHONE TRANSCRIPT
+Caller: discharge planner from County General Hospital
+Admissions: Can you summarize the case?
+Caller: This is U.E., age 86. Diagnosis is Advanced dementia with aggressive episodes. Mobility right now: Ambulates with supervision.. Behavior/safety: Aggressive behavior during care, hitting staff twice this week.. Infection status: No isolation required..
+Admissions: Any missing paperwork?
+Caller: Behavioral plan, Psychiatry note, Responsible party confirmation
+
+--- REF-122-04 / email_body / email ---
+EMAIL BODY
+From: County General Hospital
+To: admissions@target-facility.example
+Subject: Referral REF-122 - U.E. - Advanced dementia with aggressive episodes
+
+Hi admissions team,
+Please review U.E. for placement. Quick notes: payer is Medicaid; auth status is not_required; main issue is Advanced dementia with aggressive episodes.
+Need: Ambulates with supervision. / No skilled rehab need documented..
+Thanks,
+Case Management
+
+--- REF-122-05 / payer_auth_note / payer_document ---
+PAYER / AUTH NOTE
+Payer listed by sender: Medicaid
+Authorization status reported: not_required
+Authorization caveat: No payer caveat identified in this document.
+
+DEMO NOTE
+This document is fully synthetic and contains no real patient data.

@@ -1,0 +1,100 @@
+SYNTHETIC REFERRAL PACKET — FOR DEMO USE ONLY
+Referral ID: REF-131
+Source: University Medical Center
+Channel: Scanned handwritten note + email
+Received: 2026-05-07 09:00
+Target Facility: GV-SNF-001
+
+PATIENT FACE SHEET
+Patient Initials: L.P.
+Age: 82
+Payer: Medicare Part A
+Authorization Status: not_required
+Discharge Target: 2026-05-08 10:00
+
+CURRENT COURSE OF ILLNESS AND TREATMENT
+Primary Diagnosis / Reason for Referral: Aspiration pneumonia with dysphagia
+Hospital Course: Improving. Handwritten note says thickened liquids; discharge summary does not list diet.
+
+CLINICAL CARE NEEDS
+Current Medications / MAR Summary: Amoxicillin-clavulanate, aspiration precautions.
+Allergies: No known drug allergies.
+Mobility / Transfer Status: One-person assist.
+Therapy Need: PT/OT/ST recommended.
+Wound / Skin Needs: No wounds.
+Oxygen / Respiratory Needs: Room air.
+Dialysis Need: No dialysis.
+Cognitive Status: Mild confusion.
+Behavioral / Safety Concerns: No aggression.
+Infection / Isolation Status: No isolation required.
+Advance Directive / Code Status: DNR.
+Durable Medical Equipment Needs: Walker.
+
+KNOWN MISSING OR UNCLEAR ITEMS
+- Diet texture unclear
+- Liquid consistency unclear
+- Swallow precautions need final order
+
+RAW SOURCE DOCUMENTS FOR NEXT-GEN INGESTION TESTING
+
+--- REF-131-01 / face_sheet / Scanned handwritten note + email ---
+PATIENT FACE SHEET
+Referral ID: REF-131
+Source: University Medical Center
+Channel: Scanned handwritten note + email
+Received: 2026-05-07 14:30
+Target Facility: GV-SNF-001
+Patient Initials: L.P.
+Age: 82
+Payer: Medicare Part A
+Authorization Status: not_required
+Discharge Target: 2026-05-08 10:00
+
+--- REF-131-02 / discharge_summary / Scanned handwritten note + email ---
+DISCHARGE SUMMARY / CLINICAL SNAPSHOT
+Primary Diagnosis / Reason for Referral: Aspiration pneumonia with dysphagia
+Hospital Course: Improving. Handwritten note says thickened liquids; discharge summary does not list diet.
+
+CLINICAL CARE NEEDS
+Current Medications / MAR Summary: Amoxicillin-clavulanate, aspiration precautions.
+Allergies: No known drug allergies.
+Mobility / Transfer Status: One-person assist.
+Therapy Need: PT/OT/ST recommended.
+Wound / Skin Needs: No wounds.
+Oxygen / Respiratory Needs: Room air.
+Dialysis Need: No dialysis.
+Cognitive Status: Mild confusion.
+Behavioral / Safety Concerns: No aggression.
+Infection / Isolation Status: No isolation required.
+Advance Directive / Code Status: DNR.
+Durable Medical Equipment Needs: Walker.
+
+--- REF-131-03 / email_body / email ---
+EMAIL BODY
+From: University Medical Center
+To: admissions@target-facility.example
+Subject: Referral REF-131 - L.P. - Aspiration pneumonia with dysphagia
+
+Hi admissions team,
+Please review L.P. for placement. Quick notes: payer is Medicare Part A; auth status is not_required; main issue is Aspiration pneumonia with dysphagia.
+Need: One-person assist. / PT/OT/ST recommended..
+Thanks,
+Case Management
+
+--- REF-131-04 / handwritten_note_ocr / scanned_handwritten_note ---
+HANDWRITTEN NOTE OCR - LOW CONFIDENCE
+pt L.P. / 82y. dx looks like: Aspiration pneumonia with dysphagia.
+mobility: One-person assist..
+diet/swallow/other notes may be incomplete. allergies line: No known drug allergies..
+OCR confidence: 0.72
+
+NOTE: handwriting around diet/allergy/mobility is partially unclear; verify against final orders.
+
+--- REF-131-05 / payer_auth_note / payer_document ---
+PAYER / AUTH NOTE
+Payer listed by sender: Medicare Part A
+Authorization status reported: not_required
+Authorization caveat: No payer caveat identified in this document.
+
+DEMO NOTE
+This document is fully synthetic and contains no real patient data.

@@ -1,0 +1,77 @@
+SYNTHETIC REFERRAL PACKET — FOR DEMO USE ONLY
+Referral ID: REF-123
+Source: University Medical Center
+Channel: EHR export PDF
+Received: 2026-05-07 09:00
+Target Facility: GV-SNF-001
+
+PATIENT FACE SHEET
+Patient Initials: I.L.
+Age: 68
+Payer: Medicare Part A
+Authorization Status: not_required
+Discharge Target: 2026-05-08 10:00
+
+CURRENT COURSE OF ILLNESS AND TREATMENT
+Primary Diagnosis / Reason for Referral: Ventilator-dependent respiratory failure
+Hospital Course: Failed weaning attempts. Stable on ventilator settings.
+
+CLINICAL CARE NEEDS
+Current Medications / MAR Summary: Nebulizers, tube feeds, anticoagulant prophylaxis.
+Allergies: No known drug allergies.
+Mobility / Transfer Status: Bedbound; total assist.
+Therapy Need: Passive range of motion only.
+Wound / Skin Needs: No open wounds.
+Oxygen / Respiratory Needs: Ventilator required continuously.
+Dialysis Need: No dialysis.
+Cognitive Status: Sedated intermittently, follows simple commands when awake.
+Behavioral / Safety Concerns: No behaviors.
+Infection / Isolation Status: No isolation required.
+Advance Directive / Code Status: Full code.
+Durable Medical Equipment Needs: Ventilator, suction, tube-feed pump.
+
+KNOWN MISSING OR UNCLEAR ITEMS
+- Vent settings attached separately but not included
+
+RAW SOURCE DOCUMENTS FOR NEXT-GEN INGESTION TESTING
+
+--- REF-123-01 / face_sheet / EHR export PDF ---
+PATIENT FACE SHEET
+Referral ID: REF-123
+Source: University Medical Center
+Channel: EHR export PDF
+Received: 2026-05-07 13:02
+Target Facility: GV-SNF-001
+Patient Initials: I.L.
+Age: 68
+Payer: Medicare Part A
+Authorization Status: not_required
+Discharge Target: 2026-05-08 10:00
+
+--- REF-123-02 / discharge_summary / EHR export PDF ---
+DISCHARGE SUMMARY / CLINICAL SNAPSHOT
+Primary Diagnosis / Reason for Referral: Ventilator-dependent respiratory failure
+Hospital Course: Failed weaning attempts. Stable on ventilator settings.
+
+CLINICAL CARE NEEDS
+Current Medications / MAR Summary: Nebulizers, tube feeds, anticoagulant prophylaxis.
+Allergies: No known drug allergies.
+Mobility / Transfer Status: Bedbound; total assist.
+Therapy Need: Passive range of motion only.
+Wound / Skin Needs: No open wounds.
+Oxygen / Respiratory Needs: Ventilator required continuously.
+Dialysis Need: No dialysis.
+Cognitive Status: Sedated intermittently, follows simple commands when awake.
+Behavioral / Safety Concerns: No behaviors.
+Infection / Isolation Status: No isolation required.
+Advance Directive / Code Status: Full code.
+Durable Medical Equipment Needs: Ventilator, suction, tube-feed pump.
+
+--- REF-123-03 / payer_auth_note / payer_document ---
+PAYER / AUTH NOTE
+Payer listed by sender: Medicare Part A
+Authorization status reported: not_required
+Authorization caveat: No payer caveat identified in this document.
+
+DEMO NOTE
+This document is fully synthetic and contains no real patient data.

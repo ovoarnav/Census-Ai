@@ -1,0 +1,99 @@
+SYNTHETIC REFERRAL PACKET — FOR DEMO USE ONLY
+Referral ID: REF-114
+Source: Riverside Case Management
+Channel: Scanned handwritten note + email
+Received: 2026-05-07 09:00
+Target Facility: GV-SNF-001
+
+PATIENT FACE SHEET
+Patient Initials: Y.C.
+Age: 89
+Payer: Medicare Part A
+Authorization Status: not_required
+Discharge Target: 2026-05-08 10:00
+
+CURRENT COURSE OF ILLNESS AND TREATMENT
+Primary Diagnosis / Reason for Referral: Pneumonia with new oxygen requirement and delirium
+Hospital Course: Pneumonia improving. Delirium fluctuates; family reports baseline independent living.
+
+CLINICAL CARE NEEDS
+Current Medications / MAR Summary: Levofloxacin oral, melatonin, quetiapine PRN.
+Allergies: Allergy list unreadable on handwritten note.
+Mobility / Transfer Status: Two-person assist yesterday; today one-person assist per PT.
+Therapy Need: PT/OT recommended.
+Wound / Skin Needs: No wounds.
+Oxygen / Respiratory Needs: 3 L nasal cannula, may wean.
+Dialysis Need: No dialysis.
+Cognitive Status: Fluctuating confusion; reorientation helps.
+Behavioral / Safety Concerns: Pulled oxygen tubing twice overnight.
+Infection / Isolation Status: No isolation required.
+Advance Directive / Code Status: DNR.
+Durable Medical Equipment Needs: Oxygen equipment.
+
+KNOWN MISSING OR UNCLEAR ITEMS
+- Confirm allergies due to low-confidence handwriting
+- Clarify current transfer level
+
+RAW SOURCE DOCUMENTS FOR NEXT-GEN INGESTION TESTING
+
+--- REF-114-01 / face_sheet / Scanned handwritten note + email ---
+PATIENT FACE SHEET
+Referral ID: REF-114
+Source: Riverside Case Management
+Channel: Scanned handwritten note + email
+Received: 2026-05-07 11:23
+Target Facility: GV-SNF-001
+Patient Initials: Y.C.
+Age: 89
+Payer: Medicare Part A
+Authorization Status: not_required
+Discharge Target: 2026-05-08 10:00
+
+--- REF-114-02 / discharge_summary / Scanned handwritten note + email ---
+DISCHARGE SUMMARY / CLINICAL SNAPSHOT
+Primary Diagnosis / Reason for Referral: Pneumonia with new oxygen requirement and delirium
+Hospital Course: Pneumonia improving. Delirium fluctuates; family reports baseline independent living.
+
+CLINICAL CARE NEEDS
+Current Medications / MAR Summary: Levofloxacin oral, melatonin, quetiapine PRN.
+Allergies: Allergy list unreadable on handwritten note.
+Mobility / Transfer Status: Two-person assist yesterday; today one-person assist per PT.
+Therapy Need: PT/OT recommended.
+Wound / Skin Needs: No wounds.
+Oxygen / Respiratory Needs: 3 L nasal cannula, may wean.
+Dialysis Need: No dialysis.
+Cognitive Status: Fluctuating confusion; reorientation helps.
+Behavioral / Safety Concerns: Pulled oxygen tubing twice overnight.
+Infection / Isolation Status: No isolation required.
+Advance Directive / Code Status: DNR.
+Durable Medical Equipment Needs: Oxygen equipment.
+
+--- REF-114-03 / email_body / email ---
+EMAIL BODY
+From: Riverside Case Management
+To: admissions@target-facility.example
+Subject: Referral REF-114 - Y.C. - Pneumonia with new oxygen requirement and del
+
+Hi admissions team,
+Please review Y.C. for placement. Quick notes: payer is Medicare Part A; auth status is not_required; main issue is Pneumonia with new oxygen requirement and delirium.
+Need: Two-person assist yesterday; today one-person assist per PT. / PT/OT recommended..
+Thanks,
+Case Management
+
+--- REF-114-04 / handwritten_note_ocr / scanned_handwritten_note ---
+HANDWRITTEN NOTE OCR - LOW CONFIDENCE
+pt Y.C. / 89y. dx looks like: Pneumonia with new oxygen requirement and delirium.
+mobility: Two-person assist yesterday; today one-person assist per PT..
+diet/swallow/other notes may be incomplete. allergies line: Allergy list unreadable on handwritten note..
+OCR confidence: 0.72
+
+NOTE: handwriting around diet/allergy/mobility is partially unclear; verify against final orders.
+
+--- REF-114-05 / payer_auth_note / payer_document ---
+PAYER / AUTH NOTE
+Payer listed by sender: Medicare Part A
+Authorization status reported: not_required
+Authorization caveat: No payer caveat identified in this document.
+
+DEMO NOTE
+This document is fully synthetic and contains no real patient data.

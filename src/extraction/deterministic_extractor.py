@@ -56,7 +56,7 @@ def _find_field(pattern: str, text: str) -> Optional[str]:
     return value if value else None
 
 
-def _parse_age(value: Optional[str]) -> Optional[int]:
+def _parse_age(value: object | None) -> Optional[int]:
     if value is None:
         return None
     match = re.search(r"\d+", str(value))

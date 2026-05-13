@@ -1,0 +1,77 @@
+SYNTHETIC REFERRAL PACKET — FOR DEMO USE ONLY
+Referral ID: REF-117
+Source: County General Hospital
+Channel: Referral portal
+Received: 2026-05-07 09:00
+Target Facility: GV-SNF-001
+
+PATIENT FACE SHEET
+Patient Initials: V.D.
+Age: 82
+Payer: Medicare Part A
+Authorization Status: not_required
+Discharge Target: 2026-05-08 10:00
+
+CURRENT COURSE OF ILLNESS AND TREATMENT
+Primary Diagnosis / Reason for Referral: COVID recovery with deconditioning
+Hospital Course: COVID symptoms improving. Hospital requests private isolation room until 05/14.
+
+CLINICAL CARE NEEDS
+Current Medications / MAR Summary: Dexamethasone completed, home meds resumed.
+Allergies: No known drug allergies.
+Mobility / Transfer Status: One-person assist.
+Therapy Need: PT/OT requested.
+Wound / Skin Needs: No wounds.
+Oxygen / Respiratory Needs: 1 L nasal cannula at night.
+Dialysis Need: No dialysis.
+Cognitive Status: Alert and oriented.
+Behavioral / Safety Concerns: No behaviors.
+Infection / Isolation Status: Transmission-based precautions through 05/14; private room needed.
+Advance Directive / Code Status: Full code.
+Durable Medical Equipment Needs: Oxygen concentrator.
+
+KNOWN MISSING OR UNCLEAR ITEMS
+- None documented
+
+RAW SOURCE DOCUMENTS FOR NEXT-GEN INGESTION TESTING
+
+--- REF-117-01 / face_sheet / Referral portal ---
+PATIENT FACE SHEET
+Referral ID: REF-117
+Source: County General Hospital
+Channel: Referral portal
+Received: 2026-05-07 11:56
+Target Facility: GV-SNF-001
+Patient Initials: V.D.
+Age: 82
+Payer: Medicare Part A
+Authorization Status: not_required
+Discharge Target: 2026-05-08 10:00
+
+--- REF-117-02 / discharge_summary / Referral portal ---
+DISCHARGE SUMMARY / CLINICAL SNAPSHOT
+Primary Diagnosis / Reason for Referral: COVID recovery with deconditioning
+Hospital Course: COVID symptoms improving. Hospital requests private isolation room until 05/14.
+
+CLINICAL CARE NEEDS
+Current Medications / MAR Summary: Dexamethasone completed, home meds resumed.
+Allergies: No known drug allergies.
+Mobility / Transfer Status: One-person assist.
+Therapy Need: PT/OT requested.
+Wound / Skin Needs: No wounds.
+Oxygen / Respiratory Needs: 1 L nasal cannula at night.
+Dialysis Need: No dialysis.
+Cognitive Status: Alert and oriented.
+Behavioral / Safety Concerns: No behaviors.
+Infection / Isolation Status: Transmission-based precautions through 05/14; private room needed.
+Advance Directive / Code Status: Full code.
+Durable Medical Equipment Needs: Oxygen concentrator.
+
+--- REF-117-03 / payer_auth_note / payer_document ---
+PAYER / AUTH NOTE
+Payer listed by sender: Medicare Part A
+Authorization status reported: not_required
+Authorization caveat: No payer caveat identified in this document.
+
+DEMO NOTE
+This document is fully synthetic and contains no real patient data.

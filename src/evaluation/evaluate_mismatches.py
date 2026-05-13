@@ -8,7 +8,7 @@ from pathlib import Path
 # Allow running as a script from repo root
 if str(Path(__file__).resolve().parents[2]) not in sys.path:
     sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
-from typing import Dict, List, Tuple
+from typing import Any, Dict, List, Tuple
 
 from src.config import DATA_DIR, PROJECT_ROOT
 
@@ -47,7 +47,7 @@ def _precision_recall_f1(tp: int, fp: int, fn: int) -> Tuple[float, float, float
     return precision, recall, f1
 
 
-def evaluate_mismatches() -> Dict[str, dict]:
+def evaluate_mismatches() -> Dict[str, Any]:
     mismatch_path = _resolve_label_path("mismatch_labels.jsonl")
     if mismatch_path is None:
         print("Friendly exit: mismatch_labels.jsonl not found. Copy labels into data/labels or censusflow_synthetic_data_v2/data/labels.")

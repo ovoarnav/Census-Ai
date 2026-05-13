@@ -1,0 +1,77 @@
+SYNTHETIC REFERRAL PACKET — FOR DEMO USE ONLY
+Referral ID: REF-113
+Source: University Medical Center
+Channel: EHR export PDF
+Received: 2026-05-07 09:00
+Target Facility: GV-SNF-001
+
+PATIENT FACE SHEET
+Patient Initials: G.A.
+Age: 67
+Payer: Medicare Advantage
+Authorization Status: approved
+Discharge Target: 2026-05-08 10:00
+
+CURRENT COURSE OF ILLNESS AND TREATMENT
+Primary Diagnosis / Reason for Referral: Post-CABG deconditioning; needs cardiac rehab monitoring
+Hospital Course: CABG x3 seven days ago. Stable vitals. Sternal precautions.
+
+CLINICAL CARE NEEDS
+Current Medications / MAR Summary: Metoprolol, atorvastatin, aspirin, clopidogrel, furosemide.
+Allergies: No known drug allergies.
+Mobility / Transfer Status: Contact guard assist with walker.
+Therapy Need: PT/OT for endurance and ADLs.
+Wound / Skin Needs: Sternal incision clean/dry/intact.
+Oxygen / Respiratory Needs: Room air.
+Dialysis Need: No dialysis.
+Cognitive Status: Alert and oriented.
+Behavioral / Safety Concerns: No behaviors.
+Infection / Isolation Status: No isolation required.
+Advance Directive / Code Status: Full code.
+Durable Medical Equipment Needs: Walker, sternal pillow.
+
+KNOWN MISSING OR UNCLEAR ITEMS
+- None documented
+
+RAW SOURCE DOCUMENTS FOR NEXT-GEN INGESTION TESTING
+
+--- REF-113-01 / face_sheet / EHR export PDF ---
+PATIENT FACE SHEET
+Referral ID: REF-113
+Source: University Medical Center
+Channel: EHR export PDF
+Received: 2026-05-07 11:12
+Target Facility: GV-SNF-001
+Patient Initials: G.A.
+Age: 67
+Payer: Medicare Advantage
+Authorization Status: approved
+Discharge Target: 2026-05-08 10:00
+
+--- REF-113-02 / discharge_summary / EHR export PDF ---
+DISCHARGE SUMMARY / CLINICAL SNAPSHOT
+Primary Diagnosis / Reason for Referral: Post-CABG deconditioning; needs cardiac rehab monitoring
+Hospital Course: CABG x3 seven days ago. Stable vitals. Sternal precautions.
+
+CLINICAL CARE NEEDS
+Current Medications / MAR Summary: Metoprolol, atorvastatin, aspirin, clopidogrel, furosemide.
+Allergies: No known drug allergies.
+Mobility / Transfer Status: Contact guard assist with walker.
+Therapy Need: PT/OT for endurance and ADLs.
+Wound / Skin Needs: Sternal incision clean/dry/intact.
+Oxygen / Respiratory Needs: Room air.
+Dialysis Need: No dialysis.
+Cognitive Status: Alert and oriented.
+Behavioral / Safety Concerns: No behaviors.
+Infection / Isolation Status: No isolation required.
+Advance Directive / Code Status: Full code.
+Durable Medical Equipment Needs: Walker, sternal pillow.
+
+--- REF-113-03 / payer_auth_note / payer_document ---
+PAYER / AUTH NOTE
+Payer listed by sender: Medicare Advantage
+Authorization status reported: approved
+Authorization caveat: No payer caveat identified in this document.
+
+DEMO NOTE
+This document is fully synthetic and contains no real patient data.

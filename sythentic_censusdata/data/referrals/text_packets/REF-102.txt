@@ -1,0 +1,92 @@
+SYNTHETIC REFERRAL PACKET — FOR DEMO USE ONLY
+Referral ID: REF-102
+Source: St. Anne Medical Center
+Channel: Fax packet
+Received: 2026-05-07 09:00
+Target Facility: GV-SNF-001
+
+PATIENT FACE SHEET
+Patient Initials: R.L.
+Age: 83
+Payer: Medicare Advantage
+Authorization Status: pending
+Discharge Target: 2026-05-08 10:00
+
+CURRENT COURSE OF ILLNESS AND TREATMENT
+Primary Diagnosis / Reason for Referral: Congestive heart failure exacerbation with deconditioning
+Hospital Course: Diuresed with improvement. Still below baseline and tires after short ambulation.
+
+CLINICAL CARE NEEDS
+Current Medications / MAR Summary: MAR referenced in fax cover sheet but not attached.
+Allergies: Penicillin allergy - rash.
+Mobility / Transfer Status: Two-person assist for transfers; ambulates 10 ft with rolling walker and rest breaks.
+Therapy Need: PT/OT requested for strengthening and endurance.
+Wound / Skin Needs: No wounds.
+Oxygen / Respiratory Needs: 2 L nasal cannula with exertion.
+Dialysis Need: No dialysis.
+Cognitive Status: Mild forgetfulness, follows commands.
+Behavioral / Safety Concerns: No behaviors reported.
+Infection / Isolation Status: No isolation required.
+Advance Directive / Code Status: DNR.
+Durable Medical Equipment Needs: Oxygen concentrator requested at bedside.
+
+KNOWN MISSING OR UNCLEAR ITEMS
+- Current MAR not attached
+- Medicare Advantage authorization still pending
+
+RAW SOURCE DOCUMENTS FOR NEXT-GEN INGESTION TESTING
+
+--- REF-102-01 / face_sheet / Fax packet ---
+PATIENT FACE SHEET
+Referral ID: REF-102
+Source: St. Anne Medical Center
+Channel: Fax packet
+Received: 2026-05-07 09:11
+Target Facility: GV-SNF-001
+Patient Initials: R.L.
+Age: 83
+Payer: Medicare Advantage
+Authorization Status: pending
+Discharge Target: 2026-05-08 10:00
+
+--- REF-102-02 / discharge_summary / Fax packet ---
+DISCHARGE SUMMARY / CLINICAL SNAPSHOT
+Primary Diagnosis / Reason for Referral: Congestive heart failure exacerbation with deconditioning
+Hospital Course: Diuresed with improvement. Still below baseline and tires after short ambulation.
+
+CLINICAL CARE NEEDS
+Current Medications / MAR Summary: MAR referenced in fax cover sheet but not attached.
+Allergies: Penicillin allergy - rash.
+Mobility / Transfer Status: Two-person assist for transfers; ambulates 10 ft with rolling walker and rest breaks.
+Therapy Need: PT/OT requested for strengthening and endurance.
+Wound / Skin Needs: No wounds.
+Oxygen / Respiratory Needs: 2 L nasal cannula with exertion.
+Dialysis Need: No dialysis.
+Cognitive Status: Mild forgetfulness, follows commands.
+Behavioral / Safety Concerns: No behaviors reported.
+Infection / Isolation Status: No isolation required.
+Advance Directive / Code Status: DNR.
+Durable Medical Equipment Needs: Oxygen concentrator requested at bedside.
+
+--- REF-102-03 / fax_cover_sheet / fax ---
+FAX COVER SHEET
+Attached documents may be incomplete. Please confirm MAR, orders, and authorization if absent.
+EMAIL BODY
+From: St. Anne Medical Center
+To: admissions@target-facility.example
+Subject: Referral REF-102 - R.L. - Congestive heart failure exacerbation with de
+
+Hi admissions team,
+Please review R.L. for placement. Quick notes: payer is Medicare Advantage; auth status is pending; main issue is Congestive heart failure exacerbation with deconditioning.
+Need: Two-person assist for transfers; ambulates 10 ft with rolling walker and rest breaks. / PT/OT requested for strengthening and endurance..
+Thanks,
+Case Management
+
+--- REF-102-04 / payer_auth_note / payer_document ---
+PAYER / AUTH NOTE
+Payer listed by sender: Medicare Advantage
+Authorization status reported: pending
+Authorization caveat: Prior authorization or contract confirmation is required before admission.
+
+DEMO NOTE
+This document is fully synthetic and contains no real patient data.

@@ -1,0 +1,90 @@
+SYNTHETIC REFERRAL PACKET — FOR DEMO USE ONLY
+Referral ID: REF-116
+Source: Valley Cardiology Unit
+Channel: Email attachment
+Received: 2026-05-07 09:00
+Target Facility: GV-SNF-001
+
+PATIENT FACE SHEET
+Patient Initials: H.T.
+Age: 70
+Payer: Commercial
+Authorization Status: pending
+Discharge Target: 2026-05-08 10:00
+
+CURRENT COURSE OF ILLNESS AND TREATMENT
+Primary Diagnosis / Reason for Referral: Endocarditis requiring IV antibiotics
+Hospital Course: Blood cultures cleared. Needs six-week IV antibiotic course and monitoring.
+
+CLINICAL CARE NEEDS
+Current Medications / MAR Summary: IV ceftriaxone daily, warfarin with INR checks.
+Allergies: No known drug allergies.
+Mobility / Transfer Status: Independent with walker.
+Therapy Need: PT not primary need.
+Wound / Skin Needs: No wounds.
+Oxygen / Respiratory Needs: Room air.
+Dialysis Need: No dialysis.
+Cognitive Status: Alert and oriented.
+Behavioral / Safety Concerns: No behaviors.
+Infection / Isolation Status: No isolation required.
+Advance Directive / Code Status: Full code.
+Durable Medical Equipment Needs: PICC line supplies.
+
+KNOWN MISSING OR UNCLEAR ITEMS
+- Commercial authorization pending
+- PICC placement report not attached
+
+RAW SOURCE DOCUMENTS FOR NEXT-GEN INGESTION TESTING
+
+--- REF-116-01 / face_sheet / Email attachment ---
+PATIENT FACE SHEET
+Referral ID: REF-116
+Source: Valley Cardiology Unit
+Channel: Email attachment
+Received: 2026-05-07 11:45
+Target Facility: GV-SNF-001
+Patient Initials: H.T.
+Age: 70
+Payer: Commercial
+Authorization Status: pending
+Discharge Target: 2026-05-08 10:00
+
+--- REF-116-02 / discharge_summary / Email attachment ---
+DISCHARGE SUMMARY / CLINICAL SNAPSHOT
+Primary Diagnosis / Reason for Referral: Endocarditis requiring IV antibiotics
+Hospital Course: Blood cultures cleared. Needs six-week IV antibiotic course and monitoring.
+
+CLINICAL CARE NEEDS
+Current Medications / MAR Summary: IV ceftriaxone daily, warfarin with INR checks.
+Allergies: No known drug allergies.
+Mobility / Transfer Status: Independent with walker.
+Therapy Need: PT not primary need.
+Wound / Skin Needs: No wounds.
+Oxygen / Respiratory Needs: Room air.
+Dialysis Need: No dialysis.
+Cognitive Status: Alert and oriented.
+Behavioral / Safety Concerns: No behaviors.
+Infection / Isolation Status: No isolation required.
+Advance Directive / Code Status: Full code.
+Durable Medical Equipment Needs: PICC line supplies.
+
+--- REF-116-03 / email_body / email ---
+EMAIL BODY
+From: Valley Cardiology Unit
+To: admissions@target-facility.example
+Subject: Referral REF-116 - H.T. - Endocarditis requiring IV antibiotics
+
+Hi admissions team,
+Please review H.T. for placement. Quick notes: payer is Commercial; auth status is pending; main issue is Endocarditis requiring IV antibiotics.
+Need: Independent with walker. / PT not primary need..
+Thanks,
+Case Management
+
+--- REF-116-04 / payer_auth_note / payer_document ---
+PAYER / AUTH NOTE
+Payer listed by sender: Commercial
+Authorization status reported: pending
+Authorization caveat: Prior authorization or contract confirmation is required before admission.
+
+DEMO NOTE
+This document is fully synthetic and contains no real patient data.

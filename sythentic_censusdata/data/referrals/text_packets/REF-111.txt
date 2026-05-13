@@ -1,0 +1,86 @@
+SYNTHETIC REFERRAL PACKET — FOR DEMO USE ONLY
+Referral ID: REF-111
+Source: Mercy Hospital Discharge Planning
+Channel: Phone call transcript
+Received: 2026-05-07 09:00
+Target Facility: GV-SNF-001
+
+PATIENT FACE SHEET
+Patient Initials: N.F.
+Age: 84
+Payer: Medicaid
+Authorization Status: not_required
+Discharge Target: 2026-05-08 10:00
+
+CURRENT COURSE OF ILLNESS AND TREATMENT
+Primary Diagnosis / Reason for Referral: Generalized weakness after UTI; long-term placement consideration
+Hospital Course: UTI resolved. Family asks for long-term placement. Skilled need not clearly documented.
+
+CLINICAL CARE NEEDS
+Current Medications / MAR Summary: Cephalexin complete, acetaminophen PRN.
+Allergies: No known drug allergies.
+Mobility / Transfer Status: Needs supervision for transfers; ambulates with cane.
+Therapy Need: Therapy eval says patient near baseline.
+Wound / Skin Needs: No wounds.
+Oxygen / Respiratory Needs: Room air.
+Dialysis Need: No dialysis.
+Cognitive Status: Mild cognitive impairment.
+Behavioral / Safety Concerns: No behaviors.
+Infection / Isolation Status: No isolation required.
+Advance Directive / Code Status: DNR.
+Durable Medical Equipment Needs: Cane.
+
+KNOWN MISSING OR UNCLEAR ITEMS
+- Responsible party paperwork
+- Medicaid long-term care eligibility packet
+
+RAW SOURCE DOCUMENTS FOR NEXT-GEN INGESTION TESTING
+
+--- REF-111-01 / face_sheet / Phone call transcript ---
+PATIENT FACE SHEET
+Referral ID: REF-111
+Source: Mercy Hospital Discharge Planning
+Channel: Phone call transcript
+Received: 2026-05-07 10:50
+Target Facility: GV-SNF-001
+Patient Initials: N.F.
+Age: 84
+Payer: Medicaid
+Authorization Status: not_required
+Discharge Target: 2026-05-08 10:00
+
+--- REF-111-02 / discharge_summary / Phone call transcript ---
+DISCHARGE SUMMARY / CLINICAL SNAPSHOT
+Primary Diagnosis / Reason for Referral: Generalized weakness after UTI; long-term placement consideration
+Hospital Course: UTI resolved. Family asks for long-term placement. Skilled need not clearly documented.
+
+CLINICAL CARE NEEDS
+Current Medications / MAR Summary: Cephalexin complete, acetaminophen PRN.
+Allergies: No known drug allergies.
+Mobility / Transfer Status: Needs supervision for transfers; ambulates with cane.
+Therapy Need: Therapy eval says patient near baseline.
+Wound / Skin Needs: No wounds.
+Oxygen / Respiratory Needs: Room air.
+Dialysis Need: No dialysis.
+Cognitive Status: Mild cognitive impairment.
+Behavioral / Safety Concerns: No behaviors.
+Infection / Isolation Status: No isolation required.
+Advance Directive / Code Status: DNR.
+Durable Medical Equipment Needs: Cane.
+
+--- REF-111-03 / phone_transcript / phone ---
+PHONE TRANSCRIPT
+Caller: discharge planner from Mercy Hospital Discharge Planning
+Admissions: Can you summarize the case?
+Caller: This is N.F., age 84. Diagnosis is Generalized weakness after UTI; long-term placement consideration. Mobility right now: Needs supervision for transfers; ambulates with cane.. Behavior/safety: No behaviors.. Infection status: No isolation required..
+Admissions: Any missing paperwork?
+Caller: Responsible party paperwork, Medicaid long-term care eligibility packet
+
+--- REF-111-04 / payer_auth_note / payer_document ---
+PAYER / AUTH NOTE
+Payer listed by sender: Medicaid
+Authorization status reported: not_required
+Authorization caveat: No payer caveat identified in this document.
+
+DEMO NOTE
+This document is fully synthetic and contains no real patient data.

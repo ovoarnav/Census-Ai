@@ -1,0 +1,195 @@
+{
+  "dataset_name": "CensusFlow Synthetic Referral Dataset v2",
+  "created_at": "2026-05-12T22:35:32.499294Z",
+  "synthetic_phi": false,
+  "referral_count": 36,
+  "facility_count": 3,
+  "label_files": [
+    "data/labels/gold_extractions.jsonl",
+    "data/labels/evidence_labels.jsonl",
+    "data/labels/mismatch_labels.jsonl"
+  ],
+  "referrals": [
+    {
+      "referral_id": "REF-101",
+      "document_bundle": "data/referrals/document_bundles/REF-101.json",
+      "text_packet": "data/referrals/text_packets/REF-101.txt"
+    },
+    {
+      "referral_id": "REF-102",
+      "document_bundle": "data/referrals/document_bundles/REF-102.json",
+      "text_packet": "data/referrals/text_packets/REF-102.txt"
+    },
+    {
+      "referral_id": "REF-103",
+      "document_bundle": "data/referrals/document_bundles/REF-103.json",
+      "text_packet": "data/referrals/text_packets/REF-103.txt"
+    },
+    {
+      "referral_id": "REF-104",
+      "document_bundle": "data/referrals/document_bundles/REF-104.json",
+      "text_packet": "data/referrals/text_packets/REF-104.txt"
+    },
+    {
+      "referral_id": "REF-105",
+      "document_bundle": "data/referrals/document_bundles/REF-105.json",
+      "text_packet": "data/referrals/text_packets/REF-105.txt"
+    },
+    {
+      "referral_id": "REF-106",
+      "document_bundle": "data/referrals/document_bundles/REF-106.json",
+      "text_packet": "data/referrals/text_packets/REF-106.txt"
+    },
+    {
+      "referral_id": "REF-107",
+      "document_bundle": "data/referrals/document_bundles/REF-107.json",
+      "text_packet": "data/referrals/text_packets/REF-107.txt"
+    },
+    {
+      "referral_id": "REF-108",
+      "document_bundle": "data/referrals/document_bundles/REF-108.json",
+      "text_packet": "data/referrals/text_packets/REF-108.txt"
+    },
+    {
+      "referral_id": "REF-109",
+      "document_bundle": "data/referrals/document_bundles/REF-109.json",
+      "text_packet": "data/referrals/text_packets/REF-109.txt"
+    },
+    {
+      "referral_id": "REF-110",
+      "document_bundle": "data/referrals/document_bundles/REF-110.json",
+      "text_packet": "data/referrals/text_packets/REF-110.txt"
+    },
+    {
+      "referral_id": "REF-111",
+      "document_bundle": "data/referrals/document_bundles/REF-111.json",
+      "text_packet": "data/referrals/text_packets/REF-111.txt"
+    },
+    {
+      "referral_id": "REF-112",
+      "document_bundle": "data/referrals/document_bundles/REF-112.json",
+      "text_packet": "data/referrals/text_packets/REF-112.txt"
+    },
+    {
+      "referral_id": "REF-113",
+      "document_bundle": "data/referrals/document_bundles/REF-113.json",
+      "text_packet": "data/referrals/text_packets/REF-113.txt"
+    },
+    {
+      "referral_id": "REF-114",
+      "document_bundle": "data/referrals/document_bundles/REF-114.json",
+      "text_packet": "data/referrals/text_packets/REF-114.txt"
+    },
+    {
+      "referral_id": "REF-115",
+      "document_bundle": "data/referrals/document_bundles/REF-115.json",
+      "text_packet": "data/referrals/text_packets/REF-115.txt"
+    },
+    {
+      "referral_id": "REF-116",
+      "document_bundle": "data/referrals/document_bundles/REF-116.json",
+      "text_packet": "data/referrals/text_packets/REF-116.txt"
+    },
+    {
+      "referral_id": "REF-117",
+      "document_bundle": "data/referrals/document_bundles/REF-117.json",
+      "text_packet": "data/referrals/text_packets/REF-117.txt"
+    },
+    {
+      "referral_id": "REF-118",
+      "document_bundle": "data/referrals/document_bundles/REF-118.json",
+      "text_packet": "data/referrals/text_packets/REF-118.txt"
+    },
+    {
+      "referral_id": "REF-119",
+      "document_bundle": "data/referrals/document_bundles/REF-119.json",
+      "text_packet": "data/referrals/text_packets/REF-119.txt"
+    },
+    {
+      "referral_id": "REF-120",
+      "document_bundle": "data/referrals/document_bundles/REF-120.json",
+      "text_packet": "data/referrals/text_packets/REF-120.txt"
+    },
+    {
+      "referral_id": "REF-121",
+      "document_bundle": "data/referrals/document_bundles/REF-121.json",
+      "text_packet": "data/referrals/text_packets/REF-121.txt"
+    },
+    {
+      "referral_id": "REF-122",
+      "document_bundle": "data/referrals/document_bundles/REF-122.json",
+      "text_packet": "data/referrals/text_packets/REF-122.txt"
+    },
+    {
+      "referral_id": "REF-123",
+      "document_bundle": "data/referrals/document_bundles/REF-123.json",
+      "text_packet": "data/referrals/text_packets/REF-123.txt"
+    },
+    {
+      "referral_id": "REF-124",
+      "document_bundle": "data/referrals/document_bundles/REF-124.json",
+      "text_packet": "data/referrals/text_packets/REF-124.txt"
+    },
+    {
+      "referral_id": "REF-125",
+      "document_bundle": "data/referrals/document_bundles/REF-125.json",
+      "text_packet": "data/referrals/text_packets/REF-125.txt"
+    },
+    {
+      "referral_id": "REF-126",
+      "document_bundle": "data/referrals/document_bundles/REF-126.json",
+      "text_packet": "data/referrals/text_packets/REF-126.txt"
+    },
+    {
+      "referral_id": "REF-127",
+      "document_bundle": "data/referrals/document_bundles/REF-127.json",
+      "text_packet": "data/referrals/text_packets/REF-127.txt"
+    },
+    {
+      "referral_id": "REF-128",
+      "document_bundle": "data/referrals/document_bundles/REF-128.json",
+      "text_packet": "data/referrals/text_packets/REF-128.txt"
+    },
+    {
+      "referral_id": "REF-129",
+      "document_bundle": "data/referrals/document_bundles/REF-129.json",
+      "text_packet": "data/referrals/text_packets/REF-129.txt"
+    },
+    {
+      "referral_id": "REF-130",
+      "document_bundle": "data/referrals/document_bundles/REF-130.json",
+      "text_packet": "data/referrals/text_packets/REF-130.txt"
+    },
+    {
+      "referral_id": "REF-131",
+      "document_bundle": "data/referrals/document_bundles/REF-131.json",
+      "text_packet": "data/referrals/text_packets/REF-131.txt"
+    },
+    {
+      "referral_id": "REF-132",
+      "document_bundle": "data/referrals/document_bundles/REF-132.json",
+      "text_packet": "data/referrals/text_packets/REF-132.txt"
+    },
+    {
+      "referral_id": "REF-133",
+      "document_bundle": "data/referrals/document_bundles/REF-133.json",
+      "text_packet": "data/referrals/text_packets/REF-133.txt"
+    },
+    {
+      "referral_id": "REF-134",
+      "document_bundle": "data/referrals/document_bundles/REF-134.json",
+      "text_packet": "data/referrals/text_packets/REF-134.txt"
+    },
+    {
+      "referral_id": "REF-135",
+      "document_bundle": "data/referrals/document_bundles/REF-135.json",
+      "text_packet": "data/referrals/text_packets/REF-135.txt"
+    },
+    {
+      "referral_id": "REF-136",
+      "document_bundle": "data/referrals/document_bundles/REF-136.json",
+      "text_packet": "data/referrals/text_packets/REF-136.txt"
+    }
+  ],
+  "hash": "fd21401a5b1fa1ad"
+}

@@ -1,0 +1,101 @@
+SYNTHETIC REFERRAL PACKET — FOR DEMO USE ONLY
+Referral ID: REF-129
+Source: Northview Hospital
+Channel: Phone call transcript + emailed face sheet
+Received: 2026-05-07 09:00
+Target Facility: GV-SNF-001
+
+PATIENT FACE SHEET
+Patient Initials: R.B.
+Age: 81
+Payer: Medicare Advantage
+Authorization Status: approved
+Discharge Target: 2026-05-08 10:00
+
+CURRENT COURSE OF ILLNESS AND TREATMENT
+Primary Diagnosis / Reason for Referral: UTI with weakness; short rehab
+Hospital Course: Case manager says no behaviors by phone. Nursing note says patient attempted to leave unit overnight.
+
+CLINICAL CARE NEEDS
+Current Medications / MAR Summary: Oral antibiotics complete tomorrow, home meds resumed.
+Allergies: No known drug allergies.
+Mobility / Transfer Status: One-person assist with walker.
+Therapy Need: PT/OT recommended.
+Wound / Skin Needs: No wounds.
+Oxygen / Respiratory Needs: Room air.
+Dialysis Need: No dialysis.
+Cognitive Status: Confused at night.
+Behavioral / Safety Concerns: Contradiction: case manager reports no behaviors; nursing note reports exit-seeking overnight.
+Infection / Isolation Status: No isolation required.
+Advance Directive / Code Status: DNR.
+Durable Medical Equipment Needs: Walker.
+
+KNOWN MISSING OR UNCLEAR ITEMS
+- Clarify behavior and elopement risk
+
+RAW SOURCE DOCUMENTS FOR NEXT-GEN INGESTION TESTING
+
+--- REF-129-01 / face_sheet / Phone call transcript + emailed face sheet ---
+PATIENT FACE SHEET
+Referral ID: REF-129
+Source: Northview Hospital
+Channel: Phone call transcript + emailed face sheet
+Received: 2026-05-07 14:08
+Target Facility: GV-SNF-001
+Patient Initials: R.B.
+Age: 81
+Payer: Medicare Advantage
+Authorization Status: approved
+Discharge Target: 2026-05-08 10:00
+
+--- REF-129-02 / discharge_summary / Phone call transcript + emailed face sheet ---
+DISCHARGE SUMMARY / CLINICAL SNAPSHOT
+Primary Diagnosis / Reason for Referral: UTI with weakness; short rehab
+Hospital Course: Case manager says no behaviors by phone. Nursing note says patient attempted to leave unit overnight.
+
+CLINICAL CARE NEEDS
+Current Medications / MAR Summary: Oral antibiotics complete tomorrow, home meds resumed.
+Allergies: No known drug allergies.
+Mobility / Transfer Status: One-person assist with walker.
+Therapy Need: PT/OT recommended.
+Wound / Skin Needs: No wounds.
+Oxygen / Respiratory Needs: Room air.
+Dialysis Need: No dialysis.
+Cognitive Status: Confused at night.
+Behavioral / Safety Concerns: Contradiction: case manager reports no behaviors; nursing note reports exit-seeking overnight.
+Infection / Isolation Status: No isolation required.
+Advance Directive / Code Status: DNR.
+Durable Medical Equipment Needs: Walker.
+
+--- REF-129-03 / phone_transcript / phone ---
+PHONE TRANSCRIPT
+Caller: discharge planner from Northview Hospital
+Admissions: Can you summarize the case?
+Caller: This is R.B., age 81. Diagnosis is UTI with weakness; short rehab. Mobility right now: One-person assist with walker.. Behavior/safety: Contradiction: case manager reports no behaviors; nursing note reports exit-seeking overnight.. Infection status: No isolation required..
+Admissions: Any missing paperwork?
+Caller: Clarify behavior and elopement risk
+
+Caller later says: "Actually the floor nurse mentioned possible exit-seeking overnight; please verify behavior notes."
+
+CONFLICT FLAG: case manager says "no behaviors," but nursing note says "exit-seeking overnight."
+
+--- REF-129-04 / email_body / email ---
+EMAIL BODY
+From: Northview Hospital
+To: admissions@target-facility.example
+Subject: Referral REF-129 - R.B. - UTI with weakness; short rehab
+
+Hi admissions team,
+Please review R.B. for placement. Quick notes: payer is Medicare Advantage; auth status is approved; main issue is UTI with weakness; short rehab.
+Need: One-person assist with walker. / PT/OT recommended..
+Thanks,
+Case Management
+
+--- REF-129-05 / payer_auth_note / payer_document ---
+PAYER / AUTH NOTE
+Payer listed by sender: Medicare Advantage
+Authorization status reported: approved
+Authorization caveat: No payer caveat identified in this document.
+
+DEMO NOTE
+This document is fully synthetic and contains no real patient data.

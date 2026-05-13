@@ -1,0 +1,77 @@
+SYNTHETIC REFERRAL PACKET — FOR DEMO USE ONLY
+Referral ID: REF-107
+Source: St. Anne Medical Center
+Channel: Referral portal
+Received: 2026-05-07 09:00
+Target Facility: GV-SNF-001
+
+PATIENT FACE SHEET
+Patient Initials: D.H.
+Age: 65
+Payer: Medicare Part A
+Authorization Status: not_required
+Discharge Target: 2026-05-08 10:00
+
+CURRENT COURSE OF ILLNESS AND TREATMENT
+Primary Diagnosis / Reason for Referral: Complex tracheostomy care after prolonged ICU stay
+Hospital Course: Respiratory failure improved but patient still needs frequent trach suctioning and respiratory therapy.
+
+CLINICAL CARE NEEDS
+Current Medications / MAR Summary: Nebulized bronchodilators, tube feed formula, bowel regimen.
+Allergies: Latex allergy.
+Mobility / Transfer Status: Max assist for bed mobility; mechanical lift for transfers.
+Therapy Need: PT/OT/ST requested.
+Wound / Skin Needs: Small coccyx wound, foam dressing.
+Oxygen / Respiratory Needs: Tracheostomy collar at 28%; frequent suctioning.
+Dialysis Need: No dialysis.
+Cognitive Status: Follows simple commands.
+Behavioral / Safety Concerns: No aggression.
+Infection / Isolation Status: No isolation required.
+Advance Directive / Code Status: Full code.
+Durable Medical Equipment Needs: Tracheostomy supplies, suction equipment, tube-feed pump.
+
+KNOWN MISSING OR UNCLEAR ITEMS
+- Respiratory therapy orders incomplete
+
+RAW SOURCE DOCUMENTS FOR NEXT-GEN INGESTION TESTING
+
+--- REF-107-01 / face_sheet / Referral portal ---
+PATIENT FACE SHEET
+Referral ID: REF-107
+Source: St. Anne Medical Center
+Channel: Referral portal
+Received: 2026-05-07 10:06
+Target Facility: GV-SNF-001
+Patient Initials: D.H.
+Age: 65
+Payer: Medicare Part A
+Authorization Status: not_required
+Discharge Target: 2026-05-08 10:00
+
+--- REF-107-02 / discharge_summary / Referral portal ---
+DISCHARGE SUMMARY / CLINICAL SNAPSHOT
+Primary Diagnosis / Reason for Referral: Complex tracheostomy care after prolonged ICU stay
+Hospital Course: Respiratory failure improved but patient still needs frequent trach suctioning and respiratory therapy.
+
+CLINICAL CARE NEEDS
+Current Medications / MAR Summary: Nebulized bronchodilators, tube feed formula, bowel regimen.
+Allergies: Latex allergy.
+Mobility / Transfer Status: Max assist for bed mobility; mechanical lift for transfers.
+Therapy Need: PT/OT/ST requested.
+Wound / Skin Needs: Small coccyx wound, foam dressing.
+Oxygen / Respiratory Needs: Tracheostomy collar at 28%; frequent suctioning.
+Dialysis Need: No dialysis.
+Cognitive Status: Follows simple commands.
+Behavioral / Safety Concerns: No aggression.
+Infection / Isolation Status: No isolation required.
+Advance Directive / Code Status: Full code.
+Durable Medical Equipment Needs: Tracheostomy supplies, suction equipment, tube-feed pump.
+
+--- REF-107-03 / payer_auth_note / payer_document ---
+PAYER / AUTH NOTE
+Payer listed by sender: Medicare Part A
+Authorization status reported: not_required
+Authorization caveat: No payer caveat identified in this document.
+
+DEMO NOTE
+This document is fully synthetic and contains no real patient data.

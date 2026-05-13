@@ -1,0 +1,77 @@
+SYNTHETIC REFERRAL PACKET — FOR DEMO USE ONLY
+Referral ID: REF-125
+Source: Mercy Hospital Discharge Planning
+Channel: Referral portal
+Received: 2026-05-07 09:00
+Target Facility: GV-SNF-001
+
+PATIENT FACE SHEET
+Patient Initials: W.A.
+Age: 75
+Payer: Medicare Part A
+Authorization Status: not_required
+Discharge Target: 2026-05-08 10:00
+
+CURRENT COURSE OF ILLNESS AND TREATMENT
+Primary Diagnosis / Reason for Referral: Hip fracture after fall; rehab requested
+Hospital Course: Hospital course stable. Discharge requested for 20:30 tonight.
+
+CLINICAL CARE NEEDS
+Current Medications / MAR Summary: Acetaminophen, oxycodone PRN, enoxaparin.
+Allergies: No known drug allergies.
+Mobility / Transfer Status: One-person assist with walker.
+Therapy Need: PT/OT ordered.
+Wound / Skin Needs: Surgical dressing intact.
+Oxygen / Respiratory Needs: Room air.
+Dialysis Need: No dialysis.
+Cognitive Status: Alert and oriented.
+Behavioral / Safety Concerns: No behaviors.
+Infection / Isolation Status: No isolation required.
+Advance Directive / Code Status: Full code.
+Durable Medical Equipment Needs: Walker.
+
+KNOWN MISSING OR UNCLEAR ITEMS
+- Confirm transfer can occur during admission hours
+
+RAW SOURCE DOCUMENTS FOR NEXT-GEN INGESTION TESTING
+
+--- REF-125-01 / face_sheet / Referral portal ---
+PATIENT FACE SHEET
+Referral ID: REF-125
+Source: Mercy Hospital Discharge Planning
+Channel: Referral portal
+Received: 2026-05-07 13:24
+Target Facility: GV-SNF-001
+Patient Initials: W.A.
+Age: 75
+Payer: Medicare Part A
+Authorization Status: not_required
+Discharge Target: 2026-05-08 10:00
+
+--- REF-125-02 / discharge_summary / Referral portal ---
+DISCHARGE SUMMARY / CLINICAL SNAPSHOT
+Primary Diagnosis / Reason for Referral: Hip fracture after fall; rehab requested
+Hospital Course: Hospital course stable. Discharge requested for 20:30 tonight.
+
+CLINICAL CARE NEEDS
+Current Medications / MAR Summary: Acetaminophen, oxycodone PRN, enoxaparin.
+Allergies: No known drug allergies.
+Mobility / Transfer Status: One-person assist with walker.
+Therapy Need: PT/OT ordered.
+Wound / Skin Needs: Surgical dressing intact.
+Oxygen / Respiratory Needs: Room air.
+Dialysis Need: No dialysis.
+Cognitive Status: Alert and oriented.
+Behavioral / Safety Concerns: No behaviors.
+Infection / Isolation Status: No isolation required.
+Advance Directive / Code Status: Full code.
+Durable Medical Equipment Needs: Walker.
+
+--- REF-125-03 / payer_auth_note / payer_document ---
+PAYER / AUTH NOTE
+Payer listed by sender: Medicare Part A
+Authorization status reported: not_required
+Authorization caveat: No payer caveat identified in this document.
+
+DEMO NOTE
+This document is fully synthetic and contains no real patient data.

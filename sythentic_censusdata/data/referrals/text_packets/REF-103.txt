@@ -1,0 +1,89 @@
+SYNTHETIC REFERRAL PACKET — FOR DEMO USE ONLY
+Referral ID: REF-103
+Source: Lakeshore Hospital
+Channel: Email attachment
+Received: 2026-05-07 09:00
+Target Facility: GV-SNF-001
+
+PATIENT FACE SHEET
+Patient Initials: A.P.
+Age: 69
+Payer: Medicare Part A
+Authorization Status: not_required
+Discharge Target: 2026-05-08 10:00
+
+CURRENT COURSE OF ILLNESS AND TREATMENT
+Primary Diagnosis / Reason for Referral: End-stage renal disease with recent pneumonia; needs post-acute monitoring
+Hospital Course: Pneumonia improved after antibiotics. Dialysis continues Monday/Wednesday/Friday at Lakeshore Dialysis.
+
+CLINICAL CARE NEEDS
+Current Medications / MAR Summary: Sevelamer, epoetin with dialysis, amlodipine, renal vitamins.
+Allergies: No known drug allergies.
+Mobility / Transfer Status: Contact guard assist with walker.
+Therapy Need: PT 3x/week recommended.
+Wound / Skin Needs: No open wounds.
+Oxygen / Respiratory Needs: Room air at rest.
+Dialysis Need: Hemodialysis M/W/F 06:00 chair time; transportation must be coordinated.
+Cognitive Status: Alert and oriented.
+Behavioral / Safety Concerns: No safety concerns.
+Infection / Isolation Status: No isolation required.
+Advance Directive / Code Status: Full code.
+Durable Medical Equipment Needs: Walker.
+
+KNOWN MISSING OR UNCLEAR ITEMS
+- Dialysis transport pickup time not confirmed
+
+RAW SOURCE DOCUMENTS FOR NEXT-GEN INGESTION TESTING
+
+--- REF-103-01 / face_sheet / Email attachment ---
+PATIENT FACE SHEET
+Referral ID: REF-103
+Source: Lakeshore Hospital
+Channel: Email attachment
+Received: 2026-05-07 09:22
+Target Facility: GV-SNF-001
+Patient Initials: A.P.
+Age: 69
+Payer: Medicare Part A
+Authorization Status: not_required
+Discharge Target: 2026-05-08 10:00
+
+--- REF-103-02 / discharge_summary / Email attachment ---
+DISCHARGE SUMMARY / CLINICAL SNAPSHOT
+Primary Diagnosis / Reason for Referral: End-stage renal disease with recent pneumonia; needs post-acute monitoring
+Hospital Course: Pneumonia improved after antibiotics. Dialysis continues Monday/Wednesday/Friday at Lakeshore Dialysis.
+
+CLINICAL CARE NEEDS
+Current Medications / MAR Summary: Sevelamer, epoetin with dialysis, amlodipine, renal vitamins.
+Allergies: No known drug allergies.
+Mobility / Transfer Status: Contact guard assist with walker.
+Therapy Need: PT 3x/week recommended.
+Wound / Skin Needs: No open wounds.
+Oxygen / Respiratory Needs: Room air at rest.
+Dialysis Need: Hemodialysis M/W/F 06:00 chair time; transportation must be coordinated.
+Cognitive Status: Alert and oriented.
+Behavioral / Safety Concerns: No safety concerns.
+Infection / Isolation Status: No isolation required.
+Advance Directive / Code Status: Full code.
+Durable Medical Equipment Needs: Walker.
+
+--- REF-103-03 / email_body / email ---
+EMAIL BODY
+From: Lakeshore Hospital
+To: admissions@target-facility.example
+Subject: Referral REF-103 - A.P. - End-stage renal disease with recent pneumonia
+
+Hi admissions team,
+Please review A.P. for placement. Quick notes: payer is Medicare Part A; auth status is not_required; main issue is End-stage renal disease with recent pneumonia; needs post-acute monitoring.
+Need: Contact guard assist with walker. / PT 3x/week recommended..
+Thanks,
+Case Management
+
+--- REF-103-04 / payer_auth_note / payer_document ---
+PAYER / AUTH NOTE
+Payer listed by sender: Medicare Part A
+Authorization status reported: not_required
+Authorization caveat: No payer caveat identified in this document.
+
+DEMO NOTE
+This document is fully synthetic and contains no real patient data.

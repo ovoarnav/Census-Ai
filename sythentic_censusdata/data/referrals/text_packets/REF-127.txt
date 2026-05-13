@@ -1,0 +1,91 @@
+SYNTHETIC REFERRAL PACKET — FOR DEMO USE ONLY
+Referral ID: REF-127
+Source: St. Anne Medical Center
+Channel: Fax packet
+Received: 2026-05-07 09:00
+Target Facility: GV-SNF-001
+
+PATIENT FACE SHEET
+Patient Initials: M.N.
+Age: 92
+Payer: Medicare Part A
+Authorization Status: not_required
+Discharge Target: 2026-05-08 10:00
+
+CURRENT COURSE OF ILLNESS AND TREATMENT
+Primary Diagnosis / Reason for Referral: Severe malnutrition and weakness after GI bleed
+Hospital Course: GI bleed resolved. Dietitian notes poor intake and weight loss.
+
+CLINICAL CARE NEEDS
+Current Medications / MAR Summary: Pantoprazole, iron, multivitamin.
+Allergies: No known drug allergies.
+Mobility / Transfer Status: Two-person assist for transfers.
+Therapy Need: PT/OT recommended; dietitian follow-up requested.
+Wound / Skin Needs: No wounds.
+Oxygen / Respiratory Needs: Room air.
+Dialysis Need: No dialysis.
+Cognitive Status: Alert but fatigued.
+Behavioral / Safety Concerns: No behaviors.
+Infection / Isolation Status: No isolation required.
+Advance Directive / Code Status: DNR.
+Durable Medical Equipment Needs: Wheelchair.
+
+KNOWN MISSING OR UNCLEAR ITEMS
+- Diet order and supplement plan unclear
+
+RAW SOURCE DOCUMENTS FOR NEXT-GEN INGESTION TESTING
+
+--- REF-127-01 / face_sheet / Fax packet ---
+PATIENT FACE SHEET
+Referral ID: REF-127
+Source: St. Anne Medical Center
+Channel: Fax packet
+Received: 2026-05-07 13:46
+Target Facility: GV-SNF-001
+Patient Initials: M.N.
+Age: 92
+Payer: Medicare Part A
+Authorization Status: not_required
+Discharge Target: 2026-05-08 10:00
+
+--- REF-127-02 / discharge_summary / Fax packet ---
+DISCHARGE SUMMARY / CLINICAL SNAPSHOT
+Primary Diagnosis / Reason for Referral: Severe malnutrition and weakness after GI bleed
+Hospital Course: GI bleed resolved. Dietitian notes poor intake and weight loss.
+
+CLINICAL CARE NEEDS
+Current Medications / MAR Summary: Pantoprazole, iron, multivitamin.
+Allergies: No known drug allergies.
+Mobility / Transfer Status: Two-person assist for transfers.
+Therapy Need: PT/OT recommended; dietitian follow-up requested.
+Wound / Skin Needs: No wounds.
+Oxygen / Respiratory Needs: Room air.
+Dialysis Need: No dialysis.
+Cognitive Status: Alert but fatigued.
+Behavioral / Safety Concerns: No behaviors.
+Infection / Isolation Status: No isolation required.
+Advance Directive / Code Status: DNR.
+Durable Medical Equipment Needs: Wheelchair.
+
+--- REF-127-03 / fax_cover_sheet / fax ---
+FAX COVER SHEET
+Attached documents may be incomplete. Please confirm MAR, orders, and authorization if absent.
+EMAIL BODY
+From: St. Anne Medical Center
+To: admissions@target-facility.example
+Subject: Referral REF-127 - M.N. - Severe malnutrition and weakness after GI ble
+
+Hi admissions team,
+Please review M.N. for placement. Quick notes: payer is Medicare Part A; auth status is not_required; main issue is Severe malnutrition and weakness after GI bleed.
+Need: Two-person assist for transfers. / PT/OT recommended; dietitian follow-up requested..
+Thanks,
+Case Management
+
+--- REF-127-04 / payer_auth_note / payer_document ---
+PAYER / AUTH NOTE
+Payer listed by sender: Medicare Part A
+Authorization status reported: not_required
+Authorization caveat: No payer caveat identified in this document.
+
+DEMO NOTE
+This document is fully synthetic and contains no real patient data.

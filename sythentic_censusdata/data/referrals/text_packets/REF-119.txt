@@ -1,0 +1,90 @@
+SYNTHETIC REFERRAL PACKET — FOR DEMO USE ONLY
+Referral ID: REF-119
+Source: Riverside Case Management
+Channel: Email referral
+Received: 2026-05-07 09:00
+Target Facility: GV-SNF-001
+
+PATIENT FACE SHEET
+Patient Initials: C.I.
+Age: 90
+Payer: Private Pay
+Authorization Status: not_required
+Discharge Target: 2026-05-08 10:00
+
+CURRENT COURSE OF ILLNESS AND TREATMENT
+Primary Diagnosis / Reason for Referral: Assisted living respite request after caregiver hospitalization
+Hospital Course: No acute skilled need. Family requests respite placement while caregiver recovers.
+
+CLINICAL CARE NEEDS
+Current Medications / MAR Summary: Amlodipine, donepezil, vitamins.
+Allergies: No known drug allergies.
+Mobility / Transfer Status: Independent with rollator.
+Therapy Need: No skilled therapy ordered.
+Wound / Skin Needs: No wounds.
+Oxygen / Respiratory Needs: Room air.
+Dialysis Need: No dialysis.
+Cognitive Status: Mild dementia; no wandering.
+Behavioral / Safety Concerns: No behaviors.
+Infection / Isolation Status: No isolation required.
+Advance Directive / Code Status: DNR.
+Durable Medical Equipment Needs: Rollator.
+
+KNOWN MISSING OR UNCLEAR ITEMS
+- Private-pay deposit confirmation
+- Responsible party signed agreement
+
+RAW SOURCE DOCUMENTS FOR NEXT-GEN INGESTION TESTING
+
+--- REF-119-01 / face_sheet / Email referral ---
+PATIENT FACE SHEET
+Referral ID: REF-119
+Source: Riverside Case Management
+Channel: Email referral
+Received: 2026-05-07 12:18
+Target Facility: GV-SNF-001
+Patient Initials: C.I.
+Age: 90
+Payer: Private Pay
+Authorization Status: not_required
+Discharge Target: 2026-05-08 10:00
+
+--- REF-119-02 / discharge_summary / Email referral ---
+DISCHARGE SUMMARY / CLINICAL SNAPSHOT
+Primary Diagnosis / Reason for Referral: Assisted living respite request after caregiver hospitalization
+Hospital Course: No acute skilled need. Family requests respite placement while caregiver recovers.
+
+CLINICAL CARE NEEDS
+Current Medications / MAR Summary: Amlodipine, donepezil, vitamins.
+Allergies: No known drug allergies.
+Mobility / Transfer Status: Independent with rollator.
+Therapy Need: No skilled therapy ordered.
+Wound / Skin Needs: No wounds.
+Oxygen / Respiratory Needs: Room air.
+Dialysis Need: No dialysis.
+Cognitive Status: Mild dementia; no wandering.
+Behavioral / Safety Concerns: No behaviors.
+Infection / Isolation Status: No isolation required.
+Advance Directive / Code Status: DNR.
+Durable Medical Equipment Needs: Rollator.
+
+--- REF-119-03 / email_body / email ---
+EMAIL BODY
+From: Riverside Case Management
+To: admissions@target-facility.example
+Subject: Referral REF-119 - C.I. - Assisted living respite request after caregiv
+
+Hi admissions team,
+Please review C.I. for placement. Quick notes: payer is Private Pay; auth status is not_required; main issue is Assisted living respite request after caregiver hospitalization.
+Need: Independent with rollator. / No skilled therapy ordered..
+Thanks,
+Case Management
+
+--- REF-119-04 / payer_auth_note / payer_document ---
+PAYER / AUTH NOTE
+Payer listed by sender: Private Pay
+Authorization status reported: not_required
+Authorization caveat: No payer caveat identified in this document.
+
+DEMO NOTE
+This document is fully synthetic and contains no real patient data.

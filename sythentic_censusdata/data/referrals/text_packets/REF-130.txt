@@ -1,0 +1,89 @@
+SYNTHETIC REFERRAL PACKET — FOR DEMO USE ONLY
+Referral ID: REF-130
+Source: Lakeshore Hospital
+Channel: Email attachment
+Received: 2026-05-07 09:00
+Target Facility: GV-SNF-001
+
+PATIENT FACE SHEET
+Patient Initials: T.E.
+Age: 59
+Payer: Medicare Part A
+Authorization Status: not_required
+Discharge Target: 2026-05-08 10:00
+
+CURRENT COURSE OF ILLNESS AND TREATMENT
+Primary Diagnosis / Reason for Referral: Morbid obesity and deconditioning after cellulitis
+Hospital Course: Cellulitis improved. Hospital requests SNF due to mobility limitations.
+
+CLINICAL CARE NEEDS
+Current Medications / MAR Summary: Oral antibiotics, insulin, antihypertensives.
+Allergies: No known drug allergies.
+Mobility / Transfer Status: Requires bariatric wheelchair and mechanical lift.
+Therapy Need: PT/OT recommended.
+Wound / Skin Needs: Skin folds intact; no open wound.
+Oxygen / Respiratory Needs: Room air.
+Dialysis Need: No dialysis.
+Cognitive Status: Alert and oriented.
+Behavioral / Safety Concerns: No behaviors.
+Infection / Isolation Status: No isolation required.
+Advance Directive / Code Status: Full code.
+Durable Medical Equipment Needs: Bariatric wheelchair, bariatric bed, mechanical lift.
+
+KNOWN MISSING OR UNCLEAR ITEMS
+- None documented
+
+RAW SOURCE DOCUMENTS FOR NEXT-GEN INGESTION TESTING
+
+--- REF-130-01 / face_sheet / Email attachment ---
+PATIENT FACE SHEET
+Referral ID: REF-130
+Source: Lakeshore Hospital
+Channel: Email attachment
+Received: 2026-05-07 14:19
+Target Facility: GV-SNF-001
+Patient Initials: T.E.
+Age: 59
+Payer: Medicare Part A
+Authorization Status: not_required
+Discharge Target: 2026-05-08 10:00
+
+--- REF-130-02 / discharge_summary / Email attachment ---
+DISCHARGE SUMMARY / CLINICAL SNAPSHOT
+Primary Diagnosis / Reason for Referral: Morbid obesity and deconditioning after cellulitis
+Hospital Course: Cellulitis improved. Hospital requests SNF due to mobility limitations.
+
+CLINICAL CARE NEEDS
+Current Medications / MAR Summary: Oral antibiotics, insulin, antihypertensives.
+Allergies: No known drug allergies.
+Mobility / Transfer Status: Requires bariatric wheelchair and mechanical lift.
+Therapy Need: PT/OT recommended.
+Wound / Skin Needs: Skin folds intact; no open wound.
+Oxygen / Respiratory Needs: Room air.
+Dialysis Need: No dialysis.
+Cognitive Status: Alert and oriented.
+Behavioral / Safety Concerns: No behaviors.
+Infection / Isolation Status: No isolation required.
+Advance Directive / Code Status: Full code.
+Durable Medical Equipment Needs: Bariatric wheelchair, bariatric bed, mechanical lift.
+
+--- REF-130-03 / email_body / email ---
+EMAIL BODY
+From: Lakeshore Hospital
+To: admissions@target-facility.example
+Subject: Referral REF-130 - T.E. - Morbid obesity and deconditioning after cellu
+
+Hi admissions team,
+Please review T.E. for placement. Quick notes: payer is Medicare Part A; auth status is not_required; main issue is Morbid obesity and deconditioning after cellulitis.
+Need: Requires bariatric wheelchair and mechanical lift. / PT/OT recommended..
+Thanks,
+Case Management
+
+--- REF-130-04 / payer_auth_note / payer_document ---
+PAYER / AUTH NOTE
+Payer listed by sender: Medicare Part A
+Authorization status reported: not_required
+Authorization caveat: No payer caveat identified in this document.
+
+DEMO NOTE
+This document is fully synthetic and contains no real patient data.

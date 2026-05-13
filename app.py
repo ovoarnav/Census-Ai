@@ -1,5 +1,4 @@
-from typing import Any, Dict, List, Tuple
-
+from typing import Any, Dict, List, Tuple, cast
 import pandas as pd
 import streamlit as st
 
@@ -341,7 +340,7 @@ def main() -> None:
                     )
 
             row = table[table["referral_id"] == selected_referral_id].iloc[0]
-            recommendation = evaluation["recommendation"]
+            recommendation = cast(Dict[str, Any], evaluation["recommendation"])
 
             headline_cols = st.columns([1, 1, 1])
             headline_cols[0].metric("Priority", row["priority"])

@@ -1,0 +1,78 @@
+SYNTHETIC REFERRAL PACKET — FOR DEMO USE ONLY
+Referral ID: REF-128
+Source: Metro Trauma Center
+Channel: EHR export PDF
+Received: 2026-05-07 09:00
+Target Facility: GV-SNF-001
+
+PATIENT FACE SHEET
+Patient Initials: A.R.
+Age: 66
+Payer: Commercial
+Authorization Status: approved
+Discharge Target: 2026-05-08 10:00
+
+CURRENT COURSE OF ILLNESS AND TREATMENT
+Primary Diagnosis / Reason for Referral: Spinal cord injury rehab; neurogenic bowel/bladder
+Hospital Course: Medically stable after trauma. Needs intensive rehab and bladder program.
+
+CLINICAL CARE NEEDS
+Current Medications / MAR Summary: Baclofen, gabapentin, bowel regimen.
+Allergies: No known drug allergies.
+Mobility / Transfer Status: Total assist; mechanical lift required.
+Therapy Need: PT/OT daily recommended.
+Wound / Skin Needs: No pressure injuries currently.
+Oxygen / Respiratory Needs: Room air.
+Dialysis Need: No dialysis.
+Cognitive Status: Alert and oriented.
+Behavioral / Safety Concerns: No behaviors.
+Infection / Isolation Status: No isolation required.
+Advance Directive / Code Status: Full code.
+Durable Medical Equipment Needs: Mechanical lift, wheelchair cushion.
+
+KNOWN MISSING OR UNCLEAR ITEMS
+- Bladder program orders not attached
+- Bowel program details incomplete
+
+RAW SOURCE DOCUMENTS FOR NEXT-GEN INGESTION TESTING
+
+--- REF-128-01 / face_sheet / EHR export PDF ---
+PATIENT FACE SHEET
+Referral ID: REF-128
+Source: Metro Trauma Center
+Channel: EHR export PDF
+Received: 2026-05-07 13:57
+Target Facility: GV-SNF-001
+Patient Initials: A.R.
+Age: 66
+Payer: Commercial
+Authorization Status: approved
+Discharge Target: 2026-05-08 10:00
+
+--- REF-128-02 / discharge_summary / EHR export PDF ---
+DISCHARGE SUMMARY / CLINICAL SNAPSHOT
+Primary Diagnosis / Reason for Referral: Spinal cord injury rehab; neurogenic bowel/bladder
+Hospital Course: Medically stable after trauma. Needs intensive rehab and bladder program.
+
+CLINICAL CARE NEEDS
+Current Medications / MAR Summary: Baclofen, gabapentin, bowel regimen.
+Allergies: No known drug allergies.
+Mobility / Transfer Status: Total assist; mechanical lift required.
+Therapy Need: PT/OT daily recommended.
+Wound / Skin Needs: No pressure injuries currently.
+Oxygen / Respiratory Needs: Room air.
+Dialysis Need: No dialysis.
+Cognitive Status: Alert and oriented.
+Behavioral / Safety Concerns: No behaviors.
+Infection / Isolation Status: No isolation required.
+Advance Directive / Code Status: Full code.
+Durable Medical Equipment Needs: Mechanical lift, wheelchair cushion.
+
+--- REF-128-03 / payer_auth_note / payer_document ---
+PAYER / AUTH NOTE
+Payer listed by sender: Commercial
+Authorization status reported: approved
+Authorization caveat: No payer caveat identified in this document.
+
+DEMO NOTE
+This document is fully synthetic and contains no real patient data.
