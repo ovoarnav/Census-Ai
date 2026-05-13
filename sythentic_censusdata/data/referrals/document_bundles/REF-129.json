@@ -1,0 +1,96 @@
+{
+  "referral_id": "REF-129",
+  "synthetic": true,
+  "target_facility_id": "GV-SNF-001",
+  "expected_status": "clinical_review",
+  "expected_score": 63,
+  "source_summary": {
+    "source": "Northview Hospital",
+    "channel": "Phone call transcript + emailed face sheet",
+    "patient_initials": "R.B.",
+    "age": 81,
+    "payer": "Medicare Advantage",
+    "primary_diagnosis": "UTI with weakness; short rehab"
+  },
+  "source_documents": [
+    {
+      "source_doc_id": "REF-129-01",
+      "document_type": "face_sheet",
+      "channel": "Phone call transcript + emailed face sheet",
+      "received_at": "2026-05-07 14:08",
+      "ocr_confidence": 0.99,
+      "text": "PATIENT FACE SHEET\nReferral ID: REF-129\nSource: Northview Hospital\nChannel: Phone call transcript + emailed face sheet\nReceived: 2026-05-07 14:08\nTarget Facility: GV-SNF-001\nPatient Initials: R.B.\nAge: 81\nPayer: Medicare Advantage\nAuthorization Status: approved\nDischarge Target: 2026-05-08 10:00\n"
+    },
+    {
+      "source_doc_id": "REF-129-02",
+      "document_type": "discharge_summary",
+      "channel": "Phone call transcript + emailed face sheet",
+      "received_at": "2026-05-07 14:08",
+      "ocr_confidence": 0.98,
+      "text": "DISCHARGE SUMMARY / CLINICAL SNAPSHOT\nPrimary Diagnosis / Reason for Referral: UTI with weakness; short rehab\nHospital Course: Case manager says no behaviors by phone. Nursing note says patient attempted to leave unit overnight.\n\nCLINICAL CARE NEEDS\nCurrent Medications / MAR Summary: Oral antibiotics complete tomorrow, home meds resumed.\nAllergies: No known drug allergies.\nMobility / Transfer Status: One-person assist with walker.\nTherapy Need: PT/OT recommended.\nWound / Skin Needs: No wounds.\nOxygen / Respiratory Needs: Room air.\nDialysis Need: No dialysis.\nCognitive Status: Confused at night.\nBehavioral / Safety Concerns: Contradiction: case manager reports no behaviors; nursing note reports exit-seeking overnight.\nInfection / Isolation Status: No isolation required.\nAdvance Directive / Code Status: DNR.\nDurable Medical Equipment Needs: Walker.\n"
+    },
+    {
+      "source_doc_id": "REF-129-03",
+      "document_type": "phone_transcript",
+      "channel": "phone",
+      "received_at": "2026-05-07 14:08",
+      "ocr_confidence": 0.93,
+      "text": "PHONE TRANSCRIPT\nCaller: discharge planner from Northview Hospital\nAdmissions: Can you summarize the case?\nCaller: This is R.B., age 81. Diagnosis is UTI with weakness; short rehab. Mobility right now: One-person assist with walker.. Behavior/safety: Contradiction: case manager reports no behaviors; nursing note reports exit-seeking overnight.. Infection status: No isolation required..\nAdmissions: Any missing paperwork?\nCaller: Clarify behavior and elopement risk\n\nCaller later says: \"Actually the floor nurse mentioned possible exit-seeking overnight; please verify behavior notes.\"\n\nCONFLICT FLAG: case manager says \"no behaviors,\" but nursing note says \"exit-seeking overnight.\"\n"
+    },
+    {
+      "source_doc_id": "REF-129-04",
+      "document_type": "email_body",
+      "channel": "email",
+      "received_at": "2026-05-07 14:08",
+      "ocr_confidence": 0.96,
+      "text": "EMAIL BODY\nFrom: Northview Hospital\nTo: admissions@target-facility.example\nSubject: Referral REF-129 - R.B. - UTI with weakness; short rehab\n\nHi admissions team,\nPlease review R.B. for placement. Quick notes: payer is Medicare Advantage; auth status is approved; main issue is UTI with weakness; short rehab.\nNeed: One-person assist with walker. / PT/OT recommended..\nThanks,\nCase Management\n"
+    },
+    {
+      "source_doc_id": "REF-129-05",
+      "document_type": "payer_auth_note",
+      "channel": "payer_document",
+      "received_at": "2026-05-07 14:08",
+      "ocr_confidence": 0.97,
+      "text": "PAYER / AUTH NOTE\nPayer listed by sender: Medicare Advantage\nAuthorization status reported: approved\nAuthorization caveat: No payer caveat identified in this document.\n"
+    }
+  ],
+  "gold_extraction": {
+    "referral_id": "REF-129",
+    "source": "Northview Hospital",
+    "channel": "Phone call transcript + emailed face sheet",
+    "received_at": null,
+    "target_facility_id": "GV-SNF-001",
+    "patient_initials": "R.B.",
+    "age": 81,
+    "payer": "Medicare Advantage",
+    "authorization_status": "approved",
+    "primary_diagnosis": "UTI with weakness; short rehab",
+    "current_course_of_illness": "Case manager says no behaviors by phone. Nursing note says patient attempted to leave unit overnight.",
+    "current_medications_or_mar": "Oral antibiotics complete tomorrow, home meds resumed.",
+    "allergies": "No known drug allergies.",
+    "mobility_transfer_status": "One-person assist with walker.",
+    "therapy_need": "PT/OT recommended.",
+    "wound_skin_needs": "No wounds.",
+    "oxygen_respiratory_needs": "Room air.",
+    "dialysis_need": "No dialysis.",
+    "cognitive_status": "Confused at night.",
+    "behavioral_safety_concerns": "Contradiction: case manager reports no behaviors; nursing note reports exit-seeking overnight.",
+    "infection_isolation_status": "No isolation required.",
+    "advance_directive_code_status": "DNR.",
+    "durable_medical_equipment_needs": "Walker.",
+    "missing_or_unclear_items": [
+      "Clarify behavior and elopement risk"
+    ],
+    "expected_status": "clinical_review",
+    "expected_score": 63
+  },
+  "known_mismatches": [
+    {
+      "mismatch_type": "contradiction_behavioral_status",
+      "severity": "high",
+      "reason": "Source documents conflict on behavioral/elopement risk.",
+      "target_facility_id": "GV-SNF-001"
+    }
+  ],
+  "notes": "All data is synthetic. No real patient data."
+}

@@ -1,0 +1,95 @@
+{
+  "referral_id": "REF-119",
+  "synthetic": true,
+  "target_facility_id": "GV-SNF-001",
+  "expected_status": "likely_accept_needs_info",
+  "expected_score": 73,
+  "source_summary": {
+    "source": "Riverside Case Management",
+    "channel": "Email referral",
+    "patient_initials": "C.I.",
+    "age": 90,
+    "payer": "Private Pay",
+    "primary_diagnosis": "Assisted living respite request after caregiver hospitalization"
+  },
+  "source_documents": [
+    {
+      "source_doc_id": "REF-119-01",
+      "document_type": "face_sheet",
+      "channel": "Email referral",
+      "received_at": "2026-05-07 12:18",
+      "ocr_confidence": 0.99,
+      "text": "PATIENT FACE SHEET\nReferral ID: REF-119\nSource: Riverside Case Management\nChannel: Email referral\nReceived: 2026-05-07 12:18\nTarget Facility: GV-SNF-001\nPatient Initials: C.I.\nAge: 90\nPayer: Private Pay\nAuthorization Status: not_required\nDischarge Target: 2026-05-08 10:00\n"
+    },
+    {
+      "source_doc_id": "REF-119-02",
+      "document_type": "discharge_summary",
+      "channel": "Email referral",
+      "received_at": "2026-05-07 12:18",
+      "ocr_confidence": 0.98,
+      "text": "DISCHARGE SUMMARY / CLINICAL SNAPSHOT\nPrimary Diagnosis / Reason for Referral: Assisted living respite request after caregiver hospitalization\nHospital Course: No acute skilled need. Family requests respite placement while caregiver recovers.\n\nCLINICAL CARE NEEDS\nCurrent Medications / MAR Summary: Amlodipine, donepezil, vitamins.\nAllergies: No known drug allergies.\nMobility / Transfer Status: Independent with rollator.\nTherapy Need: No skilled therapy ordered.\nWound / Skin Needs: No wounds.\nOxygen / Respiratory Needs: Room air.\nDialysis Need: No dialysis.\nCognitive Status: Mild dementia; no wandering.\nBehavioral / Safety Concerns: No behaviors.\nInfection / Isolation Status: No isolation required.\nAdvance Directive / Code Status: DNR.\nDurable Medical Equipment Needs: Rollator.\n"
+    },
+    {
+      "source_doc_id": "REF-119-03",
+      "document_type": "email_body",
+      "channel": "email",
+      "received_at": "2026-05-07 12:18",
+      "ocr_confidence": 0.96,
+      "text": "EMAIL BODY\nFrom: Riverside Case Management\nTo: admissions@target-facility.example\nSubject: Referral REF-119 - C.I. - Assisted living respite request after caregiv\n\nHi admissions team,\nPlease review C.I. for placement. Quick notes: payer is Private Pay; auth status is not_required; main issue is Assisted living respite request after caregiver hospitalization.\nNeed: Independent with rollator. / No skilled therapy ordered..\nThanks,\nCase Management\n"
+    },
+    {
+      "source_doc_id": "REF-119-04",
+      "document_type": "payer_auth_note",
+      "channel": "payer_document",
+      "received_at": "2026-05-07 12:18",
+      "ocr_confidence": 0.97,
+      "text": "PAYER / AUTH NOTE\nPayer listed by sender: Private Pay\nAuthorization status reported: not_required\nAuthorization caveat: No payer caveat identified in this document.\n"
+    }
+  ],
+  "gold_extraction": {
+    "referral_id": "REF-119",
+    "source": "Riverside Case Management",
+    "channel": "Email referral",
+    "received_at": null,
+    "target_facility_id": "GV-SNF-001",
+    "patient_initials": "C.I.",
+    "age": 90,
+    "payer": "Private Pay",
+    "authorization_status": "not_required",
+    "primary_diagnosis": "Assisted living respite request after caregiver hospitalization",
+    "current_course_of_illness": "No acute skilled need. Family requests respite placement while caregiver recovers.",
+    "current_medications_or_mar": "Amlodipine, donepezil, vitamins.",
+    "allergies": "No known drug allergies.",
+    "mobility_transfer_status": "Independent with rollator.",
+    "therapy_need": "No skilled therapy ordered.",
+    "wound_skin_needs": "No wounds.",
+    "oxygen_respiratory_needs": "Room air.",
+    "dialysis_need": "No dialysis.",
+    "cognitive_status": "Mild dementia; no wandering.",
+    "behavioral_safety_concerns": "No behaviors.",
+    "infection_isolation_status": "No isolation required.",
+    "advance_directive_code_status": "DNR.",
+    "durable_medical_equipment_needs": "Rollator.",
+    "missing_or_unclear_items": [
+      "Private-pay deposit confirmation",
+      "Responsible party signed agreement"
+    ],
+    "expected_status": "likely_accept_needs_info",
+    "expected_score": 73
+  },
+  "known_mismatches": [
+    {
+      "mismatch_type": "not_snf_level_of_care",
+      "severity": "medium",
+      "reason": "Referral appears to be assisted-living/respite rather than skilled nursing level of care.",
+      "target_facility_id": "GV-SNF-001"
+    },
+    {
+      "mismatch_type": "financial_paperwork_missing",
+      "severity": "medium",
+      "reason": "Responsible party, deposit, or financial paperwork is missing.",
+      "target_facility_id": "GV-SNF-001"
+    }
+  ],
+  "notes": "All data is synthetic. No real patient data."
+}

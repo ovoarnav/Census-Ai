@@ -1,0 +1,102 @@
+{
+  "referral_id": "REF-109",
+  "synthetic": true,
+  "target_facility_id": "GV-SNF-001",
+  "expected_status": "likely_accept_needs_info",
+  "expected_score": 74,
+  "source_summary": {
+    "source": "County General Hospital",
+    "channel": "Portal screenshot entered manually",
+    "patient_initials": "P.R.",
+    "age": 80,
+    "payer": "Medicare Part A",
+    "primary_diagnosis": "Stroke with dysphagia and major functional decline"
+  },
+  "source_documents": [
+    {
+      "source_doc_id": "REF-109-01",
+      "document_type": "face_sheet",
+      "channel": "Portal screenshot entered manually",
+      "received_at": "2026-05-07 10:28",
+      "ocr_confidence": 0.99,
+      "text": "PATIENT FACE SHEET\nReferral ID: REF-109\nSource: County General Hospital\nChannel: Portal screenshot entered manually\nReceived: 2026-05-07 10:28\nTarget Facility: GV-SNF-001\nPatient Initials: P.R.\nAge: 80\nPayer: Medicare Part A\nAuthorization Status: not_required\nDischarge Target: 2026-05-08 10:00\n"
+    },
+    {
+      "source_doc_id": "REF-109-02",
+      "document_type": "discharge_summary",
+      "channel": "Portal screenshot entered manually",
+      "received_at": "2026-05-07 10:28",
+      "ocr_confidence": 0.98,
+      "text": "DISCHARGE SUMMARY / CLINICAL SNAPSHOT\nPrimary Diagnosis / Reason for Referral: Stroke with dysphagia and major functional decline\nHospital Course: Left MCA stroke. Medically stable. Needs rehab and swallowing precautions.\n\nCLINICAL CARE NEEDS\nCurrent Medications / MAR Summary: Aspirin, atorvastatin, lisinopril; MAR not sent in screenshot.\nAllergies: Allergies not listed.\nMobility / Transfer Status: Two-person assist for transfers.\nTherapy Need: PT/OT/ST recommended; swallow therapy noted.\nWound / Skin Needs: No wounds.\nOxygen / Respiratory Needs: Room air.\nDialysis Need: No dialysis.\nCognitive Status: Expressive aphasia; follows simple commands.\nBehavioral / Safety Concerns: No aggression.\nInfection / Isolation Status: No isolation required.\nAdvance Directive / Code Status: Full code.\nDurable Medical Equipment Needs: Wheelchair for transport.\n"
+    },
+    {
+      "source_doc_id": "REF-109-03",
+      "document_type": "portal_screenshot_ocr",
+      "channel": "portal_screenshot",
+      "received_at": "2026-05-07 10:28",
+      "ocr_confidence": 0.81,
+      "text": "PORTAL SCREENSHOT OCR\nP.R. / 80 / Medicare Part A / Stroke with dysphagia and major functional decline\nMeds line: Aspirin, atorvastatin, lisinopril; MAR not sent in screenshot.\nMissing line: Current MAR, Allergy status, Diet texture and liquid consistency orders\n"
+    },
+    {
+      "source_doc_id": "REF-109-04",
+      "document_type": "payer_auth_note",
+      "channel": "payer_document",
+      "received_at": "2026-05-07 10:28",
+      "ocr_confidence": 0.97,
+      "text": "PAYER / AUTH NOTE\nPayer listed by sender: Medicare Part A\nAuthorization status reported: not_required\nAuthorization caveat: No payer caveat identified in this document.\n"
+    }
+  ],
+  "gold_extraction": {
+    "referral_id": "REF-109",
+    "source": "County General Hospital",
+    "channel": "Portal screenshot entered manually",
+    "received_at": null,
+    "target_facility_id": "GV-SNF-001",
+    "patient_initials": "P.R.",
+    "age": 80,
+    "payer": "Medicare Part A",
+    "authorization_status": "not_required",
+    "primary_diagnosis": "Stroke with dysphagia and major functional decline",
+    "current_course_of_illness": "Left MCA stroke. Medically stable. Needs rehab and swallowing precautions.",
+    "current_medications_or_mar": "Aspirin, atorvastatin, lisinopril; MAR not sent in screenshot.",
+    "allergies": "Allergies not listed.",
+    "mobility_transfer_status": "Two-person assist for transfers.",
+    "therapy_need": "PT/OT/ST recommended; swallow therapy noted.",
+    "wound_skin_needs": "No wounds.",
+    "oxygen_respiratory_needs": "Room air.",
+    "dialysis_need": "No dialysis.",
+    "cognitive_status": "Expressive aphasia; follows simple commands.",
+    "behavioral_safety_concerns": "No aggression.",
+    "infection_isolation_status": "No isolation required.",
+    "advance_directive_code_status": "Full code.",
+    "durable_medical_equipment_needs": "Wheelchair for transport.",
+    "missing_or_unclear_items": [
+      "Current MAR",
+      "Allergy status",
+      "Diet texture and liquid consistency orders"
+    ],
+    "expected_status": "likely_accept_needs_info",
+    "expected_score": 74
+  },
+  "known_mismatches": [
+    {
+      "mismatch_type": "mar_missing",
+      "severity": "medium",
+      "reason": "Current medication list/MAR is missing or referenced but not attached.",
+      "target_facility_id": "GV-SNF-001"
+    },
+    {
+      "mismatch_type": "allergies_missing",
+      "severity": "medium",
+      "reason": "Allergy status is absent or not clearly listed.",
+      "target_facility_id": "GV-SNF-001"
+    },
+    {
+      "mismatch_type": "diet_swallow_orders_missing",
+      "severity": "medium",
+      "reason": "Diet texture/liquid consistency/swallow precautions are missing or unclear.",
+      "target_facility_id": "GV-SNF-001"
+    }
+  ],
+  "notes": "All data is synthetic. No real patient data."
+}

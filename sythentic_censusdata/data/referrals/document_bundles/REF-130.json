@@ -1,0 +1,86 @@
+{
+  "referral_id": "REF-130",
+  "synthetic": true,
+  "target_facility_id": "GV-SNF-001",
+  "expected_status": "decline_recommended",
+  "expected_score": 44,
+  "source_summary": {
+    "source": "Lakeshore Hospital",
+    "channel": "Email attachment",
+    "patient_initials": "T.E.",
+    "age": 59,
+    "payer": "Medicare Part A",
+    "primary_diagnosis": "Morbid obesity and deconditioning after cellulitis"
+  },
+  "source_documents": [
+    {
+      "source_doc_id": "REF-130-01",
+      "document_type": "face_sheet",
+      "channel": "Email attachment",
+      "received_at": "2026-05-07 14:19",
+      "ocr_confidence": 0.99,
+      "text": "PATIENT FACE SHEET\nReferral ID: REF-130\nSource: Lakeshore Hospital\nChannel: Email attachment\nReceived: 2026-05-07 14:19\nTarget Facility: GV-SNF-001\nPatient Initials: T.E.\nAge: 59\nPayer: Medicare Part A\nAuthorization Status: not_required\nDischarge Target: 2026-05-08 10:00\n"
+    },
+    {
+      "source_doc_id": "REF-130-02",
+      "document_type": "discharge_summary",
+      "channel": "Email attachment",
+      "received_at": "2026-05-07 14:19",
+      "ocr_confidence": 0.98,
+      "text": "DISCHARGE SUMMARY / CLINICAL SNAPSHOT\nPrimary Diagnosis / Reason for Referral: Morbid obesity and deconditioning after cellulitis\nHospital Course: Cellulitis improved. Hospital requests SNF due to mobility limitations.\n\nCLINICAL CARE NEEDS\nCurrent Medications / MAR Summary: Oral antibiotics, insulin, antihypertensives.\nAllergies: No known drug allergies.\nMobility / Transfer Status: Requires bariatric wheelchair and mechanical lift.\nTherapy Need: PT/OT recommended.\nWound / Skin Needs: Skin folds intact; no open wound.\nOxygen / Respiratory Needs: Room air.\nDialysis Need: No dialysis.\nCognitive Status: Alert and oriented.\nBehavioral / Safety Concerns: No behaviors.\nInfection / Isolation Status: No isolation required.\nAdvance Directive / Code Status: Full code.\nDurable Medical Equipment Needs: Bariatric wheelchair, bariatric bed, mechanical lift.\n"
+    },
+    {
+      "source_doc_id": "REF-130-03",
+      "document_type": "email_body",
+      "channel": "email",
+      "received_at": "2026-05-07 14:19",
+      "ocr_confidence": 0.96,
+      "text": "EMAIL BODY\nFrom: Lakeshore Hospital\nTo: admissions@target-facility.example\nSubject: Referral REF-130 - T.E. - Morbid obesity and deconditioning after cellu\n\nHi admissions team,\nPlease review T.E. for placement. Quick notes: payer is Medicare Part A; auth status is not_required; main issue is Morbid obesity and deconditioning after cellulitis.\nNeed: Requires bariatric wheelchair and mechanical lift. / PT/OT recommended..\nThanks,\nCase Management\n"
+    },
+    {
+      "source_doc_id": "REF-130-04",
+      "document_type": "payer_auth_note",
+      "channel": "payer_document",
+      "received_at": "2026-05-07 14:19",
+      "ocr_confidence": 0.97,
+      "text": "PAYER / AUTH NOTE\nPayer listed by sender: Medicare Part A\nAuthorization status reported: not_required\nAuthorization caveat: No payer caveat identified in this document.\n"
+    }
+  ],
+  "gold_extraction": {
+    "referral_id": "REF-130",
+    "source": "Lakeshore Hospital",
+    "channel": "Email attachment",
+    "received_at": null,
+    "target_facility_id": "GV-SNF-001",
+    "patient_initials": "T.E.",
+    "age": 59,
+    "payer": "Medicare Part A",
+    "authorization_status": "not_required",
+    "primary_diagnosis": "Morbid obesity and deconditioning after cellulitis",
+    "current_course_of_illness": "Cellulitis improved. Hospital requests SNF due to mobility limitations.",
+    "current_medications_or_mar": "Oral antibiotics, insulin, antihypertensives.",
+    "allergies": "No known drug allergies.",
+    "mobility_transfer_status": "Requires bariatric wheelchair and mechanical lift.",
+    "therapy_need": "PT/OT recommended.",
+    "wound_skin_needs": "Skin folds intact; no open wound.",
+    "oxygen_respiratory_needs": "Room air.",
+    "dialysis_need": "No dialysis.",
+    "cognitive_status": "Alert and oriented.",
+    "behavioral_safety_concerns": "No behaviors.",
+    "infection_isolation_status": "No isolation required.",
+    "advance_directive_code_status": "Full code.",
+    "durable_medical_equipment_needs": "Bariatric wheelchair, bariatric bed, mechanical lift.",
+    "missing_or_unclear_items": [],
+    "expected_status": "decline_recommended",
+    "expected_score": 44
+  },
+  "known_mismatches": [
+    {
+      "mismatch_type": "bariatric_equipment_gap",
+      "severity": "high",
+      "reason": "Bariatric bed/equipment appears required but target facility lacks bariatric equipment.",
+      "target_facility_id": "GV-SNF-001"
+    }
+  ],
+  "notes": "All data is synthetic. No real patient data."
+}

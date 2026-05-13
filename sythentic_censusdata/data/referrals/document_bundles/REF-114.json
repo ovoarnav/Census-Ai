@@ -1,0 +1,103 @@
+{
+  "referral_id": "REF-114",
+  "synthetic": true,
+  "target_facility_id": "GV-SNF-001",
+  "expected_status": "clinical_review",
+  "expected_score": 66,
+  "source_summary": {
+    "source": "Riverside Case Management",
+    "channel": "Scanned handwritten note + email",
+    "patient_initials": "Y.C.",
+    "age": 89,
+    "payer": "Medicare Part A",
+    "primary_diagnosis": "Pneumonia with new oxygen requirement and delirium"
+  },
+  "source_documents": [
+    {
+      "source_doc_id": "REF-114-01",
+      "document_type": "face_sheet",
+      "channel": "Scanned handwritten note + email",
+      "received_at": "2026-05-07 11:23",
+      "ocr_confidence": 0.99,
+      "text": "PATIENT FACE SHEET\nReferral ID: REF-114\nSource: Riverside Case Management\nChannel: Scanned handwritten note + email\nReceived: 2026-05-07 11:23\nTarget Facility: GV-SNF-001\nPatient Initials: Y.C.\nAge: 89\nPayer: Medicare Part A\nAuthorization Status: not_required\nDischarge Target: 2026-05-08 10:00\n"
+    },
+    {
+      "source_doc_id": "REF-114-02",
+      "document_type": "discharge_summary",
+      "channel": "Scanned handwritten note + email",
+      "received_at": "2026-05-07 11:23",
+      "ocr_confidence": 0.98,
+      "text": "DISCHARGE SUMMARY / CLINICAL SNAPSHOT\nPrimary Diagnosis / Reason for Referral: Pneumonia with new oxygen requirement and delirium\nHospital Course: Pneumonia improving. Delirium fluctuates; family reports baseline independent living.\n\nCLINICAL CARE NEEDS\nCurrent Medications / MAR Summary: Levofloxacin oral, melatonin, quetiapine PRN.\nAllergies: Allergy list unreadable on handwritten note.\nMobility / Transfer Status: Two-person assist yesterday; today one-person assist per PT.\nTherapy Need: PT/OT recommended.\nWound / Skin Needs: No wounds.\nOxygen / Respiratory Needs: 3 L nasal cannula, may wean.\nDialysis Need: No dialysis.\nCognitive Status: Fluctuating confusion; reorientation helps.\nBehavioral / Safety Concerns: Pulled oxygen tubing twice overnight.\nInfection / Isolation Status: No isolation required.\nAdvance Directive / Code Status: DNR.\nDurable Medical Equipment Needs: Oxygen equipment.\n"
+    },
+    {
+      "source_doc_id": "REF-114-03",
+      "document_type": "email_body",
+      "channel": "email",
+      "received_at": "2026-05-07 11:23",
+      "ocr_confidence": 0.96,
+      "text": "EMAIL BODY\nFrom: Riverside Case Management\nTo: admissions@target-facility.example\nSubject: Referral REF-114 - Y.C. - Pneumonia with new oxygen requirement and del\n\nHi admissions team,\nPlease review Y.C. for placement. Quick notes: payer is Medicare Part A; auth status is not_required; main issue is Pneumonia with new oxygen requirement and delirium.\nNeed: Two-person assist yesterday; today one-person assist per PT. / PT/OT recommended..\nThanks,\nCase Management\n"
+    },
+    {
+      "source_doc_id": "REF-114-04",
+      "document_type": "handwritten_note_ocr",
+      "channel": "scanned_handwritten_note",
+      "received_at": "2026-05-07 11:23",
+      "ocr_confidence": 0.72,
+      "text": "HANDWRITTEN NOTE OCR - LOW CONFIDENCE\npt Y.C. / 89y. dx looks like: Pneumonia with new oxygen requirement and delirium.\nmobility: Two-person assist yesterday; today one-person assist per PT..\ndiet/swallow/other notes may be incomplete. allergies line: Allergy list unreadable on handwritten note..\nOCR confidence: 0.72\n\nNOTE: handwriting around diet/allergy/mobility is partially unclear; verify against final orders.\n"
+    },
+    {
+      "source_doc_id": "REF-114-05",
+      "document_type": "payer_auth_note",
+      "channel": "payer_document",
+      "received_at": "2026-05-07 11:23",
+      "ocr_confidence": 0.97,
+      "text": "PAYER / AUTH NOTE\nPayer listed by sender: Medicare Part A\nAuthorization status reported: not_required\nAuthorization caveat: No payer caveat identified in this document.\n"
+    }
+  ],
+  "gold_extraction": {
+    "referral_id": "REF-114",
+    "source": "Riverside Case Management",
+    "channel": "Scanned handwritten note + email",
+    "received_at": null,
+    "target_facility_id": "GV-SNF-001",
+    "patient_initials": "Y.C.",
+    "age": 89,
+    "payer": "Medicare Part A",
+    "authorization_status": "not_required",
+    "primary_diagnosis": "Pneumonia with new oxygen requirement and delirium",
+    "current_course_of_illness": "Pneumonia improving. Delirium fluctuates; family reports baseline independent living.",
+    "current_medications_or_mar": "Levofloxacin oral, melatonin, quetiapine PRN.",
+    "allergies": "Allergy list unreadable on handwritten note.",
+    "mobility_transfer_status": "Two-person assist yesterday; today one-person assist per PT.",
+    "therapy_need": "PT/OT recommended.",
+    "wound_skin_needs": "No wounds.",
+    "oxygen_respiratory_needs": "3 L nasal cannula, may wean.",
+    "dialysis_need": "No dialysis.",
+    "cognitive_status": "Fluctuating confusion; reorientation helps.",
+    "behavioral_safety_concerns": "Pulled oxygen tubing twice overnight.",
+    "infection_isolation_status": "No isolation required.",
+    "advance_directive_code_status": "DNR.",
+    "durable_medical_equipment_needs": "Oxygen equipment.",
+    "missing_or_unclear_items": [
+      "Confirm allergies due to low-confidence handwriting",
+      "Clarify current transfer level"
+    ],
+    "expected_status": "clinical_review",
+    "expected_score": 66
+  },
+  "known_mismatches": [
+    {
+      "mismatch_type": "allergies_low_confidence",
+      "severity": "medium",
+      "reason": "Allergy information appears only in low-confidence OCR/handwriting.",
+      "target_facility_id": "GV-SNF-001"
+    },
+    {
+      "mismatch_type": "mobility_conflict",
+      "severity": "medium",
+      "reason": "Transfer or assist level conflicts across notes.",
+      "target_facility_id": "GV-SNF-001"
+    }
+  ],
+  "notes": "All data is synthetic. No real patient data."
+}

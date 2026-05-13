@@ -1,0 +1,88 @@
+{
+  "referral_id": "REF-127",
+  "synthetic": true,
+  "target_facility_id": "GV-SNF-001",
+  "expected_status": "likely_accept_needs_info",
+  "expected_score": 76,
+  "source_summary": {
+    "source": "St. Anne Medical Center",
+    "channel": "Fax packet",
+    "patient_initials": "M.N.",
+    "age": 92,
+    "payer": "Medicare Part A",
+    "primary_diagnosis": "Severe malnutrition and weakness after GI bleed"
+  },
+  "source_documents": [
+    {
+      "source_doc_id": "REF-127-01",
+      "document_type": "face_sheet",
+      "channel": "Fax packet",
+      "received_at": "2026-05-07 13:46",
+      "ocr_confidence": 0.99,
+      "text": "PATIENT FACE SHEET\nReferral ID: REF-127\nSource: St. Anne Medical Center\nChannel: Fax packet\nReceived: 2026-05-07 13:46\nTarget Facility: GV-SNF-001\nPatient Initials: M.N.\nAge: 92\nPayer: Medicare Part A\nAuthorization Status: not_required\nDischarge Target: 2026-05-08 10:00\n"
+    },
+    {
+      "source_doc_id": "REF-127-02",
+      "document_type": "discharge_summary",
+      "channel": "Fax packet",
+      "received_at": "2026-05-07 13:46",
+      "ocr_confidence": 0.98,
+      "text": "DISCHARGE SUMMARY / CLINICAL SNAPSHOT\nPrimary Diagnosis / Reason for Referral: Severe malnutrition and weakness after GI bleed\nHospital Course: GI bleed resolved. Dietitian notes poor intake and weight loss.\n\nCLINICAL CARE NEEDS\nCurrent Medications / MAR Summary: Pantoprazole, iron, multivitamin.\nAllergies: No known drug allergies.\nMobility / Transfer Status: Two-person assist for transfers.\nTherapy Need: PT/OT recommended; dietitian follow-up requested.\nWound / Skin Needs: No wounds.\nOxygen / Respiratory Needs: Room air.\nDialysis Need: No dialysis.\nCognitive Status: Alert but fatigued.\nBehavioral / Safety Concerns: No behaviors.\nInfection / Isolation Status: No isolation required.\nAdvance Directive / Code Status: DNR.\nDurable Medical Equipment Needs: Wheelchair.\n"
+    },
+    {
+      "source_doc_id": "REF-127-03",
+      "document_type": "fax_cover_sheet",
+      "channel": "fax",
+      "received_at": "2026-05-07 13:46",
+      "ocr_confidence": 0.88,
+      "text": "FAX COVER SHEET\nAttached documents may be incomplete. Please confirm MAR, orders, and authorization if absent.\nEMAIL BODY\nFrom: St. Anne Medical Center\nTo: admissions@target-facility.example\nSubject: Referral REF-127 - M.N. - Severe malnutrition and weakness after GI ble\n\nHi admissions team,\nPlease review M.N. for placement. Quick notes: payer is Medicare Part A; auth status is not_required; main issue is Severe malnutrition and weakness after GI bleed.\nNeed: Two-person assist for transfers. / PT/OT recommended; dietitian follow-up requested..\nThanks,\nCase Management\n"
+    },
+    {
+      "source_doc_id": "REF-127-04",
+      "document_type": "payer_auth_note",
+      "channel": "payer_document",
+      "received_at": "2026-05-07 13:46",
+      "ocr_confidence": 0.97,
+      "text": "PAYER / AUTH NOTE\nPayer listed by sender: Medicare Part A\nAuthorization status reported: not_required\nAuthorization caveat: No payer caveat identified in this document.\n"
+    }
+  ],
+  "gold_extraction": {
+    "referral_id": "REF-127",
+    "source": "St. Anne Medical Center",
+    "channel": "Fax packet",
+    "received_at": null,
+    "target_facility_id": "GV-SNF-001",
+    "patient_initials": "M.N.",
+    "age": 92,
+    "payer": "Medicare Part A",
+    "authorization_status": "not_required",
+    "primary_diagnosis": "Severe malnutrition and weakness after GI bleed",
+    "current_course_of_illness": "GI bleed resolved. Dietitian notes poor intake and weight loss.",
+    "current_medications_or_mar": "Pantoprazole, iron, multivitamin.",
+    "allergies": "No known drug allergies.",
+    "mobility_transfer_status": "Two-person assist for transfers.",
+    "therapy_need": "PT/OT recommended; dietitian follow-up requested.",
+    "wound_skin_needs": "No wounds.",
+    "oxygen_respiratory_needs": "Room air.",
+    "dialysis_need": "No dialysis.",
+    "cognitive_status": "Alert but fatigued.",
+    "behavioral_safety_concerns": "No behaviors.",
+    "infection_isolation_status": "No isolation required.",
+    "advance_directive_code_status": "DNR.",
+    "durable_medical_equipment_needs": "Wheelchair.",
+    "missing_or_unclear_items": [
+      "Diet order and supplement plan unclear"
+    ],
+    "expected_status": "likely_accept_needs_info",
+    "expected_score": 76
+  },
+  "known_mismatches": [
+    {
+      "mismatch_type": "nutrition_orders_missing",
+      "severity": "medium",
+      "reason": "Diet order or nutrition supplement plan is missing/unclear.",
+      "target_facility_id": "GV-SNF-001"
+    }
+  ],
+  "notes": "All data is synthetic. No real patient data."
+}

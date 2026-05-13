@@ -1,0 +1,98 @@
+{
+  "referral_id": "REF-136",
+  "synthetic": true,
+  "target_facility_id": "LW-AL-002",
+  "expected_status": "decline_recommended",
+  "expected_score": 30,
+  "source_summary": {
+    "source": "Metro Trauma Center",
+    "channel": "Fax packet",
+    "patient_initials": "B.W.",
+    "age": 76,
+    "payer": "Medicare Part A",
+    "primary_diagnosis": "Hip fracture rehab with two-person assist"
+  },
+  "source_documents": [
+    {
+      "source_doc_id": "REF-136-01",
+      "document_type": "face_sheet",
+      "channel": "Fax packet",
+      "received_at": "2026-05-07 15:25",
+      "ocr_confidence": 0.99,
+      "text": "PATIENT FACE SHEET\nReferral ID: REF-136\nSource: Metro Trauma Center\nChannel: Fax packet\nReceived: 2026-05-07 15:25\nTarget Facility: LW-AL-002\nPatient Initials: B.W.\nAge: 76\nPayer: Medicare Part A\nAuthorization Status: not_required\nDischarge Target: 2026-05-08 10:00\n"
+    },
+    {
+      "source_doc_id": "REF-136-02",
+      "document_type": "discharge_summary",
+      "channel": "Fax packet",
+      "received_at": "2026-05-07 15:25",
+      "ocr_confidence": 0.98,
+      "text": "DISCHARGE SUMMARY / CLINICAL SNAPSHOT\nPrimary Diagnosis / Reason for Referral: Hip fracture rehab with two-person assist\nHospital Course: Hospital wants AL placement but patient requires skilled rehab.\n\nCLINICAL CARE NEEDS\nCurrent Medications / MAR Summary: Pain meds, DVT prophylaxis.\nAllergies: No known drug allergies.\nMobility / Transfer Status: Two-person assist, unable to transfer independently.\nTherapy Need: PT/OT daily recommended.\nWound / Skin Needs: Surgical dressing intact.\nOxygen / Respiratory Needs: Room air.\nDialysis Need: No dialysis.\nCognitive Status: Alert.\nBehavioral / Safety Concerns: No behaviors.\nInfection / Isolation Status: No isolation required.\nAdvance Directive / Code Status: Full code.\nDurable Medical Equipment Needs: Walker.\n"
+    },
+    {
+      "source_doc_id": "REF-136-03",
+      "document_type": "fax_cover_sheet",
+      "channel": "fax",
+      "received_at": "2026-05-07 15:25",
+      "ocr_confidence": 0.88,
+      "text": "FAX COVER SHEET\nAttached documents may be incomplete. Please confirm MAR, orders, and authorization if absent.\nEMAIL BODY\nFrom: Metro Trauma Center\nTo: admissions@target-facility.example\nSubject: Referral REF-136 - B.W. - Hip fracture rehab with two-person assist\n\nHi admissions team,\nPlease review B.W. for placement. Quick notes: payer is Medicare Part A; auth status is not_required; main issue is Hip fracture rehab with two-person assist.\nNeed: Two-person assist, unable to transfer independently. / PT/OT daily recommended..\nThanks,\nCase Management\n"
+    },
+    {
+      "source_doc_id": "REF-136-04",
+      "document_type": "payer_auth_note",
+      "channel": "payer_document",
+      "received_at": "2026-05-07 15:25",
+      "ocr_confidence": 0.97,
+      "text": "PAYER / AUTH NOTE\nPayer listed by sender: Medicare Part A\nAuthorization status reported: not_required\nAuthorization caveat: No payer caveat identified in this document.\n"
+    }
+  ],
+  "gold_extraction": {
+    "referral_id": "REF-136",
+    "source": "Metro Trauma Center",
+    "channel": "Fax packet",
+    "received_at": null,
+    "target_facility_id": "LW-AL-002",
+    "patient_initials": "B.W.",
+    "age": 76,
+    "payer": "Medicare Part A",
+    "authorization_status": "not_required",
+    "primary_diagnosis": "Hip fracture rehab with two-person assist",
+    "current_course_of_illness": "Hospital wants AL placement but patient requires skilled rehab.",
+    "current_medications_or_mar": "Pain meds, DVT prophylaxis.",
+    "allergies": "No known drug allergies.",
+    "mobility_transfer_status": "Two-person assist, unable to transfer independently.",
+    "therapy_need": "PT/OT daily recommended.",
+    "wound_skin_needs": "Surgical dressing intact.",
+    "oxygen_respiratory_needs": "Room air.",
+    "dialysis_need": "No dialysis.",
+    "cognitive_status": "Alert.",
+    "behavioral_safety_concerns": "No behaviors.",
+    "infection_isolation_status": "No isolation required.",
+    "advance_directive_code_status": "Full code.",
+    "durable_medical_equipment_needs": "Walker.",
+    "missing_or_unclear_items": [],
+    "expected_status": "decline_recommended",
+    "expected_score": 30
+  },
+  "known_mismatches": [
+    {
+      "mismatch_type": "payer_not_accepted",
+      "severity": "high",
+      "reason": "Payer is not accepted by the target facility.",
+      "target_facility_id": "LW-AL-002"
+    },
+    {
+      "mismatch_type": "assisted_living_level_mismatch",
+      "severity": "medium",
+      "reason": "Referral need appears higher than assisted living can safely support.",
+      "target_facility_id": "LW-AL-002"
+    },
+    {
+      "mismatch_type": "two_person_assist_not_supported",
+      "severity": "medium",
+      "reason": "Two-person assist is required but target assisted living facility does not support it.",
+      "target_facility_id": "LW-AL-002"
+    }
+  ],
+  "notes": "All data is synthetic. No real patient data."
+}

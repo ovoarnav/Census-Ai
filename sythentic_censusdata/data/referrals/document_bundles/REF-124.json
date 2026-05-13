@@ -1,0 +1,88 @@
+{
+  "referral_id": "REF-124",
+  "synthetic": true,
+  "target_facility_id": "GV-SNF-001",
+  "expected_status": "clinical_review",
+  "expected_score": 60,
+  "source_summary": {
+    "source": "Pinecrest Acute Rehab",
+    "channel": "Portal screenshot entered manually",
+    "patient_initials": "Z.K.",
+    "age": 79,
+    "payer": "Medicare Advantage",
+    "primary_diagnosis": "Deconditioning after prolonged hospitalization"
+  },
+  "source_documents": [
+    {
+      "source_doc_id": "REF-124-01",
+      "document_type": "face_sheet",
+      "channel": "Portal screenshot entered manually",
+      "received_at": "2026-05-07 13:13",
+      "ocr_confidence": 0.99,
+      "text": "PATIENT FACE SHEET\nReferral ID: REF-124\nSource: Pinecrest Acute Rehab\nChannel: Portal screenshot entered manually\nReceived: 2026-05-07 13:13\nTarget Facility: GV-SNF-001\nPatient Initials: Z.K.\nAge: 79\nPayer: Medicare Advantage\nAuthorization Status: approved\nDischarge Target: 2026-05-08 10:00\n"
+    },
+    {
+      "source_doc_id": "REF-124-02",
+      "document_type": "discharge_summary",
+      "channel": "Portal screenshot entered manually",
+      "received_at": "2026-05-07 13:13",
+      "ocr_confidence": 0.98,
+      "text": "DISCHARGE SUMMARY / CLINICAL SNAPSHOT\nPrimary Diagnosis / Reason for Referral: Deconditioning after prolonged hospitalization\nHospital Course: Medically stable. Therapy says patient declined last two sessions.\n\nCLINICAL CARE NEEDS\nCurrent Medications / MAR Summary: Home meds continued.\nAllergies: No known drug allergies.\nMobility / Transfer Status: Requires max assist; therapy participation inconsistent.\nTherapy Need: PT/OT recommended but participation limited.\nWound / Skin Needs: No wounds.\nOxygen / Respiratory Needs: Room air.\nDialysis Need: No dialysis.\nCognitive Status: Alert, sometimes refuses care.\nBehavioral / Safety Concerns: Refuses therapy intermittently, no aggression.\nInfection / Isolation Status: No isolation required.\nAdvance Directive / Code Status: Full code.\nDurable Medical Equipment Needs: Wheelchair.\n"
+    },
+    {
+      "source_doc_id": "REF-124-03",
+      "document_type": "portal_screenshot_ocr",
+      "channel": "portal_screenshot",
+      "received_at": "2026-05-07 13:13",
+      "ocr_confidence": 0.81,
+      "text": "PORTAL SCREENSHOT OCR\nZ.K. / 79 / Medicare Advantage / Deconditioning after prolonged hospitalization\nMeds line: Home meds continued.\nMissing line: Clarify therapy participation and goals\n"
+    },
+    {
+      "source_doc_id": "REF-124-04",
+      "document_type": "payer_auth_note",
+      "channel": "payer_document",
+      "received_at": "2026-05-07 13:13",
+      "ocr_confidence": 0.97,
+      "text": "PAYER / AUTH NOTE\nPayer listed by sender: Medicare Advantage\nAuthorization status reported: approved\nAuthorization caveat: No payer caveat identified in this document.\n"
+    }
+  ],
+  "gold_extraction": {
+    "referral_id": "REF-124",
+    "source": "Pinecrest Acute Rehab",
+    "channel": "Portal screenshot entered manually",
+    "received_at": null,
+    "target_facility_id": "GV-SNF-001",
+    "patient_initials": "Z.K.",
+    "age": 79,
+    "payer": "Medicare Advantage",
+    "authorization_status": "approved",
+    "primary_diagnosis": "Deconditioning after prolonged hospitalization",
+    "current_course_of_illness": "Medically stable. Therapy says patient declined last two sessions.",
+    "current_medications_or_mar": "Home meds continued.",
+    "allergies": "No known drug allergies.",
+    "mobility_transfer_status": "Requires max assist; therapy participation inconsistent.",
+    "therapy_need": "PT/OT recommended but participation limited.",
+    "wound_skin_needs": "No wounds.",
+    "oxygen_respiratory_needs": "Room air.",
+    "dialysis_need": "No dialysis.",
+    "cognitive_status": "Alert, sometimes refuses care.",
+    "behavioral_safety_concerns": "Refuses therapy intermittently, no aggression.",
+    "infection_isolation_status": "No isolation required.",
+    "advance_directive_code_status": "Full code.",
+    "durable_medical_equipment_needs": "Wheelchair.",
+    "missing_or_unclear_items": [
+      "Clarify therapy participation and goals"
+    ],
+    "expected_status": "clinical_review",
+    "expected_score": 60
+  },
+  "known_mismatches": [
+    {
+      "mismatch_type": "therapy_participation_unclear",
+      "severity": "medium",
+      "reason": "Therapy participation or rehab potential is unclear.",
+      "target_facility_id": "GV-SNF-001"
+    }
+  ],
+  "notes": "All data is synthetic. No real patient data."
+}

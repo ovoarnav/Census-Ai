@@ -1,0 +1,86 @@
+{
+  "referral_id": "REF-134",
+  "synthetic": true,
+  "target_facility_id": "HC-SNF-003",
+  "expected_status": "decline_recommended",
+  "expected_score": 42,
+  "source_summary": {
+    "source": "Riverside Case Management",
+    "channel": "Referral portal",
+    "patient_initials": "P.T.",
+    "age": 64,
+    "payer": "Medicaid",
+    "primary_diagnosis": "Long-term care placement after stroke"
+  },
+  "source_documents": [
+    {
+      "source_doc_id": "REF-134-01",
+      "document_type": "face_sheet",
+      "channel": "Referral portal",
+      "received_at": "2026-05-07 15:03",
+      "ocr_confidence": 0.99,
+      "text": "PATIENT FACE SHEET\nReferral ID: REF-134\nSource: Riverside Case Management\nChannel: Referral portal\nReceived: 2026-05-07 15:03\nTarget Facility: HC-SNF-003\nPatient Initials: P.T.\nAge: 64\nPayer: Medicaid\nAuthorization Status: not_required\nDischarge Target: 2026-05-08 10:00\n"
+    },
+    {
+      "source_doc_id": "REF-134-02",
+      "document_type": "discharge_summary",
+      "channel": "Referral portal",
+      "received_at": "2026-05-07 15:03",
+      "ocr_confidence": 0.98,
+      "text": "DISCHARGE SUMMARY / CLINICAL SNAPSHOT\nPrimary Diagnosis / Reason for Referral: Long-term care placement after stroke\nHospital Course: Stable, no skilled need. Medicaid payer listed.\n\nCLINICAL CARE NEEDS\nCurrent Medications / MAR Summary: Home meds.\nAllergies: No known drug allergies.\nMobility / Transfer Status: Wheelchair level.\nTherapy Need: No skilled therapy ordered.\nWound / Skin Needs: No wounds.\nOxygen / Respiratory Needs: Room air.\nDialysis Need: No dialysis.\nCognitive Status: Alert.\nBehavioral / Safety Concerns: No behaviors.\nInfection / Isolation Status: No isolation required.\nAdvance Directive / Code Status: Full code.\nDurable Medical Equipment Needs: Wheelchair.\n"
+    },
+    {
+      "source_doc_id": "REF-134-03",
+      "document_type": "payer_auth_note",
+      "channel": "payer_document",
+      "received_at": "2026-05-07 15:03",
+      "ocr_confidence": 0.97,
+      "text": "PAYER / AUTH NOTE\nPayer listed by sender: Medicaid\nAuthorization status reported: not_required\nAuthorization caveat: No payer caveat identified in this document.\n"
+    }
+  ],
+  "gold_extraction": {
+    "referral_id": "REF-134",
+    "source": "Riverside Case Management",
+    "channel": "Referral portal",
+    "received_at": null,
+    "target_facility_id": "HC-SNF-003",
+    "patient_initials": "P.T.",
+    "age": 64,
+    "payer": "Medicaid",
+    "authorization_status": "not_required",
+    "primary_diagnosis": "Long-term care placement after stroke",
+    "current_course_of_illness": "Stable, no skilled need. Medicaid payer listed.",
+    "current_medications_or_mar": "Home meds.",
+    "allergies": "No known drug allergies.",
+    "mobility_transfer_status": "Wheelchair level.",
+    "therapy_need": "No skilled therapy ordered.",
+    "wound_skin_needs": "No wounds.",
+    "oxygen_respiratory_needs": "Room air.",
+    "dialysis_need": "No dialysis.",
+    "cognitive_status": "Alert.",
+    "behavioral_safety_concerns": "No behaviors.",
+    "infection_isolation_status": "No isolation required.",
+    "advance_directive_code_status": "Full code.",
+    "durable_medical_equipment_needs": "Wheelchair.",
+    "missing_or_unclear_items": [
+      "Responsible party paperwork"
+    ],
+    "expected_status": "decline_recommended",
+    "expected_score": 42
+  },
+  "known_mismatches": [
+    {
+      "mismatch_type": "payer_not_accepted",
+      "severity": "high",
+      "reason": "Payer is not accepted by the target facility.",
+      "target_facility_id": "HC-SNF-003"
+    },
+    {
+      "mismatch_type": "no_skilled_need_documented",
+      "severity": "medium",
+      "reason": "Referral may lack a documented daily skilled nursing or therapy need.",
+      "target_facility_id": "HC-SNF-003"
+    }
+  ],
+  "notes": "All data is synthetic. No real patient data."
+}

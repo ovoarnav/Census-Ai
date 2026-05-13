@@ -1,0 +1,95 @@
+{
+  "referral_id": "REF-102",
+  "synthetic": true,
+  "target_facility_id": "GV-SNF-001",
+  "expected_status": "likely_accept_needs_info",
+  "expected_score": 74,
+  "source_summary": {
+    "source": "St. Anne Medical Center",
+    "channel": "Fax packet",
+    "patient_initials": "R.L.",
+    "age": 83,
+    "payer": "Medicare Advantage",
+    "primary_diagnosis": "Congestive heart failure exacerbation with deconditioning"
+  },
+  "source_documents": [
+    {
+      "source_doc_id": "REF-102-01",
+      "document_type": "face_sheet",
+      "channel": "Fax packet",
+      "received_at": "2026-05-07 09:11",
+      "ocr_confidence": 0.99,
+      "text": "PATIENT FACE SHEET\nReferral ID: REF-102\nSource: St. Anne Medical Center\nChannel: Fax packet\nReceived: 2026-05-07 09:11\nTarget Facility: GV-SNF-001\nPatient Initials: R.L.\nAge: 83\nPayer: Medicare Advantage\nAuthorization Status: pending\nDischarge Target: 2026-05-08 10:00\n"
+    },
+    {
+      "source_doc_id": "REF-102-02",
+      "document_type": "discharge_summary",
+      "channel": "Fax packet",
+      "received_at": "2026-05-07 09:11",
+      "ocr_confidence": 0.98,
+      "text": "DISCHARGE SUMMARY / CLINICAL SNAPSHOT\nPrimary Diagnosis / Reason for Referral: Congestive heart failure exacerbation with deconditioning\nHospital Course: Diuresed with improvement. Still below baseline and tires after short ambulation.\n\nCLINICAL CARE NEEDS\nCurrent Medications / MAR Summary: MAR referenced in fax cover sheet but not attached.\nAllergies: Penicillin allergy - rash.\nMobility / Transfer Status: Two-person assist for transfers; ambulates 10 ft with rolling walker and rest breaks.\nTherapy Need: PT/OT requested for strengthening and endurance.\nWound / Skin Needs: No wounds.\nOxygen / Respiratory Needs: 2 L nasal cannula with exertion.\nDialysis Need: No dialysis.\nCognitive Status: Mild forgetfulness, follows commands.\nBehavioral / Safety Concerns: No behaviors reported.\nInfection / Isolation Status: No isolation required.\nAdvance Directive / Code Status: DNR.\nDurable Medical Equipment Needs: Oxygen concentrator requested at bedside.\n"
+    },
+    {
+      "source_doc_id": "REF-102-03",
+      "document_type": "fax_cover_sheet",
+      "channel": "fax",
+      "received_at": "2026-05-07 09:11",
+      "ocr_confidence": 0.88,
+      "text": "FAX COVER SHEET\nAttached documents may be incomplete. Please confirm MAR, orders, and authorization if absent.\nEMAIL BODY\nFrom: St. Anne Medical Center\nTo: admissions@target-facility.example\nSubject: Referral REF-102 - R.L. - Congestive heart failure exacerbation with de\n\nHi admissions team,\nPlease review R.L. for placement. Quick notes: payer is Medicare Advantage; auth status is pending; main issue is Congestive heart failure exacerbation with deconditioning.\nNeed: Two-person assist for transfers; ambulates 10 ft with rolling walker and rest breaks. / PT/OT requested for strengthening and endurance..\nThanks,\nCase Management\n"
+    },
+    {
+      "source_doc_id": "REF-102-04",
+      "document_type": "payer_auth_note",
+      "channel": "payer_document",
+      "received_at": "2026-05-07 09:11",
+      "ocr_confidence": 0.97,
+      "text": "PAYER / AUTH NOTE\nPayer listed by sender: Medicare Advantage\nAuthorization status reported: pending\nAuthorization caveat: Prior authorization or contract confirmation is required before admission.\n"
+    }
+  ],
+  "gold_extraction": {
+    "referral_id": "REF-102",
+    "source": "St. Anne Medical Center",
+    "channel": "Fax packet",
+    "received_at": null,
+    "target_facility_id": "GV-SNF-001",
+    "patient_initials": "R.L.",
+    "age": 83,
+    "payer": "Medicare Advantage",
+    "authorization_status": "pending",
+    "primary_diagnosis": "Congestive heart failure exacerbation with deconditioning",
+    "current_course_of_illness": "Diuresed with improvement. Still below baseline and tires after short ambulation.",
+    "current_medications_or_mar": "MAR referenced in fax cover sheet but not attached.",
+    "allergies": "Penicillin allergy - rash.",
+    "mobility_transfer_status": "Two-person assist for transfers; ambulates 10 ft with rolling walker and rest breaks.",
+    "therapy_need": "PT/OT requested for strengthening and endurance.",
+    "wound_skin_needs": "No wounds.",
+    "oxygen_respiratory_needs": "2 L nasal cannula with exertion.",
+    "dialysis_need": "No dialysis.",
+    "cognitive_status": "Mild forgetfulness, follows commands.",
+    "behavioral_safety_concerns": "No behaviors reported.",
+    "infection_isolation_status": "No isolation required.",
+    "advance_directive_code_status": "DNR.",
+    "durable_medical_equipment_needs": "Oxygen concentrator requested at bedside.",
+    "missing_or_unclear_items": [
+      "Current MAR not attached",
+      "Medicare Advantage authorization still pending"
+    ],
+    "expected_status": "likely_accept_needs_info",
+    "expected_score": 74
+  },
+  "known_mismatches": [
+    {
+      "mismatch_type": "authorization_missing",
+      "severity": "medium",
+      "reason": "Payer authorization is pending, missing, or not attached.",
+      "target_facility_id": "GV-SNF-001"
+    },
+    {
+      "mismatch_type": "mar_missing",
+      "severity": "medium",
+      "reason": "Current medication list/MAR is missing or referenced but not attached.",
+      "target_facility_id": "GV-SNF-001"
+    }
+  ],
+  "notes": "All data is synthetic. No real patient data."
+}

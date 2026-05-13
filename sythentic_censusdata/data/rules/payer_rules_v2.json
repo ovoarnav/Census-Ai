@@ -1,0 +1,44 @@
+{
+  "Medicare Part A": {
+    "prior_auth_required": false,
+    "requires_qualifying_inpatient_stay": true,
+    "typical_fit_note": "Generally workable for short-stay skilled rehab when skilled need and qualifying hospital stay are documented.",
+    "demo_financial_score_if_complete": 90,
+    "demo_financial_score_if_auth_missing": 85
+  },
+  "Medicare Advantage": {
+    "prior_auth_required": true,
+    "requires_qualifying_inpatient_stay": "plan_dependent",
+    "typical_fit_note": "Often requires plan authorization before admission; missing auth creates delay risk.",
+    "demo_financial_score_if_complete": 80,
+    "demo_financial_score_if_auth_missing": 55
+  },
+  "Medicaid": {
+    "prior_auth_required": false,
+    "typical_fit_note": "Common for long-term care but may have lower reimbursement and network constraints.",
+    "demo_financial_score_if_complete": 65
+  },
+  "Commercial": {
+    "prior_auth_required": true,
+    "typical_fit_note": "Can be attractive when in-network and authorized; admin burden can be high.",
+    "demo_financial_score_if_complete": 85,
+    "demo_financial_score_if_auth_missing": 50
+  },
+  "Private Pay": {
+    "prior_auth_required": false,
+    "typical_fit_note": "Often relevant for assisted living or respite care; requires deposit and responsible-party confirmation.",
+    "demo_financial_score_if_complete": 75
+  },
+  "Out of Network Managed Medicaid": {
+    "prior_auth_required": true,
+    "typical_fit_note": "Usually not workable unless a special agreement exists.",
+    "demo_financial_score_if_complete": 30,
+    "demo_financial_score_if_auth_missing": 20
+  },
+  "VA Community Care": {
+    "prior_auth_required": true,
+    "typical_fit_note": "May be viable only where facility participates and authorization is documented.",
+    "demo_financial_score_if_complete": 70,
+    "demo_financial_score_if_auth_missing": 35
+  }
+}

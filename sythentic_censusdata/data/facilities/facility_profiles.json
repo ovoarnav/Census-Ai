@@ -1,0 +1,173 @@
+{
+  "GV-SNF-001": {
+    "facility_id": "GV-SNF-001",
+    "facility_name": "Green Valley Skilled Nursing",
+    "facility_type": "SNF",
+    "market": "Midwest independent operator",
+    "total_beds": 96,
+    "available_beds_today": {
+      "skilled_rehab": 4,
+      "long_term_care": 2,
+      "memory_care": 0,
+      "isolation_private": 1
+    },
+    "admission_hours": {
+      "weekday": "08:00-18:00",
+      "weekend": "09:00-15:00",
+      "after_hours_admissions_supported": false
+    },
+    "accepted_payers": {
+      "Medicare Part A": true,
+      "Medicare Advantage": true,
+      "Medicaid": true,
+      "Commercial": true,
+      "Private Pay": true,
+      "Out of Network Managed Medicaid": false,
+      "VA Community Care": false
+    },
+    "clinical_capabilities": {
+      "wound_care": true,
+      "wound_vac": true,
+      "iv_antibiotics": true,
+      "oxygen_support": true,
+      "cpap_bipap": true,
+      "dialysis_on_site": false,
+      "dialysis_transport_coordination": true,
+      "ventilator": false,
+      "tracheostomy_complex": false,
+      "memory_care_locked_unit": false,
+      "behavioral_high_acuity": false,
+      "bariatric_bed_available": false,
+      "isolation_precautions": true,
+      "two_person_assist_supported": true,
+      "total_mechanical_lift_supported": true,
+      "pt_ot_st_available": true
+    },
+    "operational_constraints": {
+      "max_new_admissions_per_day": 3,
+      "current_admissions_today": 1,
+      "night_shift_staffing": "moderate_constraint",
+      "weekend_pharmacy_cutoff": "14:00",
+      "requires_nurse_review_for": [
+        "wound_vac",
+        "iv_antibiotics",
+        "two_person_assist",
+        "behavioral_symptoms",
+        "isolation_precautions",
+        "high_risk_anticoagulant",
+        "insulin_regimen"
+      ]
+    }
+  },
+  "HC-SNF-003": {
+    "facility_id": "HC-SNF-003",
+    "facility_name": "Harbor Care Post-Acute",
+    "facility_type": "SNF",
+    "market": "Urban multi-site operator",
+    "total_beds": 142,
+    "available_beds_today": {
+      "skilled_rehab": 2,
+      "long_term_care": 0,
+      "memory_care": 3,
+      "isolation_private": 0
+    },
+    "admission_hours": {
+      "weekday": "07:00-20:00",
+      "weekend": "09:00-17:00",
+      "after_hours_admissions_supported": true
+    },
+    "accepted_payers": {
+      "Medicare Part A": true,
+      "Medicare Advantage": true,
+      "Medicaid": false,
+      "Commercial": true,
+      "Private Pay": true,
+      "Out of Network Managed Medicaid": false,
+      "VA Community Care": true
+    },
+    "clinical_capabilities": {
+      "wound_care": true,
+      "wound_vac": true,
+      "iv_antibiotics": true,
+      "oxygen_support": true,
+      "cpap_bipap": true,
+      "dialysis_on_site": false,
+      "dialysis_transport_coordination": true,
+      "ventilator": false,
+      "tracheostomy_complex": true,
+      "memory_care_locked_unit": true,
+      "behavioral_high_acuity": false,
+      "bariatric_bed_available": true,
+      "isolation_precautions": true,
+      "two_person_assist_supported": true,
+      "total_mechanical_lift_supported": true,
+      "pt_ot_st_available": true
+    },
+    "operational_constraints": {
+      "max_new_admissions_per_day": 5,
+      "current_admissions_today": 4,
+      "night_shift_staffing": "adequate",
+      "weekend_pharmacy_cutoff": "16:00",
+      "requires_nurse_review_for": [
+        "complex_trach",
+        "wound_vac",
+        "iv_antibiotics",
+        "isolation_precautions"
+      ]
+    }
+  },
+  "LW-AL-002": {
+    "facility_id": "LW-AL-002",
+    "facility_name": "Lakeside Willow Assisted Living",
+    "facility_type": "Assisted Living",
+    "market": "Suburban assisted living",
+    "total_beds": 64,
+    "available_beds_today": {
+      "assisted_living": 3,
+      "memory_care": 1,
+      "isolation_private": 0
+    },
+    "admission_hours": {
+      "weekday": "09:00-17:00",
+      "weekend": "not_supported",
+      "after_hours_admissions_supported": false
+    },
+    "accepted_payers": {
+      "Medicare Part A": false,
+      "Medicare Advantage": false,
+      "Medicaid": false,
+      "Commercial": false,
+      "Private Pay": true,
+      "Out of Network Managed Medicaid": false,
+      "VA Community Care": false
+    },
+    "clinical_capabilities": {
+      "wound_care": false,
+      "wound_vac": false,
+      "iv_antibiotics": false,
+      "oxygen_support": "limited_stable_only",
+      "cpap_bipap": true,
+      "dialysis_on_site": false,
+      "dialysis_transport_coordination": false,
+      "ventilator": false,
+      "tracheostomy_complex": false,
+      "memory_care_locked_unit": true,
+      "behavioral_high_acuity": false,
+      "bariatric_bed_available": false,
+      "isolation_precautions": false,
+      "two_person_assist_supported": false,
+      "total_mechanical_lift_supported": false,
+      "pt_ot_st_available": false
+    },
+    "operational_constraints": {
+      "max_new_admissions_per_day": 2,
+      "current_admissions_today": 0,
+      "night_shift_staffing": "low",
+      "weekend_pharmacy_cutoff": "not_applicable",
+      "requires_nurse_review_for": [
+        "oxygen",
+        "memory_care"
+      ]
+    }
+  }
+}

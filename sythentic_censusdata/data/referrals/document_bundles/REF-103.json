@@ -1,0 +1,88 @@
+{
+  "referral_id": "REF-103",
+  "synthetic": true,
+  "target_facility_id": "GV-SNF-001",
+  "expected_status": "clinical_review",
+  "expected_score": 64,
+  "source_summary": {
+    "source": "Lakeshore Hospital",
+    "channel": "Email attachment",
+    "patient_initials": "A.P.",
+    "age": 69,
+    "payer": "Medicare Part A",
+    "primary_diagnosis": "End-stage renal disease with recent pneumonia; needs post-acute monitoring"
+  },
+  "source_documents": [
+    {
+      "source_doc_id": "REF-103-01",
+      "document_type": "face_sheet",
+      "channel": "Email attachment",
+      "received_at": "2026-05-07 09:22",
+      "ocr_confidence": 0.99,
+      "text": "PATIENT FACE SHEET\nReferral ID: REF-103\nSource: Lakeshore Hospital\nChannel: Email attachment\nReceived: 2026-05-07 09:22\nTarget Facility: GV-SNF-001\nPatient Initials: A.P.\nAge: 69\nPayer: Medicare Part A\nAuthorization Status: not_required\nDischarge Target: 2026-05-08 10:00\n"
+    },
+    {
+      "source_doc_id": "REF-103-02",
+      "document_type": "discharge_summary",
+      "channel": "Email attachment",
+      "received_at": "2026-05-07 09:22",
+      "ocr_confidence": 0.98,
+      "text": "DISCHARGE SUMMARY / CLINICAL SNAPSHOT\nPrimary Diagnosis / Reason for Referral: End-stage renal disease with recent pneumonia; needs post-acute monitoring\nHospital Course: Pneumonia improved after antibiotics. Dialysis continues Monday/Wednesday/Friday at Lakeshore Dialysis.\n\nCLINICAL CARE NEEDS\nCurrent Medications / MAR Summary: Sevelamer, epoetin with dialysis, amlodipine, renal vitamins.\nAllergies: No known drug allergies.\nMobility / Transfer Status: Contact guard assist with walker.\nTherapy Need: PT 3x/week recommended.\nWound / Skin Needs: No open wounds.\nOxygen / Respiratory Needs: Room air at rest.\nDialysis Need: Hemodialysis M/W/F 06:00 chair time; transportation must be coordinated.\nCognitive Status: Alert and oriented.\nBehavioral / Safety Concerns: No safety concerns.\nInfection / Isolation Status: No isolation required.\nAdvance Directive / Code Status: Full code.\nDurable Medical Equipment Needs: Walker.\n"
+    },
+    {
+      "source_doc_id": "REF-103-03",
+      "document_type": "email_body",
+      "channel": "email",
+      "received_at": "2026-05-07 09:22",
+      "ocr_confidence": 0.96,
+      "text": "EMAIL BODY\nFrom: Lakeshore Hospital\nTo: admissions@target-facility.example\nSubject: Referral REF-103 - A.P. - End-stage renal disease with recent pneumonia\n\nHi admissions team,\nPlease review A.P. for placement. Quick notes: payer is Medicare Part A; auth status is not_required; main issue is End-stage renal disease with recent pneumonia; needs post-acute monitoring.\nNeed: Contact guard assist with walker. / PT 3x/week recommended..\nThanks,\nCase Management\n"
+    },
+    {
+      "source_doc_id": "REF-103-04",
+      "document_type": "payer_auth_note",
+      "channel": "payer_document",
+      "received_at": "2026-05-07 09:22",
+      "ocr_confidence": 0.97,
+      "text": "PAYER / AUTH NOTE\nPayer listed by sender: Medicare Part A\nAuthorization status reported: not_required\nAuthorization caveat: No payer caveat identified in this document.\n"
+    }
+  ],
+  "gold_extraction": {
+    "referral_id": "REF-103",
+    "source": "Lakeshore Hospital",
+    "channel": "Email attachment",
+    "received_at": null,
+    "target_facility_id": "GV-SNF-001",
+    "patient_initials": "A.P.",
+    "age": 69,
+    "payer": "Medicare Part A",
+    "authorization_status": "not_required",
+    "primary_diagnosis": "End-stage renal disease with recent pneumonia; needs post-acute monitoring",
+    "current_course_of_illness": "Pneumonia improved after antibiotics. Dialysis continues Monday/Wednesday/Friday at Lakeshore Dialysis.",
+    "current_medications_or_mar": "Sevelamer, epoetin with dialysis, amlodipine, renal vitamins.",
+    "allergies": "No known drug allergies.",
+    "mobility_transfer_status": "Contact guard assist with walker.",
+    "therapy_need": "PT 3x/week recommended.",
+    "wound_skin_needs": "No open wounds.",
+    "oxygen_respiratory_needs": "Room air at rest.",
+    "dialysis_need": "Hemodialysis M/W/F 06:00 chair time; transportation must be coordinated.",
+    "cognitive_status": "Alert and oriented.",
+    "behavioral_safety_concerns": "No safety concerns.",
+    "infection_isolation_status": "No isolation required.",
+    "advance_directive_code_status": "Full code.",
+    "durable_medical_equipment_needs": "Walker.",
+    "missing_or_unclear_items": [
+      "Dialysis transport pickup time not confirmed"
+    ],
+    "expected_status": "clinical_review",
+    "expected_score": 64
+  },
+  "known_mismatches": [
+    {
+      "mismatch_type": "dialysis_transport_coordination",
+      "severity": "medium",
+      "reason": "Dialysis transport or chair-time logistics require manual coordination before admission.",
+      "target_facility_id": "GV-SNF-001"
+    }
+  ],
+  "notes": "All data is synthetic. No real patient data."
+}

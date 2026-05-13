@@ -1,0 +1,71 @@
+{
+  "referral_id": "REF-132",
+  "synthetic": true,
+  "target_facility_id": "GV-SNF-001",
+  "expected_status": "accept_ready",
+  "expected_score": 86,
+  "source_summary": {
+    "source": "Mercy Hospital Discharge Planning",
+    "channel": "Referral portal",
+    "patient_initials": "D.C.",
+    "age": 73,
+    "payer": "Medicare Advantage",
+    "primary_diagnosis": "Sepsis recovery with generalized weakness"
+  },
+  "source_documents": [
+    {
+      "source_doc_id": "REF-132-01",
+      "document_type": "face_sheet",
+      "channel": "Referral portal",
+      "received_at": "2026-05-07 14:41",
+      "ocr_confidence": 0.99,
+      "text": "PATIENT FACE SHEET\nReferral ID: REF-132\nSource: Mercy Hospital Discharge Planning\nChannel: Referral portal\nReceived: 2026-05-07 14:41\nTarget Facility: GV-SNF-001\nPatient Initials: D.C.\nAge: 73\nPayer: Medicare Advantage\nAuthorization Status: approved\nDischarge Target: 2026-05-08 10:00\n"
+    },
+    {
+      "source_doc_id": "REF-132-02",
+      "document_type": "discharge_summary",
+      "channel": "Referral portal",
+      "received_at": "2026-05-07 14:41",
+      "ocr_confidence": 0.98,
+      "text": "DISCHARGE SUMMARY / CLINICAL SNAPSHOT\nPrimary Diagnosis / Reason for Referral: Sepsis recovery with generalized weakness\nHospital Course: Sepsis resolved. Facility requested for short-term therapy.\n\nCLINICAL CARE NEEDS\nCurrent Medications / MAR Summary: MAR included; oral antibiotics through 05/13.\nAllergies: No known drug allergies.\nMobility / Transfer Status: Contact guard assist.\nTherapy Need: PT/OT recommended.\nWound / Skin Needs: No wounds.\nOxygen / Respiratory Needs: Room air.\nDialysis Need: No dialysis.\nCognitive Status: Alert and oriented.\nBehavioral / Safety Concerns: No behaviors.\nInfection / Isolation Status: No isolation required.\nAdvance Directive / Code Status: Full code.\nDurable Medical Equipment Needs: Walker.\n"
+    },
+    {
+      "source_doc_id": "REF-132-03",
+      "document_type": "payer_auth_note",
+      "channel": "payer_document",
+      "received_at": "2026-05-07 14:41",
+      "ocr_confidence": 0.97,
+      "text": "PAYER / AUTH NOTE\nPayer listed by sender: Medicare Advantage\nAuthorization status reported: approved\nAuthorization caveat: No payer caveat identified in this document.\n"
+    }
+  ],
+  "gold_extraction": {
+    "referral_id": "REF-132",
+    "source": "Mercy Hospital Discharge Planning",
+    "channel": "Referral portal",
+    "received_at": null,
+    "target_facility_id": "GV-SNF-001",
+    "patient_initials": "D.C.",
+    "age": 73,
+    "payer": "Medicare Advantage",
+    "authorization_status": "approved",
+    "primary_diagnosis": "Sepsis recovery with generalized weakness",
+    "current_course_of_illness": "Sepsis resolved. Facility requested for short-term therapy.",
+    "current_medications_or_mar": "MAR included; oral antibiotics through 05/13.",
+    "allergies": "No known drug allergies.",
+    "mobility_transfer_status": "Contact guard assist.",
+    "therapy_need": "PT/OT recommended.",
+    "wound_skin_needs": "No wounds.",
+    "oxygen_respiratory_needs": "Room air.",
+    "dialysis_need": "No dialysis.",
+    "cognitive_status": "Alert and oriented.",
+    "behavioral_safety_concerns": "No behaviors.",
+    "infection_isolation_status": "No isolation required.",
+    "advance_directive_code_status": "Full code.",
+    "durable_medical_equipment_needs": "Walker.",
+    "missing_or_unclear_items": [],
+    "expected_status": "accept_ready",
+    "expected_score": 86
+  },
+  "known_mismatches": [],
+  "notes": "All data is synthetic. No real patient data."
+}

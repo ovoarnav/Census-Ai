@@ -1,0 +1,104 @@
+{
+  "referral_id": "REF-122",
+  "synthetic": true,
+  "target_facility_id": "GV-SNF-001",
+  "expected_status": "decline_recommended",
+  "expected_score": 38,
+  "source_summary": {
+    "source": "County General Hospital",
+    "channel": "Phone call transcript + emailed face sheet",
+    "patient_initials": "U.E.",
+    "age": 86,
+    "payer": "Medicaid",
+    "primary_diagnosis": "Advanced dementia with aggressive episodes"
+  },
+  "source_documents": [
+    {
+      "source_doc_id": "REF-122-01",
+      "document_type": "face_sheet",
+      "channel": "Phone call transcript + emailed face sheet",
+      "received_at": "2026-05-07 12:51",
+      "ocr_confidence": 0.99,
+      "text": "PATIENT FACE SHEET\nReferral ID: REF-122\nSource: County General Hospital\nChannel: Phone call transcript + emailed face sheet\nReceived: 2026-05-07 12:51\nTarget Facility: GV-SNF-001\nPatient Initials: U.E.\nAge: 86\nPayer: Medicaid\nAuthorization Status: not_required\nDischarge Target: 2026-05-08 10:00\n"
+    },
+    {
+      "source_doc_id": "REF-122-02",
+      "document_type": "discharge_summary",
+      "channel": "Phone call transcript + emailed face sheet",
+      "received_at": "2026-05-07 12:51",
+      "ocr_confidence": 0.98,
+      "text": "DISCHARGE SUMMARY / CLINICAL SNAPSHOT\nPrimary Diagnosis / Reason for Referral: Advanced dementia with aggressive episodes\nHospital Course: Medically stable after dehydration treatment. Staff reports hitting, kicking, and care refusal.\n\nCLINICAL CARE NEEDS\nCurrent Medications / MAR Summary: Quetiapine scheduled, trazodone, donepezil.\nAllergies: No known drug allergies.\nMobility / Transfer Status: Ambulates with supervision.\nTherapy Need: No skilled rehab need documented.\nWound / Skin Needs: No wounds.\nOxygen / Respiratory Needs: Room air.\nDialysis Need: No dialysis.\nCognitive Status: Advanced dementia.\nBehavioral / Safety Concerns: Aggressive behavior during care, hitting staff twice this week.\nInfection / Isolation Status: No isolation required.\nAdvance Directive / Code Status: DNR.\nDurable Medical Equipment Needs: None.\n"
+    },
+    {
+      "source_doc_id": "REF-122-03",
+      "document_type": "phone_transcript",
+      "channel": "phone",
+      "received_at": "2026-05-07 12:51",
+      "ocr_confidence": 0.93,
+      "text": "PHONE TRANSCRIPT\nCaller: discharge planner from County General Hospital\nAdmissions: Can you summarize the case?\nCaller: This is U.E., age 86. Diagnosis is Advanced dementia with aggressive episodes. Mobility right now: Ambulates with supervision.. Behavior/safety: Aggressive behavior during care, hitting staff twice this week.. Infection status: No isolation required..\nAdmissions: Any missing paperwork?\nCaller: Behavioral plan, Psychiatry note, Responsible party confirmation\n"
+    },
+    {
+      "source_doc_id": "REF-122-04",
+      "document_type": "email_body",
+      "channel": "email",
+      "received_at": "2026-05-07 12:51",
+      "ocr_confidence": 0.96,
+      "text": "EMAIL BODY\nFrom: County General Hospital\nTo: admissions@target-facility.example\nSubject: Referral REF-122 - U.E. - Advanced dementia with aggressive episodes\n\nHi admissions team,\nPlease review U.E. for placement. Quick notes: payer is Medicaid; auth status is not_required; main issue is Advanced dementia with aggressive episodes.\nNeed: Ambulates with supervision. / No skilled rehab need documented..\nThanks,\nCase Management\n"
+    },
+    {
+      "source_doc_id": "REF-122-05",
+      "document_type": "payer_auth_note",
+      "channel": "payer_document",
+      "received_at": "2026-05-07 12:51",
+      "ocr_confidence": 0.97,
+      "text": "PAYER / AUTH NOTE\nPayer listed by sender: Medicaid\nAuthorization status reported: not_required\nAuthorization caveat: No payer caveat identified in this document.\n"
+    }
+  ],
+  "gold_extraction": {
+    "referral_id": "REF-122",
+    "source": "County General Hospital",
+    "channel": "Phone call transcript + emailed face sheet",
+    "received_at": null,
+    "target_facility_id": "GV-SNF-001",
+    "patient_initials": "U.E.",
+    "age": 86,
+    "payer": "Medicaid",
+    "authorization_status": "not_required",
+    "primary_diagnosis": "Advanced dementia with aggressive episodes",
+    "current_course_of_illness": "Medically stable after dehydration treatment. Staff reports hitting, kicking, and care refusal.",
+    "current_medications_or_mar": "Quetiapine scheduled, trazodone, donepezil.",
+    "allergies": "No known drug allergies.",
+    "mobility_transfer_status": "Ambulates with supervision.",
+    "therapy_need": "No skilled rehab need documented.",
+    "wound_skin_needs": "No wounds.",
+    "oxygen_respiratory_needs": "Room air.",
+    "dialysis_need": "No dialysis.",
+    "cognitive_status": "Advanced dementia.",
+    "behavioral_safety_concerns": "Aggressive behavior during care, hitting staff twice this week.",
+    "infection_isolation_status": "No isolation required.",
+    "advance_directive_code_status": "DNR.",
+    "durable_medical_equipment_needs": "None.",
+    "missing_or_unclear_items": [
+      "Behavioral plan",
+      "Psychiatry note",
+      "Responsible party confirmation"
+    ],
+    "expected_status": "decline_recommended",
+    "expected_score": 38
+  },
+  "known_mismatches": [
+    {
+      "mismatch_type": "behavioral_high_acuity",
+      "severity": "high",
+      "reason": "Behavioral/safety risk may exceed facility behavioral acuity capability.",
+      "target_facility_id": "GV-SNF-001"
+    },
+    {
+      "mismatch_type": "memory_care_gap",
+      "severity": "high",
+      "reason": "Referral suggests secured memory care or wandering risk, but target facility lacks locked memory-care capability.",
+      "target_facility_id": "GV-SNF-001"
+    }
+  ],
+  "notes": "All data is synthetic. No real patient data."
+}

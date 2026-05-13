@@ -1,0 +1,79 @@
+{
+  "referral_id": "REF-126",
+  "synthetic": true,
+  "target_facility_id": "GV-SNF-001",
+  "expected_status": "accept_ready",
+  "expected_score": 87,
+  "source_summary": {
+    "source": "Regional Ortho Center",
+    "channel": "Email attachment",
+    "patient_initials": "E.J.",
+    "age": 88,
+    "payer": "Medicare Advantage",
+    "primary_diagnosis": "Shoulder replacement; therapy and ADL support"
+  },
+  "source_documents": [
+    {
+      "source_doc_id": "REF-126-01",
+      "document_type": "face_sheet",
+      "channel": "Email attachment",
+      "received_at": "2026-05-07 13:35",
+      "ocr_confidence": 0.99,
+      "text": "PATIENT FACE SHEET\nReferral ID: REF-126\nSource: Regional Ortho Center\nChannel: Email attachment\nReceived: 2026-05-07 13:35\nTarget Facility: GV-SNF-001\nPatient Initials: E.J.\nAge: 88\nPayer: Medicare Advantage\nAuthorization Status: approved\nDischarge Target: 2026-05-08 10:00\n"
+    },
+    {
+      "source_doc_id": "REF-126-02",
+      "document_type": "discharge_summary",
+      "channel": "Email attachment",
+      "received_at": "2026-05-07 13:35",
+      "ocr_confidence": 0.98,
+      "text": "DISCHARGE SUMMARY / CLINICAL SNAPSHOT\nPrimary Diagnosis / Reason for Referral: Shoulder replacement; therapy and ADL support\nHospital Course: Stable after surgery. Needs short rehab stay.\n\nCLINICAL CARE NEEDS\nCurrent Medications / MAR Summary: Acetaminophen, hydromorphone PRN, aspirin.\nAllergies: No known drug allergies.\nMobility / Transfer Status: Ambulates with cane; needs help with upper-body dressing.\nTherapy Need: PT/OT recommended.\nWound / Skin Needs: Surgical dressing intact; no drainage.\nOxygen / Respiratory Needs: Room air.\nDialysis Need: No dialysis.\nCognitive Status: Alert and oriented.\nBehavioral / Safety Concerns: No safety concerns.\nInfection / Isolation Status: No isolation required.\nAdvance Directive / Code Status: Full code.\nDurable Medical Equipment Needs: Sling, cane.\n"
+    },
+    {
+      "source_doc_id": "REF-126-03",
+      "document_type": "email_body",
+      "channel": "email",
+      "received_at": "2026-05-07 13:35",
+      "ocr_confidence": 0.96,
+      "text": "EMAIL BODY\nFrom: Regional Ortho Center\nTo: admissions@target-facility.example\nSubject: Referral REF-126 - E.J. - Shoulder replacement; therapy and ADL support\n\nHi admissions team,\nPlease review E.J. for placement. Quick notes: payer is Medicare Advantage; auth status is approved; main issue is Shoulder replacement; therapy and ADL support.\nNeed: Ambulates with cane; needs help with upper-body dressing. / PT/OT recommended..\nThanks,\nCase Management\n"
+    },
+    {
+      "source_doc_id": "REF-126-04",
+      "document_type": "payer_auth_note",
+      "channel": "payer_document",
+      "received_at": "2026-05-07 13:35",
+      "ocr_confidence": 0.97,
+      "text": "PAYER / AUTH NOTE\nPayer listed by sender: Medicare Advantage\nAuthorization status reported: approved\nAuthorization caveat: No payer caveat identified in this document.\n"
+    }
+  ],
+  "gold_extraction": {
+    "referral_id": "REF-126",
+    "source": "Regional Ortho Center",
+    "channel": "Email attachment",
+    "received_at": null,
+    "target_facility_id": "GV-SNF-001",
+    "patient_initials": "E.J.",
+    "age": 88,
+    "payer": "Medicare Advantage",
+    "authorization_status": "approved",
+    "primary_diagnosis": "Shoulder replacement; therapy and ADL support",
+    "current_course_of_illness": "Stable after surgery. Needs short rehab stay.",
+    "current_medications_or_mar": "Acetaminophen, hydromorphone PRN, aspirin.",
+    "allergies": "No known drug allergies.",
+    "mobility_transfer_status": "Ambulates with cane; needs help with upper-body dressing.",
+    "therapy_need": "PT/OT recommended.",
+    "wound_skin_needs": "Surgical dressing intact; no drainage.",
+    "oxygen_respiratory_needs": "Room air.",
+    "dialysis_need": "No dialysis.",
+    "cognitive_status": "Alert and oriented.",
+    "behavioral_safety_concerns": "No safety concerns.",
+    "infection_isolation_status": "No isolation required.",
+    "advance_directive_code_status": "Full code.",
+    "durable_medical_equipment_needs": "Sling, cane.",
+    "missing_or_unclear_items": [],
+    "expected_status": "accept_ready",
+    "expected_score": 87
+  },
+  "known_mismatches": [],
+  "notes": "All data is synthetic. No real patient data."
+}

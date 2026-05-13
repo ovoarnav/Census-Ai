@@ -1,0 +1,78 @@
+{
+  "referral_id": "REF-112",
+  "synthetic": true,
+  "target_facility_id": "GV-SNF-001",
+  "expected_status": "decline_recommended",
+  "expected_score": 49,
+  "source_summary": {
+    "source": "Regional Ortho Center",
+    "channel": "Referral portal",
+    "patient_initials": "B.S.",
+    "age": 58,
+    "payer": "Commercial",
+    "primary_diagnosis": "Bariatric rehab after ankle fracture"
+  },
+  "source_documents": [
+    {
+      "source_doc_id": "REF-112-01",
+      "document_type": "face_sheet",
+      "channel": "Referral portal",
+      "received_at": "2026-05-07 11:01",
+      "ocr_confidence": 0.99,
+      "text": "PATIENT FACE SHEET\nReferral ID: REF-112\nSource: Regional Ortho Center\nChannel: Referral portal\nReceived: 2026-05-07 11:01\nTarget Facility: GV-SNF-001\nPatient Initials: B.S.\nAge: 58\nPayer: Commercial\nAuthorization Status: approved\nDischarge Target: 2026-05-08 10:00\n"
+    },
+    {
+      "source_doc_id": "REF-112-02",
+      "document_type": "discharge_summary",
+      "channel": "Referral portal",
+      "received_at": "2026-05-07 11:01",
+      "ocr_confidence": 0.98,
+      "text": "DISCHARGE SUMMARY / CLINICAL SNAPSHOT\nPrimary Diagnosis / Reason for Referral: Bariatric rehab after ankle fracture\nHospital Course: S/P ORIF. Needs non-weight-bearing rehab and bariatric equipment.\n\nCLINICAL CARE NEEDS\nCurrent Medications / MAR Summary: Acetaminophen, enoxaparin, oxycodone PRN.\nAllergies: No known drug allergies.\nMobility / Transfer Status: Non-weight-bearing; requires bariatric bed and two-person assist.\nTherapy Need: PT/OT requested.\nWound / Skin Needs: Surgical dressing clean.\nOxygen / Respiratory Needs: Room air.\nDialysis Need: No dialysis.\nCognitive Status: Alert and oriented.\nBehavioral / Safety Concerns: No concerns.\nInfection / Isolation Status: No isolation required.\nAdvance Directive / Code Status: Full code.\nDurable Medical Equipment Needs: Bariatric bed and bariatric wheelchair required.\n"
+    },
+    {
+      "source_doc_id": "REF-112-03",
+      "document_type": "payer_auth_note",
+      "channel": "payer_document",
+      "received_at": "2026-05-07 11:01",
+      "ocr_confidence": 0.97,
+      "text": "PAYER / AUTH NOTE\nPayer listed by sender: Commercial\nAuthorization status reported: approved\nAuthorization caveat: No payer caveat identified in this document.\n"
+    }
+  ],
+  "gold_extraction": {
+    "referral_id": "REF-112",
+    "source": "Regional Ortho Center",
+    "channel": "Referral portal",
+    "received_at": null,
+    "target_facility_id": "GV-SNF-001",
+    "patient_initials": "B.S.",
+    "age": 58,
+    "payer": "Commercial",
+    "authorization_status": "approved",
+    "primary_diagnosis": "Bariatric rehab after ankle fracture",
+    "current_course_of_illness": "S/P ORIF. Needs non-weight-bearing rehab and bariatric equipment.",
+    "current_medications_or_mar": "Acetaminophen, enoxaparin, oxycodone PRN.",
+    "allergies": "No known drug allergies.",
+    "mobility_transfer_status": "Non-weight-bearing; requires bariatric bed and two-person assist.",
+    "therapy_need": "PT/OT requested.",
+    "wound_skin_needs": "Surgical dressing clean.",
+    "oxygen_respiratory_needs": "Room air.",
+    "dialysis_need": "No dialysis.",
+    "cognitive_status": "Alert and oriented.",
+    "behavioral_safety_concerns": "No concerns.",
+    "infection_isolation_status": "No isolation required.",
+    "advance_directive_code_status": "Full code.",
+    "durable_medical_equipment_needs": "Bariatric bed and bariatric wheelchair required.",
+    "missing_or_unclear_items": [],
+    "expected_status": "decline_recommended",
+    "expected_score": 49
+  },
+  "known_mismatches": [
+    {
+      "mismatch_type": "bariatric_equipment_gap",
+      "severity": "high",
+      "reason": "Bariatric bed/equipment appears required but target facility lacks bariatric equipment.",
+      "target_facility_id": "GV-SNF-001"
+    }
+  ],
+  "notes": "All data is synthetic. No real patient data."
+}

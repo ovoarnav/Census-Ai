@@ -1,0 +1,53 @@
+{
+  "mismatch_detection_goal": "Find reasons a referral may not work for the target center before scoring fit.",
+  "mismatch_types": {
+    "authorization_missing": "Payer authorization is pending, missing, or not attached.",
+    "mar_missing": "Current medication list/MAR is missing or referenced but not attached.",
+    "memory_care_gap": "Referral suggests secured memory care or wandering risk, but target facility lacks locked memory-care capability.",
+    "behavioral_high_acuity": "Behavioral/safety risk may exceed facility behavioral acuity capability.",
+    "dialysis_transport_coordination": "Dialysis transport or chair-time logistics require manual coordination before admission.",
+    "wound_orders_missing": "Wound care orders or dressing frequency are unclear.",
+    "iv_antibiotics_nurse_review": "IV antibiotic need triggers nursing/clinical review.",
+    "tracheostomy_gap": "Complex tracheostomy care appears required and target facility does not support complex trach.",
+    "payer_not_accepted": "Payer is not accepted by the target facility.",
+    "contradiction_isolation": "Source documents conflict on whether isolation precautions are active.",
+    "allergies_missing": "Allergy status is absent or not clearly listed.",
+    "diet_swallow_orders_missing": "Diet texture/liquid consistency/swallow precautions are missing or unclear.",
+    "no_skilled_need_documented": "Referral may lack a documented daily skilled nursing or therapy need.",
+    "financial_paperwork_missing": "Responsible party, deposit, or financial paperwork is missing.",
+    "bariatric_equipment_gap": "Bariatric bed/equipment appears required but target facility lacks bariatric equipment.",
+    "allergies_low_confidence": "Allergy information appears only in low-confidence OCR/handwriting.",
+    "mobility_conflict": "Transfer or assist level conflicts across notes.",
+    "picc_documentation_missing": "PICC placement or line documentation is not attached.",
+    "isolation_bed_required": "Isolation/private room need requires bed/capacity review.",
+    "qualifying_stay_unclear": "Medicare qualifying inpatient stay or waiver is unclear.",
+    "not_snf_level_of_care": "Referral appears to be assisted-living/respite rather than skilled nursing level of care.",
+    "payer_contract_unclear": "Payer contract/VA authorization status is unclear.",
+    "therapy_participation_unclear": "Therapy participation or rehab potential is unclear.",
+    "ventilator_gap": "Ventilator support appears required and target facility does not support ventilators.",
+    "after_hours_admission_not_supported": "Requested transfer time appears outside facility admission hours.",
+    "nutrition_orders_missing": "Diet order or nutrition supplement plan is missing/unclear.",
+    "specialized_care_orders_missing": "Specialized bowel/bladder or care program orders are missing.",
+    "mechanical_lift_nurse_review": "Mechanical lift/total assist need requires nursing/operations review.",
+    "contradiction_behavioral_status": "Source documents conflict on behavioral/elopement risk.",
+    "behavioral_log_missing": "Behavioral incident log is missing for a memory-care referral.",
+    "assisted_living_level_mismatch": "Referral need appears higher than assisted living can safely support.",
+    "two_person_assist_not_supported": "Two-person assist is required but target assisted living facility does not support it."
+  },
+  "severity_guidance": {
+    "high": "Likely blocks admission or requires immediate escalation.",
+    "medium": "Could delay admission or requires clarification.",
+    "low": "Helpful but not blocking."
+  },
+  "evidence_policy": {
+    "exact_quote_required": true,
+    "no_paraphrased_quotes_in_ui": true,
+    "recommended_fields": [
+      "source_doc_id",
+      "quote",
+      "char_start",
+      "char_end",
+      "confidence"
+    ]
+  }
+}

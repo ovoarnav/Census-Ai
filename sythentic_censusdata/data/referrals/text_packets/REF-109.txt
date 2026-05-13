@@ -1,0 +1,85 @@
+SYNTHETIC REFERRAL PACKET — FOR DEMO USE ONLY
+Referral ID: REF-109
+Source: County General Hospital
+Channel: Portal screenshot entered manually
+Received: 2026-05-07 09:00
+Target Facility: GV-SNF-001
+
+PATIENT FACE SHEET
+Patient Initials: P.R.
+Age: 80
+Payer: Medicare Part A
+Authorization Status: not_required
+Discharge Target: 2026-05-08 10:00
+
+CURRENT COURSE OF ILLNESS AND TREATMENT
+Primary Diagnosis / Reason for Referral: Stroke with dysphagia and major functional decline
+Hospital Course: Left MCA stroke. Medically stable. Needs rehab and swallowing precautions.
+
+CLINICAL CARE NEEDS
+Current Medications / MAR Summary: Aspirin, atorvastatin, lisinopril; MAR not sent in screenshot.
+Allergies: Allergies not listed.
+Mobility / Transfer Status: Two-person assist for transfers.
+Therapy Need: PT/OT/ST recommended; swallow therapy noted.
+Wound / Skin Needs: No wounds.
+Oxygen / Respiratory Needs: Room air.
+Dialysis Need: No dialysis.
+Cognitive Status: Expressive aphasia; follows simple commands.
+Behavioral / Safety Concerns: No aggression.
+Infection / Isolation Status: No isolation required.
+Advance Directive / Code Status: Full code.
+Durable Medical Equipment Needs: Wheelchair for transport.
+
+KNOWN MISSING OR UNCLEAR ITEMS
+- Current MAR
+- Allergy status
+- Diet texture and liquid consistency orders
+
+RAW SOURCE DOCUMENTS FOR NEXT-GEN INGESTION TESTING
+
+--- REF-109-01 / face_sheet / Portal screenshot entered manually ---
+PATIENT FACE SHEET
+Referral ID: REF-109
+Source: County General Hospital
+Channel: Portal screenshot entered manually
+Received: 2026-05-07 10:28
+Target Facility: GV-SNF-001
+Patient Initials: P.R.
+Age: 80
+Payer: Medicare Part A
+Authorization Status: not_required
+Discharge Target: 2026-05-08 10:00
+
+--- REF-109-02 / discharge_summary / Portal screenshot entered manually ---
+DISCHARGE SUMMARY / CLINICAL SNAPSHOT
+Primary Diagnosis / Reason for Referral: Stroke with dysphagia and major functional decline
+Hospital Course: Left MCA stroke. Medically stable. Needs rehab and swallowing precautions.
+
+CLINICAL CARE NEEDS
+Current Medications / MAR Summary: Aspirin, atorvastatin, lisinopril; MAR not sent in screenshot.
+Allergies: Allergies not listed.
+Mobility / Transfer Status: Two-person assist for transfers.
+Therapy Need: PT/OT/ST recommended; swallow therapy noted.
+Wound / Skin Needs: No wounds.
+Oxygen / Respiratory Needs: Room air.
+Dialysis Need: No dialysis.
+Cognitive Status: Expressive aphasia; follows simple commands.
+Behavioral / Safety Concerns: No aggression.
+Infection / Isolation Status: No isolation required.
+Advance Directive / Code Status: Full code.
+Durable Medical Equipment Needs: Wheelchair for transport.
+
+--- REF-109-03 / portal_screenshot_ocr / portal_screenshot ---
+PORTAL SCREENSHOT OCR
+P.R. / 80 / Medicare Part A / Stroke with dysphagia and major functional decline
+Meds line: Aspirin, atorvastatin, lisinopril; MAR not sent in screenshot.
+Missing line: Current MAR, Allergy status, Diet texture and liquid consistency orders
+
+--- REF-109-04 / payer_auth_note / payer_document ---
+PAYER / AUTH NOTE
+Payer listed by sender: Medicare Part A
+Authorization status reported: not_required
+Authorization caveat: No payer caveat identified in this document.
+
+DEMO NOTE
+This document is fully synthetic and contains no real patient data.

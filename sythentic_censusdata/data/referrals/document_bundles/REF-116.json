@@ -1,0 +1,101 @@
+{
+  "referral_id": "REF-116",
+  "synthetic": true,
+  "target_facility_id": "GV-SNF-001",
+  "expected_status": "clinical_review",
+  "expected_score": 68,
+  "source_summary": {
+    "source": "Valley Cardiology Unit",
+    "channel": "Email attachment",
+    "patient_initials": "H.T.",
+    "age": 70,
+    "payer": "Commercial",
+    "primary_diagnosis": "Endocarditis requiring IV antibiotics"
+  },
+  "source_documents": [
+    {
+      "source_doc_id": "REF-116-01",
+      "document_type": "face_sheet",
+      "channel": "Email attachment",
+      "received_at": "2026-05-07 11:45",
+      "ocr_confidence": 0.99,
+      "text": "PATIENT FACE SHEET\nReferral ID: REF-116\nSource: Valley Cardiology Unit\nChannel: Email attachment\nReceived: 2026-05-07 11:45\nTarget Facility: GV-SNF-001\nPatient Initials: H.T.\nAge: 70\nPayer: Commercial\nAuthorization Status: pending\nDischarge Target: 2026-05-08 10:00\n"
+    },
+    {
+      "source_doc_id": "REF-116-02",
+      "document_type": "discharge_summary",
+      "channel": "Email attachment",
+      "received_at": "2026-05-07 11:45",
+      "ocr_confidence": 0.98,
+      "text": "DISCHARGE SUMMARY / CLINICAL SNAPSHOT\nPrimary Diagnosis / Reason for Referral: Endocarditis requiring IV antibiotics\nHospital Course: Blood cultures cleared. Needs six-week IV antibiotic course and monitoring.\n\nCLINICAL CARE NEEDS\nCurrent Medications / MAR Summary: IV ceftriaxone daily, warfarin with INR checks.\nAllergies: No known drug allergies.\nMobility / Transfer Status: Independent with walker.\nTherapy Need: PT not primary need.\nWound / Skin Needs: No wounds.\nOxygen / Respiratory Needs: Room air.\nDialysis Need: No dialysis.\nCognitive Status: Alert and oriented.\nBehavioral / Safety Concerns: No behaviors.\nInfection / Isolation Status: No isolation required.\nAdvance Directive / Code Status: Full code.\nDurable Medical Equipment Needs: PICC line supplies.\n"
+    },
+    {
+      "source_doc_id": "REF-116-03",
+      "document_type": "email_body",
+      "channel": "email",
+      "received_at": "2026-05-07 11:45",
+      "ocr_confidence": 0.96,
+      "text": "EMAIL BODY\nFrom: Valley Cardiology Unit\nTo: admissions@target-facility.example\nSubject: Referral REF-116 - H.T. - Endocarditis requiring IV antibiotics\n\nHi admissions team,\nPlease review H.T. for placement. Quick notes: payer is Commercial; auth status is pending; main issue is Endocarditis requiring IV antibiotics.\nNeed: Independent with walker. / PT not primary need..\nThanks,\nCase Management\n"
+    },
+    {
+      "source_doc_id": "REF-116-04",
+      "document_type": "payer_auth_note",
+      "channel": "payer_document",
+      "received_at": "2026-05-07 11:45",
+      "ocr_confidence": 0.97,
+      "text": "PAYER / AUTH NOTE\nPayer listed by sender: Commercial\nAuthorization status reported: pending\nAuthorization caveat: Prior authorization or contract confirmation is required before admission.\n"
+    }
+  ],
+  "gold_extraction": {
+    "referral_id": "REF-116",
+    "source": "Valley Cardiology Unit",
+    "channel": "Email attachment",
+    "received_at": null,
+    "target_facility_id": "GV-SNF-001",
+    "patient_initials": "H.T.",
+    "age": 70,
+    "payer": "Commercial",
+    "authorization_status": "pending",
+    "primary_diagnosis": "Endocarditis requiring IV antibiotics",
+    "current_course_of_illness": "Blood cultures cleared. Needs six-week IV antibiotic course and monitoring.",
+    "current_medications_or_mar": "IV ceftriaxone daily, warfarin with INR checks.",
+    "allergies": "No known drug allergies.",
+    "mobility_transfer_status": "Independent with walker.",
+    "therapy_need": "PT not primary need.",
+    "wound_skin_needs": "No wounds.",
+    "oxygen_respiratory_needs": "Room air.",
+    "dialysis_need": "No dialysis.",
+    "cognitive_status": "Alert and oriented.",
+    "behavioral_safety_concerns": "No behaviors.",
+    "infection_isolation_status": "No isolation required.",
+    "advance_directive_code_status": "Full code.",
+    "durable_medical_equipment_needs": "PICC line supplies.",
+    "missing_or_unclear_items": [
+      "Commercial authorization pending",
+      "PICC placement report not attached"
+    ],
+    "expected_status": "clinical_review",
+    "expected_score": 68
+  },
+  "known_mismatches": [
+    {
+      "mismatch_type": "authorization_missing",
+      "severity": "medium",
+      "reason": "Payer authorization is pending, missing, or not attached.",
+      "target_facility_id": "GV-SNF-001"
+    },
+    {
+      "mismatch_type": "iv_antibiotics_nurse_review",
+      "severity": "medium",
+      "reason": "IV antibiotic need triggers nursing/clinical review.",
+      "target_facility_id": "GV-SNF-001"
+    },
+    {
+      "mismatch_type": "picc_documentation_missing",
+      "severity": "medium",
+      "reason": "PICC placement or line documentation is not attached.",
+      "target_facility_id": "GV-SNF-001"
+    }
+  ],
+  "notes": "All data is synthetic. No real patient data."
+}

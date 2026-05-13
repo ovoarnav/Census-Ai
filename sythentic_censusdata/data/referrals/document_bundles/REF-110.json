@@ -1,0 +1,101 @@
+{
+  "referral_id": "REF-110",
+  "synthetic": true,
+  "target_facility_id": "GV-SNF-001",
+  "expected_status": "decline_recommended",
+  "expected_score": 47,
+  "source_summary": {
+    "source": "Northview Hospital",
+    "channel": "Referral portal",
+    "patient_initials": "E.W.",
+    "age": 76,
+    "payer": "Out of Network Managed Medicaid",
+    "primary_diagnosis": "Cellulitis requiring IV antibiotics"
+  },
+  "source_documents": [
+    {
+      "source_doc_id": "REF-110-01",
+      "document_type": "face_sheet",
+      "channel": "Referral portal",
+      "received_at": "2026-05-07 10:39",
+      "ocr_confidence": 0.99,
+      "text": "PATIENT FACE SHEET\nReferral ID: REF-110\nSource: Northview Hospital\nChannel: Referral portal\nReceived: 2026-05-07 10:39\nTarget Facility: GV-SNF-001\nPatient Initials: E.W.\nAge: 76\nPayer: Out of Network Managed Medicaid\nAuthorization Status: pending\nDischarge Target: 2026-05-08 10:00\n"
+    },
+    {
+      "source_doc_id": "REF-110-02",
+      "document_type": "discharge_summary",
+      "channel": "Referral portal",
+      "received_at": "2026-05-07 10:39",
+      "ocr_confidence": 0.98,
+      "text": "DISCHARGE SUMMARY / CLINICAL SNAPSHOT\nPrimary Diagnosis / Reason for Referral: Cellulitis requiring IV antibiotics\nHospital Course: Improving but requires IV antibiotics for 5 more days.\n\nCLINICAL CARE NEEDS\nCurrent Medications / MAR Summary: IV vancomycin, warfarin, furosemide.\nAllergies: No known drug allergies.\nMobility / Transfer Status: Supervision with walker.\nTherapy Need: PT screen requested.\nWound / Skin Needs: Lower extremity cellulitis; no open surgical wound.\nOxygen / Respiratory Needs: Room air.\nDialysis Need: No dialysis.\nCognitive Status: Alert and oriented.\nBehavioral / Safety Concerns: No behaviors.\nInfection / Isolation Status: Contact isolation for draining wound mentioned by nurse; case manager says no isolation.\nAdvance Directive / Code Status: Full code.\nDurable Medical Equipment Needs: None.\n\nNURSING ADDENDUM: nurse note says \"Contact isolation still active; private room requested.\"\n\nCONFLICT: case manager says \"no isolation\"; nurse note says \"contact isolation for draining wound.\"\n"
+    },
+    {
+      "source_doc_id": "REF-110-03",
+      "document_type": "email_body",
+      "channel": "email",
+      "received_at": "2026-05-07 10:39",
+      "ocr_confidence": 0.96,
+      "text": "EMAIL BODY\nFrom: Northview Hospital\nTo: admissions@target-facility.example\nSubject: Referral REF-110 - E.W. - Cellulitis requiring IV antibiotics\n\nHi admissions team,\nPlease review E.W. for placement. Quick notes: payer is Out of Network Managed Medicaid; auth status is pending; main issue is Cellulitis requiring IV antibiotics.\nNeed: Supervision with walker. / PT screen requested..\nThanks,\nCase Management\n\nEMAIL FOLLOW-UP: case manager writes, \"No isolation required from our side.\"\n"
+    },
+    {
+      "source_doc_id": "REF-110-04",
+      "document_type": "payer_auth_note",
+      "channel": "payer_document",
+      "received_at": "2026-05-07 10:39",
+      "ocr_confidence": 0.97,
+      "text": "PAYER / AUTH NOTE\nPayer listed by sender: Out of Network Managed Medicaid\nAuthorization status reported: pending\nAuthorization caveat: Prior authorization or contract confirmation is required before admission.\n"
+    }
+  ],
+  "gold_extraction": {
+    "referral_id": "REF-110",
+    "source": "Northview Hospital",
+    "channel": "Referral portal",
+    "received_at": null,
+    "target_facility_id": "GV-SNF-001",
+    "patient_initials": "E.W.",
+    "age": 76,
+    "payer": "Out of Network Managed Medicaid",
+    "authorization_status": "pending",
+    "primary_diagnosis": "Cellulitis requiring IV antibiotics",
+    "current_course_of_illness": "Improving but requires IV antibiotics for 5 more days.",
+    "current_medications_or_mar": "IV vancomycin, warfarin, furosemide.",
+    "allergies": "No known drug allergies.",
+    "mobility_transfer_status": "Supervision with walker.",
+    "therapy_need": "PT screen requested.",
+    "wound_skin_needs": "Lower extremity cellulitis; no open surgical wound.",
+    "oxygen_respiratory_needs": "Room air.",
+    "dialysis_need": "No dialysis.",
+    "cognitive_status": "Alert and oriented.",
+    "behavioral_safety_concerns": "No behaviors.",
+    "infection_isolation_status": "Contact isolation for draining wound mentioned by nurse; case manager says no isolation.",
+    "advance_directive_code_status": "Full code.",
+    "durable_medical_equipment_needs": "None.",
+    "missing_or_unclear_items": [
+      "Authorization pending",
+      "Clarify isolation status"
+    ],
+    "expected_status": "decline_recommended",
+    "expected_score": 47
+  },
+  "known_mismatches": [
+    {
+      "mismatch_type": "payer_not_accepted",
+      "severity": "high",
+      "reason": "Payer is not accepted by the target facility.",
+      "target_facility_id": "GV-SNF-001"
+    },
+    {
+      "mismatch_type": "authorization_missing",
+      "severity": "medium",
+      "reason": "Payer authorization is pending, missing, or not attached.",
+      "target_facility_id": "GV-SNF-001"
+    },
+    {
+      "mismatch_type": "contradiction_isolation",
+      "severity": "high",
+      "reason": "Source documents conflict on whether isolation precautions are active.",
+      "target_facility_id": "GV-SNF-001"
+    }
+  ],
+  "notes": "All data is synthetic. No real patient data."
+}

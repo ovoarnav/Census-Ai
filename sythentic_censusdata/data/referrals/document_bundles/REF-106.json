@@ -1,0 +1,79 @@
+{
+  "referral_id": "REF-106",
+  "synthetic": true,
+  "target_facility_id": "GV-SNF-001",
+  "expected_status": "accept_ready",
+  "expected_score": 86,
+  "source_summary": {
+    "source": "Northview Hospital",
+    "channel": "Fax packet",
+    "patient_initials": "M.C.",
+    "age": 91,
+    "payer": "Medicare Advantage",
+    "primary_diagnosis": "COPD exacerbation; needs short-term monitoring and rehab"
+  },
+  "source_documents": [
+    {
+      "source_doc_id": "REF-106-01",
+      "document_type": "face_sheet",
+      "channel": "Fax packet",
+      "received_at": "2026-05-07 09:55",
+      "ocr_confidence": 0.99,
+      "text": "PATIENT FACE SHEET\nReferral ID: REF-106\nSource: Northview Hospital\nChannel: Fax packet\nReceived: 2026-05-07 09:55\nTarget Facility: GV-SNF-001\nPatient Initials: M.C.\nAge: 91\nPayer: Medicare Advantage\nAuthorization Status: approved\nDischarge Target: 2026-05-08 10:00\n"
+    },
+    {
+      "source_doc_id": "REF-106-02",
+      "document_type": "discharge_summary",
+      "channel": "Fax packet",
+      "received_at": "2026-05-07 09:55",
+      "ocr_confidence": 0.98,
+      "text": "DISCHARGE SUMMARY / CLINICAL SNAPSHOT\nPrimary Diagnosis / Reason for Referral: COPD exacerbation; needs short-term monitoring and rehab\nHospital Course: Improved after steroids and nebulizers. Stable for transfer.\n\nCLINICAL CARE NEEDS\nCurrent Medications / MAR Summary: Prednisone taper, albuterol PRN, tiotropium, metoprolol.\nAllergies: No known drug allergies.\nMobility / Transfer Status: One-person assist with rollator.\nTherapy Need: PT/OT for endurance and ADLs.\nWound / Skin Needs: No wounds.\nOxygen / Respiratory Needs: 2 L nasal cannula continuous; CPAP at night.\nDialysis Need: No dialysis.\nCognitive Status: Alert and oriented.\nBehavioral / Safety Concerns: No behaviors.\nInfection / Isolation Status: No isolation required.\nAdvance Directive / Code Status: Full code.\nDurable Medical Equipment Needs: CPAP from home, portable oxygen tank for transfer.\n"
+    },
+    {
+      "source_doc_id": "REF-106-03",
+      "document_type": "fax_cover_sheet",
+      "channel": "fax",
+      "received_at": "2026-05-07 09:55",
+      "ocr_confidence": 0.88,
+      "text": "FAX COVER SHEET\nAttached documents may be incomplete. Please confirm MAR, orders, and authorization if absent.\nEMAIL BODY\nFrom: Northview Hospital\nTo: admissions@target-facility.example\nSubject: Referral REF-106 - M.C. - COPD exacerbation; needs short-term monitorin\n\nHi admissions team,\nPlease review M.C. for placement. Quick notes: payer is Medicare Advantage; auth status is approved; main issue is COPD exacerbation; needs short-term monitoring and rehab.\nNeed: One-person assist with rollator. / PT/OT for endurance and ADLs..\nThanks,\nCase Management\n"
+    },
+    {
+      "source_doc_id": "REF-106-04",
+      "document_type": "payer_auth_note",
+      "channel": "payer_document",
+      "received_at": "2026-05-07 09:55",
+      "ocr_confidence": 0.97,
+      "text": "PAYER / AUTH NOTE\nPayer listed by sender: Medicare Advantage\nAuthorization status reported: approved\nAuthorization caveat: No payer caveat identified in this document.\n"
+    }
+  ],
+  "gold_extraction": {
+    "referral_id": "REF-106",
+    "source": "Northview Hospital",
+    "channel": "Fax packet",
+    "received_at": null,
+    "target_facility_id": "GV-SNF-001",
+    "patient_initials": "M.C.",
+    "age": 91,
+    "payer": "Medicare Advantage",
+    "authorization_status": "approved",
+    "primary_diagnosis": "COPD exacerbation; needs short-term monitoring and rehab",
+    "current_course_of_illness": "Improved after steroids and nebulizers. Stable for transfer.",
+    "current_medications_or_mar": "Prednisone taper, albuterol PRN, tiotropium, metoprolol.",
+    "allergies": "No known drug allergies.",
+    "mobility_transfer_status": "One-person assist with rollator.",
+    "therapy_need": "PT/OT for endurance and ADLs.",
+    "wound_skin_needs": "No wounds.",
+    "oxygen_respiratory_needs": "2 L nasal cannula continuous; CPAP at night.",
+    "dialysis_need": "No dialysis.",
+    "cognitive_status": "Alert and oriented.",
+    "behavioral_safety_concerns": "No behaviors.",
+    "infection_isolation_status": "No isolation required.",
+    "advance_directive_code_status": "Full code.",
+    "durable_medical_equipment_needs": "CPAP from home, portable oxygen tank for transfer.",
+    "missing_or_unclear_items": [],
+    "expected_status": "accept_ready",
+    "expected_score": 86
+  },
+  "known_mismatches": [],
+  "notes": "All data is synthetic. No real patient data."
+}

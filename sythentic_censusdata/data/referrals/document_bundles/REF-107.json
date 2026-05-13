@@ -1,0 +1,80 @@
+{
+  "referral_id": "REF-107",
+  "synthetic": true,
+  "target_facility_id": "GV-SNF-001",
+  "expected_status": "decline_recommended",
+  "expected_score": 35,
+  "source_summary": {
+    "source": "St. Anne Medical Center",
+    "channel": "Referral portal",
+    "patient_initials": "D.H.",
+    "age": 65,
+    "payer": "Medicare Part A",
+    "primary_diagnosis": "Complex tracheostomy care after prolonged ICU stay"
+  },
+  "source_documents": [
+    {
+      "source_doc_id": "REF-107-01",
+      "document_type": "face_sheet",
+      "channel": "Referral portal",
+      "received_at": "2026-05-07 10:06",
+      "ocr_confidence": 0.99,
+      "text": "PATIENT FACE SHEET\nReferral ID: REF-107\nSource: St. Anne Medical Center\nChannel: Referral portal\nReceived: 2026-05-07 10:06\nTarget Facility: GV-SNF-001\nPatient Initials: D.H.\nAge: 65\nPayer: Medicare Part A\nAuthorization Status: not_required\nDischarge Target: 2026-05-08 10:00\n"
+    },
+    {
+      "source_doc_id": "REF-107-02",
+      "document_type": "discharge_summary",
+      "channel": "Referral portal",
+      "received_at": "2026-05-07 10:06",
+      "ocr_confidence": 0.98,
+      "text": "DISCHARGE SUMMARY / CLINICAL SNAPSHOT\nPrimary Diagnosis / Reason for Referral: Complex tracheostomy care after prolonged ICU stay\nHospital Course: Respiratory failure improved but patient still needs frequent trach suctioning and respiratory therapy.\n\nCLINICAL CARE NEEDS\nCurrent Medications / MAR Summary: Nebulized bronchodilators, tube feed formula, bowel regimen.\nAllergies: Latex allergy.\nMobility / Transfer Status: Max assist for bed mobility; mechanical lift for transfers.\nTherapy Need: PT/OT/ST requested.\nWound / Skin Needs: Small coccyx wound, foam dressing.\nOxygen / Respiratory Needs: Tracheostomy collar at 28%; frequent suctioning.\nDialysis Need: No dialysis.\nCognitive Status: Follows simple commands.\nBehavioral / Safety Concerns: No aggression.\nInfection / Isolation Status: No isolation required.\nAdvance Directive / Code Status: Full code.\nDurable Medical Equipment Needs: Tracheostomy supplies, suction equipment, tube-feed pump.\n"
+    },
+    {
+      "source_doc_id": "REF-107-03",
+      "document_type": "payer_auth_note",
+      "channel": "payer_document",
+      "received_at": "2026-05-07 10:06",
+      "ocr_confidence": 0.97,
+      "text": "PAYER / AUTH NOTE\nPayer listed by sender: Medicare Part A\nAuthorization status reported: not_required\nAuthorization caveat: No payer caveat identified in this document.\n"
+    }
+  ],
+  "gold_extraction": {
+    "referral_id": "REF-107",
+    "source": "St. Anne Medical Center",
+    "channel": "Referral portal",
+    "received_at": null,
+    "target_facility_id": "GV-SNF-001",
+    "patient_initials": "D.H.",
+    "age": 65,
+    "payer": "Medicare Part A",
+    "authorization_status": "not_required",
+    "primary_diagnosis": "Complex tracheostomy care after prolonged ICU stay",
+    "current_course_of_illness": "Respiratory failure improved but patient still needs frequent trach suctioning and respiratory therapy.",
+    "current_medications_or_mar": "Nebulized bronchodilators, tube feed formula, bowel regimen.",
+    "allergies": "Latex allergy.",
+    "mobility_transfer_status": "Max assist for bed mobility; mechanical lift for transfers.",
+    "therapy_need": "PT/OT/ST requested.",
+    "wound_skin_needs": "Small coccyx wound, foam dressing.",
+    "oxygen_respiratory_needs": "Tracheostomy collar at 28%; frequent suctioning.",
+    "dialysis_need": "No dialysis.",
+    "cognitive_status": "Follows simple commands.",
+    "behavioral_safety_concerns": "No aggression.",
+    "infection_isolation_status": "No isolation required.",
+    "advance_directive_code_status": "Full code.",
+    "durable_medical_equipment_needs": "Tracheostomy supplies, suction equipment, tube-feed pump.",
+    "missing_or_unclear_items": [
+      "Respiratory therapy orders incomplete"
+    ],
+    "expected_status": "decline_recommended",
+    "expected_score": 35
+  },
+  "known_mismatches": [
+    {
+      "mismatch_type": "tracheostomy_gap",
+      "severity": "high",
+      "reason": "Complex tracheostomy care appears required and target facility does not support complex trach.",
+      "target_facility_id": "GV-SNF-001"
+    }
+  ],
+  "notes": "All data is synthetic. No real patient data."
+}

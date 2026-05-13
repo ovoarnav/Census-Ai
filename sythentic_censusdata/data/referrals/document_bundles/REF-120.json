@@ -1,0 +1,95 @@
+{
+  "referral_id": "REF-120",
+  "synthetic": true,
+  "target_facility_id": "GV-SNF-001",
+  "expected_status": "clinical_review",
+  "expected_score": 61,
+  "source_summary": {
+    "source": "Metro Trauma Center",
+    "channel": "Fax packet",
+    "patient_initials": "F.R.",
+    "age": 63,
+    "payer": "VA Community Care",
+    "primary_diagnosis": "Below-knee amputation; prosthetic training and wound monitoring"
+  },
+  "source_documents": [
+    {
+      "source_doc_id": "REF-120-01",
+      "document_type": "face_sheet",
+      "channel": "Fax packet",
+      "received_at": "2026-05-07 12:29",
+      "ocr_confidence": 0.99,
+      "text": "PATIENT FACE SHEET\nReferral ID: REF-120\nSource: Metro Trauma Center\nChannel: Fax packet\nReceived: 2026-05-07 12:29\nTarget Facility: GV-SNF-001\nPatient Initials: F.R.\nAge: 63\nPayer: VA Community Care\nAuthorization Status: missing\nDischarge Target: 2026-05-08 10:00\n"
+    },
+    {
+      "source_doc_id": "REF-120-02",
+      "document_type": "discharge_summary",
+      "channel": "Fax packet",
+      "received_at": "2026-05-07 12:29",
+      "ocr_confidence": 0.98,
+      "text": "DISCHARGE SUMMARY / CLINICAL SNAPSHOT\nPrimary Diagnosis / Reason for Referral: Below-knee amputation; prosthetic training and wound monitoring\nHospital Course: S/P BKA. Needs rehab and residual limb monitoring.\n\nCLINICAL CARE NEEDS\nCurrent Medications / MAR Summary: Gabapentin, acetaminophen, enoxaparin.\nAllergies: No known drug allergies.\nMobility / Transfer Status: Wheelchair level; slide-board transfers with assistance.\nTherapy Need: PT/OT for transfers and pre-prosthetic training.\nWound / Skin Needs: Residual limb incision with staples; dressing daily.\nOxygen / Respiratory Needs: Room air.\nDialysis Need: No dialysis.\nCognitive Status: Alert and oriented.\nBehavioral / Safety Concerns: No behaviors.\nInfection / Isolation Status: No isolation required.\nAdvance Directive / Code Status: Full code.\nDurable Medical Equipment Needs: Wheelchair, slide board.\n"
+    },
+    {
+      "source_doc_id": "REF-120-03",
+      "document_type": "fax_cover_sheet",
+      "channel": "fax",
+      "received_at": "2026-05-07 12:29",
+      "ocr_confidence": 0.88,
+      "text": "FAX COVER SHEET\nAttached documents may be incomplete. Please confirm MAR, orders, and authorization if absent.\nEMAIL BODY\nFrom: Metro Trauma Center\nTo: admissions@target-facility.example\nSubject: Referral REF-120 - F.R. - Below-knee amputation; prosthetic training an\n\nHi admissions team,\nPlease review F.R. for placement. Quick notes: payer is VA Community Care; auth status is missing; main issue is Below-knee amputation; prosthetic training and wound monitoring.\nNeed: Wheelchair level; slide-board transfers with assistance. / PT/OT for transfers and pre-prosthetic training..\nThanks,\nCase Management\n"
+    },
+    {
+      "source_doc_id": "REF-120-04",
+      "document_type": "payer_auth_note",
+      "channel": "payer_document",
+      "received_at": "2026-05-07 12:29",
+      "ocr_confidence": 0.97,
+      "text": "PAYER / AUTH NOTE\nPayer listed by sender: VA Community Care\nAuthorization status reported: missing\nAuthorization caveat: Prior authorization or contract confirmation is required before admission.\n"
+    }
+  ],
+  "gold_extraction": {
+    "referral_id": "REF-120",
+    "source": "Metro Trauma Center",
+    "channel": "Fax packet",
+    "received_at": null,
+    "target_facility_id": "GV-SNF-001",
+    "patient_initials": "F.R.",
+    "age": 63,
+    "payer": "VA Community Care",
+    "authorization_status": "missing",
+    "primary_diagnosis": "Below-knee amputation; prosthetic training and wound monitoring",
+    "current_course_of_illness": "S/P BKA. Needs rehab and residual limb monitoring.",
+    "current_medications_or_mar": "Gabapentin, acetaminophen, enoxaparin.",
+    "allergies": "No known drug allergies.",
+    "mobility_transfer_status": "Wheelchair level; slide-board transfers with assistance.",
+    "therapy_need": "PT/OT for transfers and pre-prosthetic training.",
+    "wound_skin_needs": "Residual limb incision with staples; dressing daily.",
+    "oxygen_respiratory_needs": "Room air.",
+    "dialysis_need": "No dialysis.",
+    "cognitive_status": "Alert and oriented.",
+    "behavioral_safety_concerns": "No behaviors.",
+    "infection_isolation_status": "No isolation required.",
+    "advance_directive_code_status": "Full code.",
+    "durable_medical_equipment_needs": "Wheelchair, slide board.",
+    "missing_or_unclear_items": [
+      "VA authorization not attached",
+      "Prosthetics follow-up schedule"
+    ],
+    "expected_status": "clinical_review",
+    "expected_score": 61
+  },
+  "known_mismatches": [
+    {
+      "mismatch_type": "authorization_missing",
+      "severity": "medium",
+      "reason": "Payer authorization is pending, missing, or not attached.",
+      "target_facility_id": "GV-SNF-001"
+    },
+    {
+      "mismatch_type": "payer_contract_unclear",
+      "severity": "medium",
+      "reason": "Payer contract/VA authorization status is unclear.",
+      "target_facility_id": "GV-SNF-001"
+    }
+  ],
+  "notes": "All data is synthetic. No real patient data."
+}

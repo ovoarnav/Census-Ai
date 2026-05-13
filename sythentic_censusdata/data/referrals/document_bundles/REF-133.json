@@ -1,0 +1,88 @@
+{
+  "referral_id": "REF-133",
+  "synthetic": true,
+  "target_facility_id": "HC-SNF-003",
+  "expected_status": "likely_accept_needs_info",
+  "expected_score": 76,
+  "source_summary": {
+    "source": "County General Hospital",
+    "channel": "Email attachment",
+    "patient_initials": "K.L.",
+    "age": 79,
+    "payer": "Medicare Part A",
+    "primary_diagnosis": "Dementia with wandering; needs locked memory care after fall"
+  },
+  "source_documents": [
+    {
+      "source_doc_id": "REF-133-01",
+      "document_type": "face_sheet",
+      "channel": "Email attachment",
+      "received_at": "2026-05-07 14:52",
+      "ocr_confidence": 0.99,
+      "text": "PATIENT FACE SHEET\nReferral ID: REF-133\nSource: County General Hospital\nChannel: Email attachment\nReceived: 2026-05-07 14:52\nTarget Facility: HC-SNF-003\nPatient Initials: K.L.\nAge: 79\nPayer: Medicare Part A\nAuthorization Status: not_required\nDischarge Target: 2026-05-08 10:00\n"
+    },
+    {
+      "source_doc_id": "REF-133-02",
+      "document_type": "discharge_summary",
+      "channel": "Email attachment",
+      "received_at": "2026-05-07 14:52",
+      "ocr_confidence": 0.98,
+      "text": "DISCHARGE SUMMARY / CLINICAL SNAPSHOT\nPrimary Diagnosis / Reason for Referral: Dementia with wandering; needs locked memory care after fall\nHospital Course: UTI treated. Still exit-seeking at night.\n\nCLINICAL CARE NEEDS\nCurrent Medications / MAR Summary: Donepezil, melatonin.\nAllergies: No known drug allergies.\nMobility / Transfer Status: Ambulates with supervision.\nTherapy Need: PT screen only.\nWound / Skin Needs: No wounds.\nOxygen / Respiratory Needs: Room air.\nDialysis Need: No dialysis.\nCognitive Status: Requires secured memory-care setting.\nBehavioral / Safety Concerns: Wandering nightly but redirectable.\nInfection / Isolation Status: No isolation required.\nAdvance Directive / Code Status: DNR.\nDurable Medical Equipment Needs: None.\n"
+    },
+    {
+      "source_doc_id": "REF-133-03",
+      "document_type": "email_body",
+      "channel": "email",
+      "received_at": "2026-05-07 14:52",
+      "ocr_confidence": 0.96,
+      "text": "EMAIL BODY\nFrom: County General Hospital\nTo: admissions@target-facility.example\nSubject: Referral REF-133 - K.L. - Dementia with wandering; needs locked memory \n\nHi admissions team,\nPlease review K.L. for placement. Quick notes: payer is Medicare Part A; auth status is not_required; main issue is Dementia with wandering; needs locked memory care after fall.\nNeed: Ambulates with supervision. / PT screen only..\nThanks,\nCase Management\n"
+    },
+    {
+      "source_doc_id": "REF-133-04",
+      "document_type": "payer_auth_note",
+      "channel": "payer_document",
+      "received_at": "2026-05-07 14:52",
+      "ocr_confidence": 0.97,
+      "text": "PAYER / AUTH NOTE\nPayer listed by sender: Medicare Part A\nAuthorization status reported: not_required\nAuthorization caveat: No payer caveat identified in this document.\n"
+    }
+  ],
+  "gold_extraction": {
+    "referral_id": "REF-133",
+    "source": "County General Hospital",
+    "channel": "Email attachment",
+    "received_at": null,
+    "target_facility_id": "HC-SNF-003",
+    "patient_initials": "K.L.",
+    "age": 79,
+    "payer": "Medicare Part A",
+    "authorization_status": "not_required",
+    "primary_diagnosis": "Dementia with wandering; needs locked memory care after fall",
+    "current_course_of_illness": "UTI treated. Still exit-seeking at night.",
+    "current_medications_or_mar": "Donepezil, melatonin.",
+    "allergies": "No known drug allergies.",
+    "mobility_transfer_status": "Ambulates with supervision.",
+    "therapy_need": "PT screen only.",
+    "wound_skin_needs": "No wounds.",
+    "oxygen_respiratory_needs": "Room air.",
+    "dialysis_need": "No dialysis.",
+    "cognitive_status": "Requires secured memory-care setting.",
+    "behavioral_safety_concerns": "Wandering nightly but redirectable.",
+    "infection_isolation_status": "No isolation required.",
+    "advance_directive_code_status": "DNR.",
+    "durable_medical_equipment_needs": "None.",
+    "missing_or_unclear_items": [
+      "Behavioral incident log"
+    ],
+    "expected_status": "likely_accept_needs_info",
+    "expected_score": 76
+  },
+  "known_mismatches": [
+    {
+      "mismatch_type": "behavioral_log_missing",
+      "severity": "high",
+      "reason": "Behavioral incident log is missing for a memory-care referral.",
+      "target_facility_id": "HC-SNF-003"
+    }
+  ],
+  "notes": "All data is synthetic. No real patient data."
+}
